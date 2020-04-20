@@ -1,0 +1,660 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6035B9FCE448F954D4A919F6 /* Pods_GreatPeotry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B936DA7DDF2ABBECC18ADC84 /* Pods_GreatPeotry.framework */; };
+		FF44EB8124494E620081F59C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF44EB8024494E620081F59C /* AppDelegate.swift */; };
+		FF44EB8324494E620081F59C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF44EB8224494E620081F59C /* SceneDelegate.swift */; };
+		FF44EB8524494E620081F59C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF44EB8424494E620081F59C /* ViewController.swift */; };
+		FF44EB8824494E620081F59C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF44EB8624494E620081F59C /* Main.storyboard */; };
+		FF44EB8A24494E660081F59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF44EB8924494E660081F59C /* Assets.xcassets */; };
+		FF44EB8D24494E660081F59C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF44EB8B24494E660081F59C /* LaunchScreen.storyboard */; };
+		FF44EB9824494E660081F59C /* GreatPeotryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF44EB9724494E660081F59C /* GreatPeotryTests.swift */; };
+		FF44EBA324494E660081F59C /* GreatPeotryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF44EBA224494E660081F59C /* GreatPeotryUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF44EB9424494E660081F59C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF44EB7524494E620081F59C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF44EB7C24494E620081F59C;
+			remoteInfo = GreatPeotry;
+		};
+		FF44EB9F24494E660081F59C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF44EB7524494E620081F59C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF44EB7C24494E620081F59C;
+			remoteInfo = GreatPeotry;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8B7E65E1D2F1ACEC7D84524B /* Pods-GreatPeotry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreatPeotry.release.xcconfig"; path = "Target Support Files/Pods-GreatPeotry/Pods-GreatPeotry.release.xcconfig"; sourceTree = "<group>"; };
+		B936DA7DDF2ABBECC18ADC84 /* Pods_GreatPeotry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreatPeotry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C48269A7488812B9DA56C1E2 /* Pods-GreatPeotry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreatPeotry.debug.xcconfig"; path = "Target Support Files/Pods-GreatPeotry/Pods-GreatPeotry.debug.xcconfig"; sourceTree = "<group>"; };
+		FF44EB7D24494E620081F59C /* GreatPeotry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreatPeotry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF44EB8024494E620081F59C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF44EB8224494E620081F59C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FF44EB8424494E620081F59C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF44EB8724494E620081F59C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF44EB8924494E660081F59C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF44EB8C24494E660081F59C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FF44EB8E24494E660081F59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF44EB9324494E660081F59C /* GreatPeotryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreatPeotryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF44EB9724494E660081F59C /* GreatPeotryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatPeotryTests.swift; sourceTree = "<group>"; };
+		FF44EB9924494E660081F59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF44EB9E24494E660081F59C /* GreatPeotryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreatPeotryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF44EBA224494E660081F59C /* GreatPeotryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatPeotryUITests.swift; sourceTree = "<group>"; };
+		FF44EBA424494E660081F59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF44EB7A24494E620081F59C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6035B9FCE448F954D4A919F6 /* Pods_GreatPeotry.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF44EB9024494E660081F59C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF44EB9B24494E660081F59C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		178D4C1F6855EF6D61F76F79 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B936DA7DDF2ABBECC18ADC84 /* Pods_GreatPeotry.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF44EB7424494E620081F59C = {
+			isa = PBXGroup;
+			children = (
+				FF44EB7F24494E620081F59C /* GreatPeotry */,
+				FF44EB9624494E660081F59C /* GreatPeotryTests */,
+				FF44EBA124494E660081F59C /* GreatPeotryUITests */,
+				FF44EB7E24494E620081F59C /* Products */,
+				FF96928A5E5884ABA8E56892 /* Pods */,
+				178D4C1F6855EF6D61F76F79 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FF44EB7E24494E620081F59C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF44EB7D24494E620081F59C /* GreatPeotry.app */,
+				FF44EB9324494E660081F59C /* GreatPeotryTests.xctest */,
+				FF44EB9E24494E660081F59C /* GreatPeotryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF44EB7F24494E620081F59C /* GreatPeotry */ = {
+			isa = PBXGroup;
+			children = (
+				FF44EB8024494E620081F59C /* AppDelegate.swift */,
+				FF44EB8224494E620081F59C /* SceneDelegate.swift */,
+				FF44EB8424494E620081F59C /* ViewController.swift */,
+				FF44EB8624494E620081F59C /* Main.storyboard */,
+				FF44EB8924494E660081F59C /* Assets.xcassets */,
+				FF44EB8B24494E660081F59C /* LaunchScreen.storyboard */,
+				FF44EB8E24494E660081F59C /* Info.plist */,
+			);
+			path = GreatPeotry;
+			sourceTree = "<group>";
+		};
+		FF44EB9624494E660081F59C /* GreatPeotryTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF44EB9724494E660081F59C /* GreatPeotryTests.swift */,
+				FF44EB9924494E660081F59C /* Info.plist */,
+			);
+			path = GreatPeotryTests;
+			sourceTree = "<group>";
+		};
+		FF44EBA124494E660081F59C /* GreatPeotryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FF44EBA224494E660081F59C /* GreatPeotryUITests.swift */,
+				FF44EBA424494E660081F59C /* Info.plist */,
+			);
+			path = GreatPeotryUITests;
+			sourceTree = "<group>";
+		};
+		FF96928A5E5884ABA8E56892 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C48269A7488812B9DA56C1E2 /* Pods-GreatPeotry.debug.xcconfig */,
+				8B7E65E1D2F1ACEC7D84524B /* Pods-GreatPeotry.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF44EB7C24494E620081F59C /* GreatPeotry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF44EBA724494E660081F59C /* Build configuration list for PBXNativeTarget "GreatPeotry" */;
+			buildPhases = (
+				E5F3C977CD5E2F966BF4BFF9 /* [CP] Check Pods Manifest.lock */,
+				FF44EB7924494E620081F59C /* Sources */,
+				FF44EB7A24494E620081F59C /* Frameworks */,
+				FF44EB7B24494E620081F59C /* Resources */,
+				0EFAC68035446BF81834E465 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GreatPeotry;
+			productName = GreatPeotry;
+			productReference = FF44EB7D24494E620081F59C /* GreatPeotry.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF44EB9224494E660081F59C /* GreatPeotryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF44EBAA24494E660081F59C /* Build configuration list for PBXNativeTarget "GreatPeotryTests" */;
+			buildPhases = (
+				FF44EB8F24494E660081F59C /* Sources */,
+				FF44EB9024494E660081F59C /* Frameworks */,
+				FF44EB9124494E660081F59C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF44EB9524494E660081F59C /* PBXTargetDependency */,
+			);
+			name = GreatPeotryTests;
+			productName = GreatPeotryTests;
+			productReference = FF44EB9324494E660081F59C /* GreatPeotryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FF44EB9D24494E660081F59C /* GreatPeotryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF44EBAD24494E660081F59C /* Build configuration list for PBXNativeTarget "GreatPeotryUITests" */;
+			buildPhases = (
+				FF44EB9A24494E660081F59C /* Sources */,
+				FF44EB9B24494E660081F59C /* Frameworks */,
+				FF44EB9C24494E660081F59C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF44EBA024494E660081F59C /* PBXTargetDependency */,
+			);
+			name = GreatPeotryUITests;
+			productName = GreatPeotryUITests;
+			productReference = FF44EB9E24494E660081F59C /* GreatPeotryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF44EB7524494E620081F59C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = hend;
+				TargetAttributes = {
+					FF44EB7C24494E620081F59C = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					FF44EB9224494E660081F59C = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = FF44EB7C24494E620081F59C;
+					};
+					FF44EB9D24494E660081F59C = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = FF44EB7C24494E620081F59C;
+					};
+				};
+			};
+			buildConfigurationList = FF44EB7824494E620081F59C /* Build configuration list for PBXProject "GreatPeotry" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF44EB7424494E620081F59C;
+			productRefGroup = FF44EB7E24494E620081F59C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF44EB7C24494E620081F59C /* GreatPeotry */,
+				FF44EB9224494E660081F59C /* GreatPeotryTests */,
+				FF44EB9D24494E660081F59C /* GreatPeotryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF44EB7B24494E620081F59C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF44EB8D24494E660081F59C /* LaunchScreen.storyboard in Resources */,
+				FF44EB8A24494E660081F59C /* Assets.xcassets in Resources */,
+				FF44EB8824494E620081F59C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF44EB9124494E660081F59C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF44EB9C24494E660081F59C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EFAC68035446BF81834E465 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GreatPeotry/Pods-GreatPeotry-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GreatPeotry/Pods-GreatPeotry-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GreatPeotry/Pods-GreatPeotry-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5F3C977CD5E2F966BF4BFF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GreatPeotry-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF44EB7924494E620081F59C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF44EB8524494E620081F59C /* ViewController.swift in Sources */,
+				FF44EB8124494E620081F59C /* AppDelegate.swift in Sources */,
+				FF44EB8324494E620081F59C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF44EB8F24494E660081F59C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF44EB9824494E660081F59C /* GreatPeotryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF44EB9A24494E660081F59C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF44EBA324494E660081F59C /* GreatPeotryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF44EB9524494E660081F59C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF44EB7C24494E620081F59C /* GreatPeotry */;
+			targetProxy = FF44EB9424494E660081F59C /* PBXContainerItemProxy */;
+		};
+		FF44EBA024494E660081F59C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF44EB7C24494E620081F59C /* GreatPeotry */;
+			targetProxy = FF44EB9F24494E660081F59C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF44EB8624494E620081F59C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF44EB8724494E620081F59C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF44EB8B24494E660081F59C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF44EB8C24494E660081F59C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF44EBA524494E660081F59C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FF44EBA624494E660081F59C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF44EBA824494E660081F59C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C48269A7488812B9DA56C1E2 /* Pods-GreatPeotry.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GreatPeotry/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.GreatPeotry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF44EBA924494E660081F59C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B7E65E1D2F1ACEC7D84524B /* Pods-GreatPeotry.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GreatPeotry/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.GreatPeotry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FF44EBAB24494E660081F59C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GreatPeotryTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.GreatPeotryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GreatPeotry.app/GreatPeotry";
+			};
+			name = Debug;
+		};
+		FF44EBAC24494E660081F59C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GreatPeotryTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.GreatPeotryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GreatPeotry.app/GreatPeotry";
+			};
+			name = Release;
+		};
+		FF44EBAE24494E660081F59C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GreatPeotryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.GreatPeotryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GreatPeotry;
+			};
+			name = Debug;
+		};
+		FF44EBAF24494E660081F59C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GreatPeotryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.GreatPeotryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GreatPeotry;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF44EB7824494E620081F59C /* Build configuration list for PBXProject "GreatPeotry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF44EBA524494E660081F59C /* Debug */,
+				FF44EBA624494E660081F59C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF44EBA724494E660081F59C /* Build configuration list for PBXNativeTarget "GreatPeotry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF44EBA824494E660081F59C /* Debug */,
+				FF44EBA924494E660081F59C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF44EBAA24494E660081F59C /* Build configuration list for PBXNativeTarget "GreatPeotryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF44EBAB24494E660081F59C /* Debug */,
+				FF44EBAC24494E660081F59C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF44EBAD24494E660081F59C /* Build configuration list for PBXNativeTarget "GreatPeotryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF44EBAE24494E660081F59C /* Debug */,
+				FF44EBAF24494E660081F59C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF44EB7524494E620081F59C /* Project object */;
+}
