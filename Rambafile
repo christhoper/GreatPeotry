@@ -10,10 +10,10 @@ xcodeproj_path: GreatPeotry.xcodeproj
 project_target: GreatPeotry
 
 # The file path for new modules
-project_file_path: /GreatPeotry/Modules/Creation
+project_file_path: /Creation/Creation
 
 # The Xcode group path to new modules
-project_group_path: /GreatPeotry/Modules/Creation
+project_group_path: /Creation/Creation
 
 
 ### Templates

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		03B8B8A484D7C8FD13DD7C3A /* Pods_Router.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404E364392DAFF1240755305 /* Pods_Router.framework */; };
 		FF3AD0AB2452C0B200349798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF3AD0AA2452C0B200349798 /* Assets.xcassets */; };
+		FF3AD0ED2452D52100349798 /* Mine_Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD0EC2452D52100349798 /* Mine_Mediator.swift */; };
+		FF3AD0EF2452D54100349798 /* Creation_Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD0EE2452D54100349798 /* Creation_Mediator.swift */; };
+		FF3AD0F12452D55E00349798 /* Home_Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD0F02452D55E00349798 /* Home_Mediator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +21,9 @@
 		FF3AD09E2452C0B100349798 /* Router.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Router.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3AD0AA2452C0B200349798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF3AD0AF2452C0B200349798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF3AD0EC2452D52100349798 /* Mine_Mediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mine_Mediator.swift; sourceTree = "<group>"; };
+		FF3AD0EE2452D54100349798 /* Creation_Mediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creation_Mediator.swift; sourceTree = "<group>"; };
+		FF3AD0F02452D55E00349798 /* Home_Mediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_Mediator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,9 @@
 		FF3AD0A02452C0B100349798 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				FF3AD0EE2452D54100349798 /* Creation_Mediator.swift */,
+				FF3AD0EC2452D52100349798 /* Mine_Mediator.swift */,
+				FF3AD0F02452D55E00349798 /* Home_Mediator.swift */,
 				FF3AD0AA2452C0B200349798 /* Assets.xcassets */,
 				FF3AD0AF2452C0B200349798 /* Info.plist */,
 			);
@@ -111,6 +120,7 @@
 				TargetAttributes = {
 					FF3AD09D2452C0B100349798 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -190,6 +200,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF3AD0F12452D55E00349798 /* Home_Mediator.swift in Sources */,
+				FF3AD0ED2452D52100349798 /* Mine_Mediator.swift in Sources */,
+				FF3AD0EF2452D54100349798 /* Creation_Mediator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +328,7 @@
 			baseConfigurationReference = 8F82202B6CF22B6892B94BC0 /* Pods-Router.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Router/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,6 +337,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.Router;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,6 +348,7 @@
 			baseConfigurationReference = D21D01F10600FFEB1B962CEE /* Pods-Router.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Router/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
