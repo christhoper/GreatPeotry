@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		841D6586B65FBE194C343554 /* Pods_Creation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C236D8874BD49ABBB21387B6 /* Pods_Creation.framework */; };
 		FF3AD05F2452BFD300349798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF3AD05E2452BFD300349798 /* Assets.xcassets */; };
+		FF3AD1062452D66600349798 /* MainPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD1002452D66600349798 /* MainPagePresenter.swift */; };
+		FF3AD1072452D66600349798 /* MainPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD1012452D66600349798 /* MainPageProtocols.swift */; };
+		FF3AD1082452D66600349798 /* MainPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD1032452D66600349798 /* MainPageInteractor.swift */; };
+		FF3AD1092452D66600349798 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD1052452D66600349798 /* MainPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +22,10 @@
 		FF3AD0522452BFD100349798 /* Creation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Creation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3AD05E2452BFD300349798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF3AD0632452BFD300349798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF3AD1002452D66600349798 /* MainPagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPagePresenter.swift; sourceTree = "<group>"; };
+		FF3AD1012452D66600349798 /* MainPageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageProtocols.swift; sourceTree = "<group>"; };
+		FF3AD1032452D66600349798 /* MainPageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageInteractor.swift; sourceTree = "<group>"; };
+		FF3AD1052452D66600349798 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +79,46 @@
 		FF3AD0542452BFD100349798 /* Creation */ = {
 			isa = PBXGroup;
 			children = (
+				FF3AD0FE2452D66600349798 /* MainPage */,
 				FF3AD05E2452BFD300349798 /* Assets.xcassets */,
 				FF3AD0632452BFD300349798 /* Info.plist */,
 			);
 			path = Creation;
+			sourceTree = "<group>";
+		};
+		FF3AD0FE2452D66600349798 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				FF3AD0FF2452D66600349798 /* Presenter */,
+				FF3AD1012452D66600349798 /* MainPageProtocols.swift */,
+				FF3AD1022452D66600349798 /* Model */,
+				FF3AD1042452D66600349798 /* View */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		FF3AD0FF2452D66600349798 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FF3AD1002452D66600349798 /* MainPagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FF3AD1022452D66600349798 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF3AD1032452D66600349798 /* MainPageInteractor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF3AD1042452D66600349798 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF3AD1052452D66600349798 /* MainPageViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF3AD1092452D66600349798 /* MainPageViewController.swift in Sources */,
+				FF3AD1062452D66600349798 /* MainPagePresenter.swift in Sources */,
+				FF3AD1082452D66600349798 /* MainPageInteractor.swift in Sources */,
+				FF3AD1072452D66600349798 /* MainPageProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

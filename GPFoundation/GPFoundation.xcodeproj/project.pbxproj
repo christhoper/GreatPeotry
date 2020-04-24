@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0FB54874092D467636C5EA53 /* Pods_GPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11888AD600BCEC932871A1FB /* Pods_GPFoundation.framework */; };
 		FF3AD0852452C05B00349798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF3AD0842452C05B00349798 /* Assets.xcassets */; };
+		FF3AD0D22452D1DB00349798 /* GPNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD0D12452D1DB00349798 /* GPNetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,8 @@
 		FF3AD0782452C05900349798 /* GPFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3AD0842452C05B00349798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF3AD0892452C05B00349798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF3AD0D02452D1DB00349798 /* GPFoundation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GPFoundation-Bridging-Header.h"; sourceTree = "<group>"; };
+		FF3AD0D12452D1DB00349798 /* GPNetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNetworkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +74,20 @@
 		FF3AD07A2452C05900349798 /* GPFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				FF3AD0CD2452D16A00349798 /* NetWorking */,
 				FF3AD0842452C05B00349798 /* Assets.xcassets */,
 				FF3AD0892452C05B00349798 /* Info.plist */,
 			);
 			path = GPFoundation;
+			sourceTree = "<group>";
+		};
+		FF3AD0CD2452D16A00349798 /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				FF3AD0D12452D1DB00349798 /* GPNetworkingManager.swift */,
+				FF3AD0D02452D1DB00349798 /* GPFoundation-Bridging-Header.h */,
+			);
+			path = NetWorking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,6 +124,7 @@
 				TargetAttributes = {
 					FF3AD0772452C05900349798 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -190,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF3AD0D22452D1DB00349798 /* GPNetworkingManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +330,7 @@
 			baseConfigurationReference = 38BC5DA04A201A1DA93C70BF /* Pods-GPFoundation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GPFoundation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -323,6 +339,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.GPFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GPFoundation/NetWorking/GPFoundation-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,6 +351,7 @@
 			baseConfigurationReference = 70974ECBF77480208FA112B7 /* Pods-GPFoundation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GPFoundation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -341,6 +360,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.GPFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GPFoundation/NetWorking/GPFoundation-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
