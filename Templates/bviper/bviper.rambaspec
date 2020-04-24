@@ -1,0 +1,23 @@
+# Template information section
+name: "bviper"
+summary: "Swift VIPER module template with Configurator"
+author: "Ezreal"
+version: "1.1"
+license: "MIT"
+
+# The declarations for code files
+
+code_files:
+# Protocols
+- {name: Protocols.swift, path: Code/protocols.swift.liquid}
+
+# Model
+- {name: Model/Interactor.swift, path: Code/Model/interactor.swift.liquid}
+
+# Presenter
+- {name: Presenter/Presenter.swift, path: Code/Presenter/presenter.swift.liquid}
+
+# View
+- {name: View/ViewController.swift, path: Code/View/viewcontroller.swift.liquid}
+
+

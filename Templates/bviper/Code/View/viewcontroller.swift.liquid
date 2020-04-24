@@ -1,0 +1,78 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+class {{ module_info.name }}ViewController: UIViewController {
+
+    var output: {{ module_info.name }}ViewOutput!
+
+    // MARK: override
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        setupNavItems()
+        setupSubViews()
+        addObserverForNoti()
+    }
+}
+
+// MARK: - Assistant
+
+extension {{ module_info.name }}ViewController {
+
+    func setupNavItems() {}
+    
+    func setupSubViews() {}
+    
+    func addObserverForNoti() {}
+}
+
+// MARK: - Network
+
+extension {{ module_info.name }}ViewController {}
+
+// MARK: - Delegate
+
+extension {{ module_info.name }}ViewController {}
+
+// MARK: - Selector
+
+@objc extension {{ module_info.name }}ViewController {
+
+    func onClick{{ module_info.name }}Btn(_ sender: UIButton) {}
+    
+    func onRecv{{ module_info.name }}Noti(_ noti: Notification) {}
+}
+
+// MARK: - {{module_info.name}}ViewInput 
+
+extension {{ module_info.name }}ViewController: {{module_info.name}}ViewInput {}
+
+// MARK: - {{ module_info.name }}ModuleBuilder
+
+class {{ module_info.name }}ModuleBuilder {
+
+    class func setupModule(handler: {{ module_info.name }}ModuleOutput? = nil) -> (UIViewController, {{ module_info.name }}ModuleInput) {
+        let viewController = {{ module_info.name }}ViewController()
+        
+        let presenter = {{ module_info.name }}Presenter()
+        presenter.view = viewController
+        presenter.transitionHandler = viewController
+        presenter.outer = handler
+        viewController.output = presenter
+       
+        let interactor = {{ module_info.name }}Interactor()
+        interactor.output = presenter
+        presenter.interactor = interactor
+        
+        let input = presenter
+        
+        return (viewController, input)
+    }
+}

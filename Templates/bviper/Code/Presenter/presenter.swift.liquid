@@ -1,0 +1,39 @@
+//
+//  {{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+import UIKit
+
+typealias {{ module_info.name }}PresenterView = {{ module_info.name }}ViewOutput
+typealias {{ module_info.name }}PresenterInteractor = {{ module_info.name }}InteractorOutput
+
+class {{ module_info.name }}Presenter {
+
+    weak var view: {{ module_info.name }}ViewInput!
+    weak var transitionHandler: UIViewController!
+    var interactor: {{ module_info.name }}InteractorInput!
+    var outer: {{ module_info.name }}ModuleOutput?
+}
+
+extension {{ module_info.name }}Presenter {
+
+    var nav: UINavigationController? {
+        return transitionHandler.navigationController
+    }
+}
+
+// MARK: - {{ module_info.name }}PresenterView
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}PresenterView {}
+
+// MARK: - {{ module_info.name }}PresenterInteractor
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}PresenterInteractor {}
+
+// MARK: - {{ module_info.name }}ModuleInput
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ModuleInput {}

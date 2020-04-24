@@ -1,0 +1,23 @@
+### Headers settings
+company: lancoo
+
+### Xcode project settings
+project_name: GreatPeotry
+xcodeproj_path: GreatPeotry.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: GreatPeotry
+
+# The file path for new modules
+project_file_path: /GreatPeotry/Modules/Creation
+
+# The Xcode group path to new modules
+project_group_path: /GreatPeotry/Modules/Creation
+
+
+### Templates
+catalogs:
+- 'https://gitwbp5.wbp5.com/iOS/bviper.git'
+templates:
+- {name: bviper}
