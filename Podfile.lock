@@ -7,6 +7,10 @@ PODS:
   - KRActivityIndicatorView (3.0.4)
   - KRProgressHUD (3.4.4):
     - KRActivityIndicatorView (= 3.0.4)
+  - Localize-Swift (3.1.0)
+  - R.swift (5.1.0):
+    - R.swift.Library (~> 5.1.0)
+  - R.swift.Library (5.1.0)
   - RxCocoa (5.0.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -16,10 +20,12 @@ PODS:
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
-  - CTMediator (~> 25)
+  - CTMediator
   - HandyJSON
   - Kingfisher
   - KRProgressHUD
+  - Localize-Swift
+  - R.swift
   - RxCocoa
   - RxSwift
   - SnapKit
@@ -31,6 +37,9 @@ SPEC REPOS:
     - Kingfisher
     - KRActivityIndicatorView
     - KRProgressHUD
+    - Localize-Swift
+    - R.swift
+    - R.swift.Library
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -42,11 +51,14 @@ SPEC CHECKSUMS:
   Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
   KRActivityIndicatorView: 549db10b9578d58bac73db063d8b544e8970f7f2
   KRProgressHUD: c3b9a48a0ee4824ea13212ac3f1efa50dca021e3
+  Localize-Swift: 4bed4f0ccac8be2ec3517ee359da80ba2adb0fae
+  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
+  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 7c49cc987997b0dbe59d760c2f443da4abc6560c
+PODFILE CHECKSUM: 7a5dac09918aeb75c351787e0789e0af7a45156b
 
 COCOAPODS: 1.8.4

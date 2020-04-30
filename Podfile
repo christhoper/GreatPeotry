@@ -15,10 +15,23 @@ def pods_common
   pod 'HandyJSON'
   pod 'Kingfisher'
   pod "KRProgressHUD"
+  pod 'R.swift'
+  pod 'Localize-Swift'
 end
 
 def pods_router
-  pod 'CTMediator', '~> 25'
+  pod 'CTMediator'
+end
+
+def pods_home
+end
+
+def pods_mine
+  
+end
+
+def pods_creation
+  
 end
 
 
@@ -28,15 +41,19 @@ target 'GreatPeotry' do
   project './GreatPeotry.xcodeproj'
   pods_common
   pods_router
-
+  pods_home
+  pods_creation
+  pods_mine
+  
 end
 
 
 target 'Mine' do
-
+  
   project './Mine/Mine.xcodeproj'
   pods_common
   pods_router
+  pods_mine
 
 end
 
@@ -45,6 +62,7 @@ target 'Home' do
   project './Home/Home.xcodeproj'
   pods_common
   pods_router
+  pods_home
 
 end
 
@@ -54,6 +72,7 @@ target 'Creation' do
   project './Creation/Creation.xcodeproj'
   pods_common
   pods_router
+  pods_creation
 
 end
 

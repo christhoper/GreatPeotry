@@ -1,6 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-Mine/Pods-Mine-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework
 ${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework
+${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
 ${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework
 ${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework

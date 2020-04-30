@@ -26,7 +26,9 @@ class MainPageViewController: UIViewController {
 
 extension MainPageViewController {
 
-    func setupNavItems() {}
+    func setupNavItems() {
+        view.backgroundColor = .white
+    }
     
     func setupSubViews() {}
     

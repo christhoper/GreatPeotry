@@ -3,105 +3,117 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0FB54874092D467636C5EA53 /* Pods_GPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11888AD600BCEC932871A1FB /* Pods_GPFoundation.framework */; };
-		FF3AD0852452C05B00349798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF3AD0842452C05B00349798 /* Assets.xcassets */; };
-		FF3AD0D22452D1DB00349798 /* GPNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD0D12452D1DB00349798 /* GPNetworkingManager.swift */; };
+		BAFBBD21FFF41AEC6A050729 /* Pods_GPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7312B061FAEE653DAAA02EF1 /* Pods_GPFoundation.framework */; };
+		FF3F1D94245AC735004B674E /* GPFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = FF3F1D92245AC735004B674E /* GPFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF3F1DA3245AC79C004B674E /* GPFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1DA1245AC79C004B674E /* GPFont.swift */; };
+		FF3F1DA4245AC79C004B674E /* GPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1DA2245AC79C004B674E /* GPColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11888AD600BCEC932871A1FB /* Pods_GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38BC5DA04A201A1DA93C70BF /* Pods-GPFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPFoundation.debug.xcconfig"; path = "Target Support Files/Pods-GPFoundation/Pods-GPFoundation.debug.xcconfig"; sourceTree = "<group>"; };
-		70974ECBF77480208FA112B7 /* Pods-GPFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPFoundation.release.xcconfig"; path = "Target Support Files/Pods-GPFoundation/Pods-GPFoundation.release.xcconfig"; sourceTree = "<group>"; };
-		FF3AD0782452C05900349798 /* GPFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GPFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF3AD0842452C05B00349798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FF3AD0892452C05B00349798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF3AD0D02452D1DB00349798 /* GPFoundation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GPFoundation-Bridging-Header.h"; sourceTree = "<group>"; };
-		FF3AD0D12452D1DB00349798 /* GPNetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNetworkingManager.swift; sourceTree = "<group>"; };
+		1EE99AC5EF6796E7F4424A47 /* Pods-GPFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPFoundation.release.xcconfig"; path = "Target Support Files/Pods-GPFoundation/Pods-GPFoundation.release.xcconfig"; sourceTree = "<group>"; };
+		7312B061FAEE653DAAA02EF1 /* Pods_GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9CC0F7454129FC5234BAFAE /* Pods-GPFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPFoundation.debug.xcconfig"; path = "Target Support Files/Pods-GPFoundation/Pods-GPFoundation.debug.xcconfig"; sourceTree = "<group>"; };
+		FF3F1D8F245AC735004B674E /* GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF3F1D92245AC735004B674E /* GPFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPFoundation.h; sourceTree = "<group>"; };
+		FF3F1D93245AC735004B674E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF3F1DA1245AC79C004B674E /* GPFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPFont.swift; sourceTree = "<group>"; };
+		FF3F1DA2245AC79C004B674E /* GPColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FF3AD0752452C05900349798 /* Frameworks */ = {
+		FF3F1D8C245AC735004B674E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FB54874092D467636C5EA53 /* Pods_GPFoundation.framework in Frameworks */,
+				BAFBBD21FFF41AEC6A050729 /* Pods_GPFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		102AAD44BDE6B62AE6BB8934 /* Frameworks */ = {
+		571CD7DA032BCB162DE25770 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				11888AD600BCEC932871A1FB /* Pods_GPFoundation.framework */,
+				7312B061FAEE653DAAA02EF1 /* Pods_GPFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C356182577D6836BBD3CCEA6 /* Pods */ = {
+		83A7EC3C973225BAE5CE28C5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				38BC5DA04A201A1DA93C70BF /* Pods-GPFoundation.debug.xcconfig */,
-				70974ECBF77480208FA112B7 /* Pods-GPFoundation.release.xcconfig */,
+				E9CC0F7454129FC5234BAFAE /* Pods-GPFoundation.debug.xcconfig */,
+				1EE99AC5EF6796E7F4424A47 /* Pods-GPFoundation.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
-		FF3AD06F2452C05900349798 = {
+		FF3F1D85245AC735004B674E = {
 			isa = PBXGroup;
 			children = (
-				FF3AD07A2452C05900349798 /* GPFoundation */,
-				FF3AD0792452C05900349798 /* Products */,
-				C356182577D6836BBD3CCEA6 /* Pods */,
-				102AAD44BDE6B62AE6BB8934 /* Frameworks */,
+				FF3F1D91245AC735004B674E /* GPFoundation */,
+				FF3F1D90245AC735004B674E /* Products */,
+				83A7EC3C973225BAE5CE28C5 /* Pods */,
+				571CD7DA032BCB162DE25770 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		FF3AD0792452C05900349798 /* Products */ = {
+		FF3F1D90245AC735004B674E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FF3AD0782452C05900349798 /* GPFoundation.app */,
+				FF3F1D8F245AC735004B674E /* GPFoundation.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FF3AD07A2452C05900349798 /* GPFoundation */ = {
+		FF3F1D91245AC735004B674E /* GPFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				FF3AD0CD2452D16A00349798 /* NetWorking */,
-				FF3AD0842452C05B00349798 /* Assets.xcassets */,
-				FF3AD0892452C05B00349798 /* Info.plist */,
+				FF3F1DA0245AC79C004B674E /* Extenstion */,
+				FF3F1D92245AC735004B674E /* GPFoundation.h */,
+				FF3F1D93245AC735004B674E /* Info.plist */,
 			);
 			path = GPFoundation;
 			sourceTree = "<group>";
 		};
-		FF3AD0CD2452D16A00349798 /* NetWorking */ = {
+		FF3F1DA0245AC79C004B674E /* Extenstion */ = {
 			isa = PBXGroup;
 			children = (
-				FF3AD0D12452D1DB00349798 /* GPNetworkingManager.swift */,
-				FF3AD0D02452D1DB00349798 /* GPFoundation-Bridging-Header.h */,
+				FF3F1DA1245AC79C004B674E /* GPFont.swift */,
+				FF3F1DA2245AC79C004B674E /* GPColor.swift */,
 			);
-			path = NetWorking;
+			path = Extenstion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		FF3F1D8A245AC735004B674E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF3F1D94245AC735004B674E /* GPFoundation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		FF3AD0772452C05900349798 /* GPFoundation */ = {
+		FF3F1D8E245AC735004B674E /* GPFoundation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF3AD08C2452C05B00349798 /* Build configuration list for PBXNativeTarget "GPFoundation" */;
+			buildConfigurationList = FF3F1D97245AC735004B674E /* Build configuration list for PBXNativeTarget "GPFoundation" */;
 			buildPhases = (
-				ADB2CA9A8EBB40F9FEBDCCC0 /* [CP] Check Pods Manifest.lock */,
-				FF3AD0742452C05900349798 /* Sources */,
-				FF3AD0752452C05900349798 /* Frameworks */,
-				FF3AD0762452C05900349798 /* Resources */,
-				C2920BA08FCA057CFE2F8D29 /* [CP] Embed Pods Frameworks */,
+				69F80B453463025486438BAE /* [CP] Check Pods Manifest.lock */,
+				FF3F1D8A245AC735004B674E /* Headers */,
+				FF3F1D8B245AC735004B674E /* Sources */,
+				FF3F1D8C245AC735004B674E /* Frameworks */,
+				FF3F1D8D245AC735004B674E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -109,26 +121,24 @@
 			);
 			name = GPFoundation;
 			productName = GPFoundation;
-			productReference = FF3AD0782452C05900349798 /* GPFoundation.app */;
-			productType = "com.apple.product-type.application";
+			productReference = FF3F1D8F245AC735004B674E /* GPFoundation.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FF3AD0702452C05900349798 /* Project object */ = {
+		FF3F1D86245AC735004B674E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = hend;
 				TargetAttributes = {
-					FF3AD0772452C05900349798 = {
+					FF3F1D8E245AC735004B674E = {
 						CreatedOnToolsVersion = 11.3.1;
-						LastSwiftMigration = 1130;
 					};
 				};
 			};
-			buildConfigurationList = FF3AD0732452C05900349798 /* Build configuration list for PBXProject "GPFoundation" */;
+			buildConfigurationList = FF3F1D89245AC735004B674E /* Build configuration list for PBXProject "GPFoundation" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -136,29 +146,28 @@
 				en,
 				Base,
 			);
-			mainGroup = FF3AD06F2452C05900349798;
-			productRefGroup = FF3AD0792452C05900349798 /* Products */;
+			mainGroup = FF3F1D85245AC735004B674E;
+			productRefGroup = FF3F1D90245AC735004B674E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FF3AD0772452C05900349798 /* GPFoundation */,
+				FF3F1D8E245AC735004B674E /* GPFoundation */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FF3AD0762452C05900349798 /* Resources */ = {
+		FF3F1D8D245AC735004B674E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3AD0852452C05B00349798 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		ADB2CA9A8EBB40F9FEBDCCC0 /* [CP] Check Pods Manifest.lock */ = {
+		69F80B453463025486438BAE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -180,38 +189,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C2920BA08FCA057CFE2F8D29 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GPFoundation/Pods-GPFoundation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GPFoundation/Pods-GPFoundation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GPFoundation/Pods-GPFoundation-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FF3AD0742452C05900349798 /* Sources */ = {
+		FF3F1D8B245AC735004B674E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3AD0D22452D1DB00349798 /* GPNetworkingManager.swift in Sources */,
+				FF3F1DA4245AC79C004B674E /* GPColor.swift in Sources */,
+				FF3F1DA3245AC79C004B674E /* GPFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		FF3AD08A2452C05B00349798 /* Debug */ = {
+		FF3F1D95245AC735004B674E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,6 +237,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -268,10 +262,12 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		FF3AD08B2452C05B00349798 /* Release */ = {
+		FF3F1D96245AC735004B674E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -304,6 +300,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -322,45 +319,54 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		FF3AD08D2452C05B00349798 /* Debug */ = {
+		FF3F1D98245AC735004B674E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38BC5DA04A201A1DA93C70BF /* Pods-GPFoundation.debug.xcconfig */;
+			baseConfigurationReference = E9CC0F7454129FC5234BAFAE /* Pods-GPFoundation.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = GPFoundation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.GPFoundation;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "GPFoundation/NetWorking/GPFoundation-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		FF3AD08E2452C05B00349798 /* Release */ = {
+		FF3F1D99245AC735004B674E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70974ECBF77480208FA112B7 /* Pods-GPFoundation.release.xcconfig */;
+			baseConfigurationReference = 1EE99AC5EF6796E7F4424A47 /* Pods-GPFoundation.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = GPFoundation/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.GPFoundation;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "GPFoundation/NetWorking/GPFoundation-Bridging-Header.h";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -369,25 +375,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FF3AD0732452C05900349798 /* Build configuration list for PBXProject "GPFoundation" */ = {
+		FF3F1D89245AC735004B674E /* Build configuration list for PBXProject "GPFoundation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FF3AD08A2452C05B00349798 /* Debug */,
-				FF3AD08B2452C05B00349798 /* Release */,
+				FF3F1D95245AC735004B674E /* Debug */,
+				FF3F1D96245AC735004B674E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FF3AD08C2452C05B00349798 /* Build configuration list for PBXNativeTarget "GPFoundation" */ = {
+		FF3F1D97245AC735004B674E /* Build configuration list for PBXNativeTarget "GPFoundation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FF3AD08D2452C05B00349798 /* Debug */,
-				FF3AD08E2452C05B00349798 /* Release */,
+				FF3F1D98245AC735004B674E /* Debug */,
+				FF3F1D99245AC735004B674E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FF3AD0702452C05900349798 /* Project object */;
+	rootObject = FF3F1D86245AC735004B674E /* Project object */;
 }

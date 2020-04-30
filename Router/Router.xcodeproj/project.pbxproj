@@ -3,101 +3,112 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03B8B8A484D7C8FD13DD7C3A /* Pods_Router.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 404E364392DAFF1240755305 /* Pods_Router.framework */; };
-		FF3AD0AB2452C0B200349798 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF3AD0AA2452C0B200349798 /* Assets.xcassets */; };
-		FF3AD0ED2452D52100349798 /* Mine_Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD0EC2452D52100349798 /* Mine_Mediator.swift */; };
-		FF3AD0EF2452D54100349798 /* Creation_Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD0EE2452D54100349798 /* Creation_Mediator.swift */; };
-		FF3AD0F12452D55E00349798 /* Home_Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3AD0F02452D55E00349798 /* Home_Mediator.swift */; };
+		5EA54506308B86722835773A /* Pods_Router.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5E3309AE2BBA6234BB3AE1 /* Pods_Router.framework */; };
+		FF3F1CFB245AC4A9004B674E /* Router.h in Headers */ = {isa = PBXBuildFile; fileRef = FF3F1CF9245AC4A9004B674E /* Router.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF3F1D0A245AC4EE004B674E /* Home_Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D07245AC4EE004B674E /* Home_Mediator.swift */; };
+		FF3F1D0B245AC4EE004B674E /* Creation_Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D08245AC4EE004B674E /* Creation_Mediator.swift */; };
+		FF3F1D0C245AC4EE004B674E /* Mine_Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D09245AC4EE004B674E /* Mine_Mediator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		404E364392DAFF1240755305 /* Pods_Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F82202B6CF22B6892B94BC0 /* Pods-Router.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.debug.xcconfig"; path = "Target Support Files/Pods-Router/Pods-Router.debug.xcconfig"; sourceTree = "<group>"; };
-		D21D01F10600FFEB1B962CEE /* Pods-Router.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.release.xcconfig"; path = "Target Support Files/Pods-Router/Pods-Router.release.xcconfig"; sourceTree = "<group>"; };
-		FF3AD09E2452C0B100349798 /* Router.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Router.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF3AD0AA2452C0B200349798 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FF3AD0AF2452C0B200349798 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF3AD0EC2452D52100349798 /* Mine_Mediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mine_Mediator.swift; sourceTree = "<group>"; };
-		FF3AD0EE2452D54100349798 /* Creation_Mediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creation_Mediator.swift; sourceTree = "<group>"; };
-		FF3AD0F02452D55E00349798 /* Home_Mediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_Mediator.swift; sourceTree = "<group>"; };
+		2D5E3309AE2BBA6234BB3AE1 /* Pods_Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C77FBED8B0BE0F5A0D7609A /* Pods-Router.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.release.xcconfig"; path = "Target Support Files/Pods-Router/Pods-Router.release.xcconfig"; sourceTree = "<group>"; };
+		FF3F1CF6245AC4A9004B674E /* Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF3F1CF9245AC4A9004B674E /* Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
+		FF3F1CFA245AC4A9004B674E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF3F1D07245AC4EE004B674E /* Home_Mediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home_Mediator.swift; sourceTree = "<group>"; };
+		FF3F1D08245AC4EE004B674E /* Creation_Mediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Creation_Mediator.swift; sourceTree = "<group>"; };
+		FF3F1D09245AC4EE004B674E /* Mine_Mediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mine_Mediator.swift; sourceTree = "<group>"; };
+		FFF565DCBB48FDAA4DE07307 /* Pods-Router.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.debug.xcconfig"; path = "Target Support Files/Pods-Router/Pods-Router.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FF3AD09B2452C0B100349798 /* Frameworks */ = {
+		FF3F1CF3245AC4A9004B674E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03B8B8A484D7C8FD13DD7C3A /* Pods_Router.framework in Frameworks */,
+				5EA54506308B86722835773A /* Pods_Router.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04EE91B697E16EA21951370C /* Frameworks */ = {
+		109318E9FA9D7C0F69BF9F11 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				404E364392DAFF1240755305 /* Pods_Router.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B8234C00783D818A6A9EC718 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8F82202B6CF22B6892B94BC0 /* Pods-Router.debug.xcconfig */,
-				D21D01F10600FFEB1B962CEE /* Pods-Router.release.xcconfig */,
+				FFF565DCBB48FDAA4DE07307 /* Pods-Router.debug.xcconfig */,
+				4C77FBED8B0BE0F5A0D7609A /* Pods-Router.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
-		FF3AD0952452C0B100349798 = {
+		5B403BD2D411EFE7E489725F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FF3AD0A02452C0B100349798 /* Router */,
-				FF3AD09F2452C0B100349798 /* Products */,
-				B8234C00783D818A6A9EC718 /* Pods */,
-				04EE91B697E16EA21951370C /* Frameworks */,
+				2D5E3309AE2BBA6234BB3AE1 /* Pods_Router.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF3F1CEC245AC4A9004B674E = {
+			isa = PBXGroup;
+			children = (
+				FF3F1CF8245AC4A9004B674E /* Router */,
+				FF3F1CF7245AC4A9004B674E /* Products */,
+				109318E9FA9D7C0F69BF9F11 /* Pods */,
+				5B403BD2D411EFE7E489725F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		FF3AD09F2452C0B100349798 /* Products */ = {
+		FF3F1CF7245AC4A9004B674E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FF3AD09E2452C0B100349798 /* Router.app */,
+				FF3F1CF6245AC4A9004B674E /* Router.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FF3AD0A02452C0B100349798 /* Router */ = {
+		FF3F1CF8245AC4A9004B674E /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				FF3AD0EE2452D54100349798 /* Creation_Mediator.swift */,
-				FF3AD0EC2452D52100349798 /* Mine_Mediator.swift */,
-				FF3AD0F02452D55E00349798 /* Home_Mediator.swift */,
-				FF3AD0AA2452C0B200349798 /* Assets.xcassets */,
-				FF3AD0AF2452C0B200349798 /* Info.plist */,
+				FF3F1D08245AC4EE004B674E /* Creation_Mediator.swift */,
+				FF3F1D07245AC4EE004B674E /* Home_Mediator.swift */,
+				FF3F1D09245AC4EE004B674E /* Mine_Mediator.swift */,
+				FF3F1CF9245AC4A9004B674E /* Router.h */,
+				FF3F1CFA245AC4A9004B674E /* Info.plist */,
 			);
 			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		FF3F1CF1245AC4A9004B674E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF3F1CFB245AC4A9004B674E /* Router.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		FF3AD09D2452C0B100349798 /* Router */ = {
+		FF3F1CF5245AC4A9004B674E /* Router */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF3AD0B22452C0B200349798 /* Build configuration list for PBXNativeTarget "Router" */;
+			buildConfigurationList = FF3F1CFE245AC4A9004B674E /* Build configuration list for PBXNativeTarget "Router" */;
 			buildPhases = (
-				9EBD8A8C2ABD273ADD03E460 /* [CP] Check Pods Manifest.lock */,
-				FF3AD09A2452C0B100349798 /* Sources */,
-				FF3AD09B2452C0B100349798 /* Frameworks */,
-				FF3AD09C2452C0B100349798 /* Resources */,
-				FDC4D0FC114572289120BA62 /* [CP] Embed Pods Frameworks */,
+				7AA8233077043C7AEB07DB0E /* [CP] Check Pods Manifest.lock */,
+				FF3F1CF1245AC4A9004B674E /* Headers */,
+				FF3F1CF2245AC4A9004B674E /* Sources */,
+				FF3F1CF3245AC4A9004B674E /* Frameworks */,
+				FF3F1CF4245AC4A9004B674E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -105,26 +116,25 @@
 			);
 			name = Router;
 			productName = Router;
-			productReference = FF3AD09E2452C0B100349798 /* Router.app */;
-			productType = "com.apple.product-type.application";
+			productReference = FF3F1CF6245AC4A9004B674E /* Router.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FF3AD0962452C0B100349798 /* Project object */ = {
+		FF3F1CED245AC4A9004B674E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = hend;
 				TargetAttributes = {
-					FF3AD09D2452C0B100349798 = {
+					FF3F1CF5245AC4A9004B674E = {
 						CreatedOnToolsVersion = 11.3.1;
 						LastSwiftMigration = 1130;
 					};
 				};
 			};
-			buildConfigurationList = FF3AD0992452C0B100349798 /* Build configuration list for PBXProject "Router" */;
+			buildConfigurationList = FF3F1CF0245AC4A9004B674E /* Build configuration list for PBXProject "Router" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -132,29 +142,28 @@
 				en,
 				Base,
 			);
-			mainGroup = FF3AD0952452C0B100349798;
-			productRefGroup = FF3AD09F2452C0B100349798 /* Products */;
+			mainGroup = FF3F1CEC245AC4A9004B674E;
+			productRefGroup = FF3F1CF7245AC4A9004B674E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FF3AD09D2452C0B100349798 /* Router */,
+				FF3F1CF5245AC4A9004B674E /* Router */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FF3AD09C2452C0B100349798 /* Resources */ = {
+		FF3F1CF4245AC4A9004B674E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3AD0AB2452C0B200349798 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9EBD8A8C2ABD273ADD03E460 /* [CP] Check Pods Manifest.lock */ = {
+		7AA8233077043C7AEB07DB0E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -176,40 +185,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FDC4D0FC114572289120BA62 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Router/Pods-Router-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Router/Pods-Router-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Router/Pods-Router-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FF3AD09A2452C0B100349798 /* Sources */ = {
+		FF3F1CF2245AC4A9004B674E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3AD0F12452D55E00349798 /* Home_Mediator.swift in Sources */,
-				FF3AD0ED2452D52100349798 /* Mine_Mediator.swift in Sources */,
-				FF3AD0EF2452D54100349798 /* Creation_Mediator.swift in Sources */,
+				FF3F1D0A245AC4EE004B674E /* Home_Mediator.swift in Sources */,
+				FF3F1D0B245AC4EE004B674E /* Creation_Mediator.swift in Sources */,
+				FF3F1D0C245AC4EE004B674E /* Mine_Mediator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		FF3AD0B02452C0B200349798 /* Debug */ = {
+		FF3F1CFC245AC4A9004B674E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -242,6 +234,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -266,10 +259,12 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		FF3AD0B12452C0B200349798 /* Release */ = {
+		FF3F1CFD245AC4A9004B674E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -302,6 +297,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -320,43 +316,57 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		FF3AD0B32452C0B200349798 /* Debug */ = {
+		FF3F1CFF245AC4A9004B674E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F82202B6CF22B6892B94BC0 /* Pods-Router.debug.xcconfig */;
+			baseConfigurationReference = FFF565DCBB48FDAA4DE07307 /* Pods-Router.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Router/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.Router;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		FF3AD0B42452C0B200349798 /* Release */ = {
+		FF3F1D00245AC4A9004B674E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D21D01F10600FFEB1B962CEE /* Pods-Router.release.xcconfig */;
+			baseConfigurationReference = 4C77FBED8B0BE0F5A0D7609A /* Pods-Router.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Router/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.Router;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,25 +375,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FF3AD0992452C0B100349798 /* Build configuration list for PBXProject "Router" */ = {
+		FF3F1CF0245AC4A9004B674E /* Build configuration list for PBXProject "Router" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FF3AD0B02452C0B200349798 /* Debug */,
-				FF3AD0B12452C0B200349798 /* Release */,
+				FF3F1CFC245AC4A9004B674E /* Debug */,
+				FF3F1CFD245AC4A9004B674E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FF3AD0B22452C0B200349798 /* Build configuration list for PBXNativeTarget "Router" */ = {
+		FF3F1CFE245AC4A9004B674E /* Build configuration list for PBXNativeTarget "Router" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FF3AD0B32452C0B200349798 /* Debug */,
-				FF3AD0B42452C0B200349798 /* Release */,
+				FF3F1CFF245AC4A9004B674E /* Debug */,
+				FF3F1D00245AC4A9004B674E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FF3AD0962452C0B100349798 /* Project object */;
+	rootObject = FF3F1CED245AC4A9004B674E /* Project object */;
 }

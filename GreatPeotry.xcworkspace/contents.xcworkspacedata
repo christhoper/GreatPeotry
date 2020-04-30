@@ -7,4 +7,19 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Creation/Creation.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:GPFoundation/GPFoundation.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Home/Home.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Mine/Mine.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Router/Router.xcodeproj">
+   </FileRef>
 </Workspace>

@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6035B9FCE448F954D4A919F6 /* Pods_GreatPeotry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B936DA7DDF2ABBECC18ADC84 /* Pods_GreatPeotry.framework */; };
+		E15014045CD43013ADE380D7 /* Pods_GreatPeotry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B936DA7DDF2ABBECC18ADC84 /* Pods_GreatPeotry.framework */; };
+		FF1A7E6924581E5A0068BC26 /* GPTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A7E6824581E5A0068BC26 /* GPTabBarViewController.swift */; };
+		FF3F1DD0245AC8A7004B674E /* Router.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D06245AC4AA004B674E /* Router.framework */; };
+		FF3F1DD1245AC8A7004B674E /* Router.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D06245AC4AA004B674E /* Router.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF3F1DE2245AC984004B674E /* GPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D9F245AC736004B674E /* GPFoundation.framework */; };
+		FF3F1DF9245AD0A4004B674E /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D84245AC6DB004B674E /* Home.framework */; };
 		FF44EB8124494E620081F59C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF44EB8024494E620081F59C /* AppDelegate.swift */; };
 		FF44EB8324494E620081F59C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF44EB8224494E620081F59C /* SceneDelegate.swift */; };
 		FF44EB8524494E620081F59C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF44EB8424494E620081F59C /* ViewController.swift */; };
@@ -19,40 +24,40 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FF3AD0012452BF0700349798 /* PBXContainerItemProxy */ = {
+		FF3F1D05245AC4AA004B674E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FF3ACFFD2452BF0600349798 /* Mine.xcodeproj */;
+			containerPortal = FF3F1D01245AC4A9004B674E /* Router.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = FF3ACFE62452BF0400349798;
+			remoteGlobalIDString = FF3F1CF6245AC4A9004B674E;
+			remoteInfo = Router;
+		};
+		FF3F1D26245AC589004B674E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF3F1D22245AC588004B674E /* Mine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FF3F1D17245AC588004B674E;
 			remoteInfo = Mine;
 		};
-		FF3AD0472452BFA800349798 /* PBXContainerItemProxy */ = {
+		FF3F1D4D245AC637004B674E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FF3AD0432452BFA700349798 /* Home.xcodeproj */;
+			containerPortal = FF3F1D49245AC636004B674E /* Creation.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = FF3AD02C2452BFA500349798;
-			remoteInfo = Home;
-		};
-		FF3AD06D2452BFD400349798 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF3AD0692452BFD300349798 /* Creation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FF3AD0522452BFD100349798;
+			remoteGlobalIDString = FF3F1D3E245AC636004B674E;
 			remoteInfo = Creation;
 		};
-		FF3AD0932452C05C00349798 /* PBXContainerItemProxy */ = {
+		FF3F1D83245AC6DB004B674E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FF3AD08F2452C05B00349798 /* GPFoundation.xcodeproj */;
+			containerPortal = FF3F1D7F245AC6DA004B674E /* Home.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = FF3AD0782452C05900349798;
-			remoteInfo = GPFoundation;
+			remoteGlobalIDString = FF3F1D74245AC6DA004B674E;
+			remoteInfo = Home;
 		};
-		FF3AD0B92452C0B300349798 /* PBXContainerItemProxy */ = {
+		FF3F1D9E245AC736004B674E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FF3AD0B52452C0B200349798 /* Router.xcodeproj */;
+			containerPortal = FF3F1D9A245AC735004B674E /* GPFoundation.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = FF3AD09E2452C0B100349798;
-			remoteInfo = Router;
+			remoteGlobalIDString = FF3F1D8F245AC735004B674E;
+			remoteInfo = GPFoundation;
 		};
 		FF44EB9424494E660081F59C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -70,15 +75,34 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FF1A7E9C245826050068BC26 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FF3F1DD1245AC8A7004B674E /* Router.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8B7E65E1D2F1ACEC7D84524B /* Pods-GreatPeotry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreatPeotry.release.xcconfig"; path = "Target Support Files/Pods-GreatPeotry/Pods-GreatPeotry.release.xcconfig"; sourceTree = "<group>"; };
 		B936DA7DDF2ABBECC18ADC84 /* Pods_GreatPeotry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GreatPeotry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C48269A7488812B9DA56C1E2 /* Pods-GreatPeotry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GreatPeotry.debug.xcconfig"; path = "Target Support Files/Pods-GreatPeotry/Pods-GreatPeotry.debug.xcconfig"; sourceTree = "<group>"; };
-		FF3ACFFD2452BF0600349798 /* Mine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mine.xcodeproj; path = Mine/Mine.xcodeproj; sourceTree = "<group>"; };
-		FF3AD0432452BFA700349798 /* Home.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Home.xcodeproj; path = Home/Home.xcodeproj; sourceTree = "<group>"; };
-		FF3AD0692452BFD300349798 /* Creation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Creation.xcodeproj; path = Creation/Creation.xcodeproj; sourceTree = "<group>"; };
-		FF3AD08F2452C05B00349798 /* GPFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPFoundation.xcodeproj; path = GPFoundation/GPFoundation.xcodeproj; sourceTree = "<group>"; };
-		FF3AD0B52452C0B200349798 /* Router.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Router.xcodeproj; path = Router/Router.xcodeproj; sourceTree = "<group>"; };
+		FF1A7E6824581E5A0068BC26 /* GPTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTabBarViewController.swift; sourceTree = "<group>"; };
+		FF1A7E762458216F0068BC26 /* Pods_GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF1A7E892458241E0068BC26 /* Pods_Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF1A7E99245826050068BC26 /* Pods_Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF3F1C92245ABDD1004B674E /* Pods_RouterTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_RouterTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF3F1D01245AC4A9004B674E /* Router.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Router.xcodeproj; path = Router/Router.xcodeproj; sourceTree = "<group>"; };
+		FF3F1D22245AC588004B674E /* Mine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mine.xcodeproj; path = Mine/Mine.xcodeproj; sourceTree = "<group>"; };
+		FF3F1D49245AC636004B674E /* Creation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Creation.xcodeproj; path = Creation/Creation.xcodeproj; sourceTree = "<group>"; };
+		FF3F1D7F245AC6DA004B674E /* Home.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Home.xcodeproj; path = Home/Home.xcodeproj; sourceTree = "<group>"; };
+		FF3F1D9A245AC735004B674E /* GPFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPFoundation.xcodeproj; path = GPFoundation/GPFoundation.xcodeproj; sourceTree = "<group>"; };
 		FF44EB7D24494E620081F59C /* GreatPeotry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GreatPeotry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF44EB8024494E620081F59C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF44EB8224494E620081F59C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +124,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6035B9FCE448F954D4A919F6 /* Pods_GreatPeotry.framework in Frameworks */,
+				FF3F1DF9245AD0A4004B674E /* Home.framework in Frameworks */,
+				FF3F1DE2245AC984004B674E /* GPFoundation.framework in Frameworks */,
+				E15014045CD43013ADE380D7 /* Pods_GreatPeotry.framework in Frameworks */,
+				FF3F1DD0245AC8A7004B674E /* Router.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,47 +151,58 @@
 		178D4C1F6855EF6D61F76F79 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF3F1C92245ABDD1004B674E /* Pods_RouterTest.framework */,
 				B936DA7DDF2ABBECC18ADC84 /* Pods_GreatPeotry.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FF3ACFFE2452BF0600349798 /* Products */ = {
+		FF1A7E83245823280068BC26 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				FF3AD0022452BF0700349798 /* Mine.app */,
+				FF1A7E762458216F0068BC26 /* Pods_GPFoundation.framework */,
+				FF1A7E892458241E0068BC26 /* Pods_Router.framework */,
+				FF1A7E99245826050068BC26 /* Pods_Router.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		FF3F1D02245AC4A9004B674E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF3F1D06245AC4AA004B674E /* Router.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FF3AD0442452BFA700349798 /* Products */ = {
+		FF3F1D23245AC588004B674E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FF3AD0482452BFA800349798 /* Home.app */,
+				FF3F1D27245AC589004B674E /* Mine.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FF3AD06A2452BFD300349798 /* Products */ = {
+		FF3F1D4A245AC636004B674E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FF3AD06E2452BFD400349798 /* Creation.app */,
+				FF3F1D4E245AC637004B674E /* Creation.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FF3AD0902452C05B00349798 /* Products */ = {
+		FF3F1D80245AC6DA004B674E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FF3AD0942452C05C00349798 /* GPFoundation.app */,
+				FF3F1D84245AC6DB004B674E /* Home.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FF3AD0B62452C0B200349798 /* Products */ = {
+		FF3F1D9B245AC735004B674E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FF3AD0BA2452C0B300349798 /* Router.app */,
+				FF3F1D9F245AC736004B674E /* GPFoundation.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,17 +210,18 @@
 		FF44EB7424494E620081F59C = {
 			isa = PBXGroup;
 			children = (
-				FF3AD0B52452C0B200349798 /* Router.xcodeproj */,
-				FF3AD08F2452C05B00349798 /* GPFoundation.xcodeproj */,
-				FF3AD0432452BFA700349798 /* Home.xcodeproj */,
-				FF3AD0692452BFD300349798 /* Creation.xcodeproj */,
-				FF3ACFFD2452BF0600349798 /* Mine.xcodeproj */,
+				FF3F1D9A245AC735004B674E /* GPFoundation.xcodeproj */,
+				FF3F1D7F245AC6DA004B674E /* Home.xcodeproj */,
+				FF3F1D49245AC636004B674E /* Creation.xcodeproj */,
+				FF3F1D22245AC588004B674E /* Mine.xcodeproj */,
+				FF3F1D01245AC4A9004B674E /* Router.xcodeproj */,
 				FF44EB7F24494E620081F59C /* GreatPeotry */,
 				FF44EB9624494E660081F59C /* GreatPeotryTests */,
 				FF44EBA124494E660081F59C /* GreatPeotryUITests */,
 				FF44EB7E24494E620081F59C /* Products */,
 				FF96928A5E5884ABA8E56892 /* Pods */,
 				178D4C1F6855EF6D61F76F79 /* Frameworks */,
+				FF1A7E83245823280068BC26 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,6 +241,7 @@
 				FF44EB8024494E620081F59C /* AppDelegate.swift */,
 				FF44EB8224494E620081F59C /* SceneDelegate.swift */,
 				FF44EB8424494E620081F59C /* ViewController.swift */,
+				FF1A7E6824581E5A0068BC26 /* GPTabBarViewController.swift */,
 				FF44EB8624494E620081F59C /* Main.storyboard */,
 				FF44EB8924494E660081F59C /* Assets.xcassets */,
 				FF44EB8B24494E660081F59C /* LaunchScreen.storyboard */,
@@ -249,6 +289,7 @@
 				FF44EB7A24494E620081F59C /* Frameworks */,
 				FF44EB7B24494E620081F59C /* Resources */,
 				0EFAC68035446BF81834E465 /* [CP] Embed Pods Frameworks */,
+				FF1A7E9C245826050068BC26 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -331,24 +372,24 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = FF3AD06A2452BFD300349798 /* Products */;
-					ProjectRef = FF3AD0692452BFD300349798 /* Creation.xcodeproj */;
+					ProductGroup = FF3F1D4A245AC636004B674E /* Products */;
+					ProjectRef = FF3F1D49245AC636004B674E /* Creation.xcodeproj */;
 				},
 				{
-					ProductGroup = FF3AD0902452C05B00349798 /* Products */;
-					ProjectRef = FF3AD08F2452C05B00349798 /* GPFoundation.xcodeproj */;
+					ProductGroup = FF3F1D9B245AC735004B674E /* Products */;
+					ProjectRef = FF3F1D9A245AC735004B674E /* GPFoundation.xcodeproj */;
 				},
 				{
-					ProductGroup = FF3AD0442452BFA700349798 /* Products */;
-					ProjectRef = FF3AD0432452BFA700349798 /* Home.xcodeproj */;
+					ProductGroup = FF3F1D80245AC6DA004B674E /* Products */;
+					ProjectRef = FF3F1D7F245AC6DA004B674E /* Home.xcodeproj */;
 				},
 				{
-					ProductGroup = FF3ACFFE2452BF0600349798 /* Products */;
-					ProjectRef = FF3ACFFD2452BF0600349798 /* Mine.xcodeproj */;
+					ProductGroup = FF3F1D23245AC588004B674E /* Products */;
+					ProjectRef = FF3F1D22245AC588004B674E /* Mine.xcodeproj */;
 				},
 				{
-					ProductGroup = FF3AD0B62452C0B200349798 /* Products */;
-					ProjectRef = FF3AD0B52452C0B200349798 /* Router.xcodeproj */;
+					ProductGroup = FF3F1D02245AC4A9004B674E /* Products */;
+					ProjectRef = FF3F1D01245AC4A9004B674E /* Router.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -361,39 +402,39 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		FF3AD0022452BF0700349798 /* Mine.app */ = {
+		FF3F1D06245AC4AA004B674E /* Router.framework */ = {
 			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Mine.app;
-			remoteRef = FF3AD0012452BF0700349798 /* PBXContainerItemProxy */;
+			fileType = wrapper.framework;
+			path = Router.framework;
+			remoteRef = FF3F1D05245AC4AA004B674E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FF3AD0482452BFA800349798 /* Home.app */ = {
+		FF3F1D27245AC589004B674E /* Mine.framework */ = {
 			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Home.app;
-			remoteRef = FF3AD0472452BFA800349798 /* PBXContainerItemProxy */;
+			fileType = wrapper.framework;
+			path = Mine.framework;
+			remoteRef = FF3F1D26245AC589004B674E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FF3AD06E2452BFD400349798 /* Creation.app */ = {
+		FF3F1D4E245AC637004B674E /* Creation.framework */ = {
 			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Creation.app;
-			remoteRef = FF3AD06D2452BFD400349798 /* PBXContainerItemProxy */;
+			fileType = wrapper.framework;
+			path = Creation.framework;
+			remoteRef = FF3F1D4D245AC637004B674E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FF3AD0942452C05C00349798 /* GPFoundation.app */ = {
+		FF3F1D84245AC6DB004B674E /* Home.framework */ = {
 			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = GPFoundation.app;
-			remoteRef = FF3AD0932452C05C00349798 /* PBXContainerItemProxy */;
+			fileType = wrapper.framework;
+			path = Home.framework;
+			remoteRef = FF3F1D83245AC6DB004B674E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FF3AD0BA2452C0B300349798 /* Router.app */ = {
+		FF3F1D9F245AC736004B674E /* GPFoundation.framework */ = {
 			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Router.app;
-			remoteRef = FF3AD0B92452C0B300349798 /* PBXContainerItemProxy */;
+			fileType = wrapper.framework;
+			path = GPFoundation.framework;
+			remoteRef = FF3F1D9E245AC736004B674E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -473,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF44EB8524494E620081F59C /* ViewController.swift in Sources */,
+				FF1A7E6924581E5A0068BC26 /* GPTabBarViewController.swift in Sources */,
 				FF44EB8124494E620081F59C /* AppDelegate.swift in Sources */,
 				FF44EB8324494E620081F59C /* SceneDelegate.swift in Sources */,
 			);
@@ -648,7 +690,25 @@
 			baseConfigurationReference = C48269A7488812B9DA56C1E2 /* Pods-GreatPeotry.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6C95N65QXM;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CTMediator/CTMediator.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/HandyJSON/HandyJSON.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/KRProgressHUD/KRProgressHUD.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher/Kingfisher.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Localize-Swift/Localize_Swift.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/M80AttributedLabel/M80AttributedLabel.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa/RxCocoa.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxRelay/RxRelay.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxSwift/RxSwift.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers\"",
+					"\"${PODS_ROOT}/../Router\"",
+				);
 				INFOPLIST_FILE = GreatPeotry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -656,6 +716,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.GreatPeotry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -666,7 +727,9 @@
 			baseConfigurationReference = 8B7E65E1D2F1ACEC7D84524B /* Pods-GreatPeotry.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6C95N65QXM;
 				INFOPLIST_FILE = GreatPeotry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -674,6 +737,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.GreatPeotry;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
