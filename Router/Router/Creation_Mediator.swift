@@ -6,8 +6,15 @@
 //  Copyright © 2020 hend. All rights reserved.
 //
 
-import UIKit
+import CTMediator
 
-class Creation_Mediator: NSObject {
-
+public extension CTMediator {
+    @objc func CreationPage_GetCreationMainPageViewController(callback: @escaping (NSDictionary) -> Void) -> UIViewController? {
+        var params = [AnyHashable: Any]()
+        params[kCTMediatorParamsKeySwiftTargetModuleName] = "Creation"
+        if let viewController = performTarget("CreationPage", action: "GetCreationMainPageViewController", params: params, shouldCacheTarget: false) as? UIViewController {
+            return viewController
+        }
+        return nil
+    }
 }

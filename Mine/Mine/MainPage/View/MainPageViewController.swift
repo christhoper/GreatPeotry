@@ -28,7 +28,10 @@ extension MainPageViewController {
 
     func setupNavItems() {}
     
-    func setupSubViews() {}
+    func setupSubViews() {
+        view.backgroundColor = .red
+        self.title = "我的"
+    }
     
     func addObserverForNoti() {}
 }

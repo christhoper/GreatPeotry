@@ -6,8 +6,15 @@
 //  Copyright © 2020 hend. All rights reserved.
 //
 
-import UIKit
+import CTMediator
 
-class Mine_Mediator: NSObject {
-
+public extension CTMediator {
+    @objc func MinePage_GetMineMainPageViewController(callback: @escaping (NSDictionary) -> Void) -> UIViewController? {
+        var params = [AnyHashable: Any]()
+        params[kCTMediatorParamsKeySwiftTargetModuleName] = "Mine"
+        if let viewController = performTarget("MinePage", action: "GetMineMainPageViewController", params: params, shouldCacheTarget: false) as? UIViewController {
+            return viewController
+        }
+        return nil
+    }
 }

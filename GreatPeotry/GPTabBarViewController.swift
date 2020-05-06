@@ -10,7 +10,7 @@ import UIKit
 import CTMediator
 import Router
 import GPFoundation
-import Home
+
 
 
 class GPTabBarViewController: UITabBarController {
@@ -69,27 +69,24 @@ extension GPTabBarViewController {
     }
 
     private func createHomeNavigationController() -> UINavigationController {
-        let homePage = CTMediator.sharedInstance()?.HomePage_GetHomeMainPageViewController(callback: { (_) in
-        })
+        let homePage = CTMediator.sharedInstance()?.HomePage_GetHomeMainPageViewController(callback: { (_) in })
         let homeNav = UINavigationController(rootViewController: homePage!)
         homeNav.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "def"), selectedImage: UIImage(named: "def"))
         return homeNav
     }
 
     private func createCreationNavigationController() -> UINavigationController {
-        let homePage = CTMediator.sharedInstance()?.HomePage_GetHomeMainPageViewController(callback: { (_) in
-        })
-        let homeNav = UINavigationController(rootViewController: homePage!)
-        homeNav.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "def"), selectedImage: UIImage(named: "def"))
-        return homeNav
+        let creationPage = CTMediator.sharedInstance()?.CreationPage_GetCreationMainPageViewController(callback: { (_) in })
+        let nav = UINavigationController(rootViewController: creationPage!)
+        nav.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "def"), selectedImage: UIImage(named: "def"))
+        return nav
     }
 
     private func createMineNavigationController() -> UINavigationController {
-        let homePage = CTMediator.sharedInstance()?.HomePage_GetHomeMainPageViewController(callback: { (_) in
-        })
-        let homeNav = UINavigationController(rootViewController: homePage!)
-        homeNav.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "def"), selectedImage: UIImage(named: "def"))
-        return homeNav
+        let minePage = CTMediator.sharedInstance()?.MinePage_GetMineMainPageViewController(callback: { (_) in })
+        let nav = UINavigationController(rootViewController: minePage!)
+        nav.tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "def"), selectedImage: UIImage(named: "def"))
+        return nav
     }
 }
 

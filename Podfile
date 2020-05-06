@@ -17,6 +17,7 @@ def pods_common
   pod "KRProgressHUD"
   pod 'R.swift'
   pod 'Localize-Swift'
+  pod 'VerticalCardSwiper'
 end
 
 def pods_router
