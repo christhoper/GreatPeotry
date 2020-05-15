@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.backgroundColor = UIColor.white
 //        self.enterMainPage()
 //        self.window?.makeKeyAndVisible()
-        self.jsonModel()
         return true
     }
 
@@ -38,8 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
 
 extension AppDelegate {
@@ -49,14 +46,6 @@ extension AppDelegate {
             return
         } else {
             window?.rootViewController = tabbarController
-        }
-    }
-    
-    func jsonModel() {
-        let bundle = Bundle.main.path(forResource: "/Users/bailun/Documents/GreatPeotry/GreatPeotry/DataSource/lunyu/lunyu.json", ofType: "json")
-        if let path = bundle {
-            let data = NSData(contentsOfFile:path)
-            print(data as Any)
         }
     }
 }

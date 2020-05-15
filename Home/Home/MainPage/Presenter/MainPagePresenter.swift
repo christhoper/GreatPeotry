@@ -17,6 +17,8 @@ class MainPagePresenter {
     weak var transitionHandler: UIViewController!
     var interactor: MainPageInteractorInput!
     var outer: MainPageModuleOutput?
+    var entitys: [MainPageEntity?] = []
+    
 }
 
 extension MainPagePresenter {
@@ -28,11 +30,22 @@ extension MainPagePresenter {
 
 // MARK: - MainPagePresenterView
 
-extension MainPagePresenter: MainPagePresenterView {}
+extension MainPagePresenter: MainPagePresenterView {
+
+    func fetchPeotry() {
+        self.interactor.doFetchPeotry(for: "测试ID")
+    }
+}
 
 // MARK: - MainPagePresenterInteractor
 
-extension MainPagePresenter: MainPagePresenterInteractor {}
+extension MainPagePresenter: MainPagePresenterInteractor {
+    func handleFetchPeotryResult(_ entitys: [MainPageEntity?]?) {
+        guard let entity = entitys else { return }
+        self.entitys = entity
+        self.view.didFetchPeotryEntitys()
+    }
+}
 
 // MARK: - MainPageModuleInput
 

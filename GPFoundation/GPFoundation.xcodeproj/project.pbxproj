@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BAFBBD21FFF41AEC6A050729 /* Pods_GPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7312B061FAEE653DAAA02EF1 /* Pods_GPFoundation.framework */; };
+		FF23FF80246E6C1400465A43 /* AnimateLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23FF7F246E6C1400465A43 /* AnimateLoadingView.swift */; };
 		FF3F1D94245AC735004B674E /* GPFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = FF3F1D92245AC735004B674E /* GPFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF3F1DA3245AC79C004B674E /* GPFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1DA1245AC79C004B674E /* GPFont.swift */; };
 		FF3F1DA4245AC79C004B674E /* GPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1DA2245AC79C004B674E /* GPColor.swift */; };
@@ -17,6 +18,7 @@
 		1EE99AC5EF6796E7F4424A47 /* Pods-GPFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPFoundation.release.xcconfig"; path = "Target Support Files/Pods-GPFoundation/Pods-GPFoundation.release.xcconfig"; sourceTree = "<group>"; };
 		7312B061FAEE653DAAA02EF1 /* Pods_GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CC0F7454129FC5234BAFAE /* Pods-GPFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPFoundation.debug.xcconfig"; path = "Target Support Files/Pods-GPFoundation/Pods-GPFoundation.debug.xcconfig"; sourceTree = "<group>"; };
+		FF23FF7F246E6C1400465A43 /* AnimateLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateLoadingView.swift; sourceTree = "<group>"; };
 		FF3F1D8F245AC735004B674E /* GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3F1D92245AC735004B674E /* GPFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPFoundation.h; sourceTree = "<group>"; };
 		FF3F1D93245AC735004B674E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
+		FF23FF7E246E6BF000465A43 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FF23FF7F246E6C1400465A43 /* AnimateLoadingView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		FF3F1D85245AC735004B674E = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +85,7 @@
 		FF3F1D91245AC735004B674E /* GPFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				FF23FF7E246E6BF000465A43 /* UI */,
 				FF3F1DA0245AC79C004B674E /* Extenstion */,
 				FF3F1D92245AC735004B674E /* GPFoundation.h */,
 				FF3F1D93245AC735004B674E /* Info.plist */,
@@ -198,6 +209,7 @@
 			files = (
 				FF3F1DA4245AC79C004B674E /* GPColor.swift in Sources */,
 				FF3F1DA3245AC79C004B674E /* GPFont.swift in Sources */,
+				FF23FF80246E6C1400465A43 /* AnimateLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

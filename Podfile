@@ -1,5 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '10.0'
+platform :ios, '11.0'
 
 workspace 'GreatPeotry'
 
@@ -18,6 +18,7 @@ def pods_common
   pod 'R.swift'
   pod 'Localize-Swift'
   pod 'VerticalCardSwiper'
+  pod "SkeletonView"
 end
 
 def pods_router

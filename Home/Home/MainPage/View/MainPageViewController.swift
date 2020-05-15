@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import VerticalCardSwiper
-import SnapKit
 
 class MainPageViewController: UIViewController {
 
@@ -22,8 +20,13 @@ class MainPageViewController: UIViewController {
         return view
     }()
     
-    private var cardEntities: [String] = []
-
+    lazy var loadingView: LoadingView = {
+        let view = LoadingView()
+        view.type = .custom
+        view.isSkeletonable = true
+        return view
+    }()
+    
     // MARK: override
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +34,8 @@ class MainPageViewController: UIViewController {
         setupNavItems()
         setupSubViews()
         addObserverForNoti()
-        self.configureData()
-        self.jsonModel()
-    }
-    
-    func configureData() {
-        cardEntities = ["a","b","c","d","e"]
-        cardSwiperView.reloadData()
+        self.output.fetchPeotry()
+        self.loadingView.showAnimatedGradientSkeleton()
     }
 }
 
@@ -57,6 +55,13 @@ extension MainPageViewController {
             make.left.right.bottom.equalToSuperview()
             make.top.equalToSuperview().offset(88)
         }
+        
+        view.addSubview(loadingView)
+        loadingView.snp.makeConstraints { (make) in
+            make.edges.equalTo(cardSwiperView)
+        }
+        
+        self.loadingView.bringSubviewToFront(self.view)
     }
     
     func addObserverForNoti() {}
@@ -64,38 +69,29 @@ extension MainPageViewController {
 
 // MARK: - Network
 
-extension MainPageViewController {
-    func jsonModel() {
-        let bundle = Bundle.main.path(forResource: "DataSource/lunyu", ofType: "json")
-        if let path = bundle {
-            let data = NSData(contentsOfFile:path)
-            print(data as Any)
-        }
-    }
-    
-}
+extension MainPageViewController {}
 
 // MARK: - Delegate
 
 extension MainPageViewController: VerticalCardSwiperDelegate, VerticalCardSwiperDatasource {
     func numberOfCards(verticalCardSwiperView: VerticalCardSwiperView) -> Int {
-        return cardEntities.count
+        return self.output.entitys.count
     }
     
     func cardForItemAt(verticalCardSwiperView: VerticalCardSwiperView, cardForItemAt index: Int) -> CardCell {
         let cell = verticalCardSwiperView.dequeueReusableCell(withReuseIdentifier: CardSwiperCell.identifier, for: index) as! CardSwiperCell
         cell.setRandomBackgroundColor()
-        cell.contentLabel.text = cardEntities[index]
+        if let model = self.output.entitys[index] {
+            cell.setupCell(for: model)
+        }
         return cell
     }
     
     func willSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection) {
-        if index < cardEntities.count {
-            cardEntities.remove(at: index)
+        if index < self.output.entitys.count {
+            self.output.entitys.remove(at: index)
         }
     }
-    
-    
 }
 
 // MARK: - Selector
@@ -109,7 +105,16 @@ extension MainPageViewController: VerticalCardSwiperDelegate, VerticalCardSwiper
 
 // MARK: - MainPageViewInput 
 
-extension MainPageViewController: MainPageViewInput {}
+extension MainPageViewController: MainPageViewInput {
+    
+    func didFetchPeotryEntitys() {
+        loadingView.hideSkeleton(transition: .crossDissolve(0.25))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.loadingView.isHidden = true
+            self.cardSwiperView.reloadData()
+        }
+    }
+}
 
 // MARK: - MainPageModuleBuilder
 

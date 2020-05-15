@@ -688,6 +688,7 @@
 		FF44EB8D24494E660081F59C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF44EB8B24494E660081F59C /* LaunchScreen.storyboard */; };
 		FF44EB9824494E660081F59C /* GreatPeotryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF44EB9724494E660081F59C /* GreatPeotryTests.swift */; };
 		FF44EBA324494E660081F59C /* GreatPeotryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF44EBA224494E660081F59C /* GreatPeotryUITests.swift */; };
+		FF6227F3246D397E00B363C1 /* poetTest.json in Resources */ = {isa = PBXBuildFile; fileRef = FF6227ED246D397E00B363C1 /* poetTest.json */; };
 		FF6A2925246288E700FC4E4E /* Creation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D4E245AC637004B674E /* Creation.framework */; };
 		FF6A2926246288E700FC4E4E /* Creation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D4E245AC637004B674E /* Creation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF6A2931246291EB00FC4E4E /* Mine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D27245AC589004B674E /* Mine.framework */; };
@@ -1465,6 +1466,7 @@
 		FF44EB9E24494E660081F59C /* GreatPeotryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreatPeotryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF44EBA224494E660081F59C /* GreatPeotryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatPeotryUITests.swift; sourceTree = "<group>"; };
 		FF44EBA424494E660081F59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF6227ED246D397E00B363C1 /* poetTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = poetTest.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2345,6 +2347,7 @@
 		FF44EB7F24494E620081F59C /* GreatPeotry */ = {
 			isa = PBXGroup;
 			children = (
+				FF6227ED246D397E00B363C1 /* poetTest.json */,
 				FF3F1E08245AD89A004B674E /* DataSource */,
 				FF44EB8024494E620081F59C /* AppDelegate.swift */,
 				FF44EB8224494E620081F59C /* SceneDelegate.swift */,
@@ -2666,6 +2669,7 @@
 				FF3F2233245AD8E8004B674E /* poet.tang.20000.json in Resources */,
 				FF3F226C245AD8E8004B674E /* poet.song.178000.json in Resources */,
 				FF3F2321245AD8E9004B674E /* poet.tang.9000.json in Resources */,
+				FF6227F3246D397E00B363C1 /* poetTest.json in Resources */,
 				FF3F22D2245AD8E9004B674E /* poet.song.128000.json in Resources */,
 				FF3F233D245AD8EA004B674E /* poet.song.177000.json in Resources */,
 				FF3F20BC245AD8E6004B674E /* zhongyong.json in Resources */,
