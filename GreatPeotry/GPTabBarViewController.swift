@@ -10,6 +10,7 @@ import UIKit
 import CTMediator
 import Router
 import GPFoundation
+import Rswift
 
 
 
@@ -71,21 +72,21 @@ extension GPTabBarViewController {
     private func createHomeNavigationController() -> UINavigationController {
         let homePage = CTMediator.sharedInstance()?.HomePage_GetHomeMainPageViewController(callback: { (_) in })
         let homeNav = UINavigationController(rootViewController: homePage!)
-        homeNav.tabBarItem = UITabBarItem(title: "首页", image: UIImage(named: "def"), selectedImage: UIImage(named: "def"))
+        homeNav.tabBarItem = UITabBarItem(title: "首页", image: R.image.home_selected(), selectedImage: R.image.home_unSelected())
         return homeNav
     }
 
     private func createCreationNavigationController() -> UINavigationController {
         let creationPage = CTMediator.sharedInstance()?.CreationPage_GetCreationMainPageViewController(callback: { (_) in })
         let nav = UINavigationController(rootViewController: creationPage!)
-        nav.tabBarItem = UITabBarItem(title: "创作", image: UIImage(named: "def"), selectedImage: UIImage(named: "def"))
+        nav.tabBarItem = UITabBarItem(title: "创作", image: R.image.complaint_selected(), selectedImage: R.image.complaint_unSelected())
         return nav
     }
 
     private func createMineNavigationController() -> UINavigationController {
         let minePage = CTMediator.sharedInstance()?.MinePage_GetMineMainPageViewController(callback: { (_) in })
         let nav = UINavigationController(rootViewController: minePage!)
-        nav.tabBarItem = UITabBarItem(title: "我的", image: UIImage(named: "def"), selectedImage: UIImage(named: "def"))
+        nav.tabBarItem = UITabBarItem(title: "我的", image: R.image.mine_selected(), selectedImage: R.image.mine_unSelected())
         return nav
     }
 }

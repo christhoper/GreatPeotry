@@ -16,6 +16,11 @@ struct MainPageEntity: HandyJSON {
     
     var content: String {
         var result = ""
+        
+//        for string in paragraphs[1...] {
+//            <#code#>
+//        }
+//
         paragraphs.forEach { (string) in
             result = result + "\n" + string
         }

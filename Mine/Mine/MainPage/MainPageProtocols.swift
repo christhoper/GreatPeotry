@@ -23,10 +23,15 @@ protocol MainPageModuleOutput: class {}
 // MARK: - SceneProtocol
 
 /// methods for communication Presenter -> View
-protocol MainPageViewInput: class {}
+protocol MainPageViewInput: class {
+    
+}
 
 /// methods for communication View -> Presenter
-protocol MainPageViewOutput {}
+protocol MainPageViewOutput {
+    
+     var block: ((Int, String, Bool) -> Void)? { get set }
+}
 
 /// methods for communication Presenter -> Interactor
 protocol MainPageInteractorInput {}

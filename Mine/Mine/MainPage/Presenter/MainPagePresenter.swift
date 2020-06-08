@@ -17,6 +17,7 @@ class MainPagePresenter {
     weak var transitionHandler: UIViewController!
     var interactor: MainPageInteractorInput!
     var outer: MainPageModuleOutput?
+    var block: ((Int, String, Bool) -> Void)?
 }
 
 extension MainPagePresenter {
@@ -28,7 +29,9 @@ extension MainPagePresenter {
 
 // MARK: - MainPagePresenterView
 
-extension MainPagePresenter: MainPagePresenterView {}
+extension MainPagePresenter: MainPagePresenterView {
+    
+}
 
 // MARK: - MainPagePresenterInteractor
 

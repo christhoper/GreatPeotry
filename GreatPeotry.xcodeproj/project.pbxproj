@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E15014045CD43013ADE380D7 /* Pods_GreatPeotry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B936DA7DDF2ABBECC18ADC84 /* Pods_GreatPeotry.framework */; };
 		FF1A7E6924581E5A0068BC26 /* GPTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A7E6824581E5A0068BC26 /* GPTabBarViewController.swift */; };
+		FF23FFA8246F8CBE00465A43 /* GPEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23FFA7246F8CBE00465A43 /* GPEnum.swift */; };
 		FF3F1DD0245AC8A7004B674E /* Router.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D06245AC4AA004B674E /* Router.framework */; };
 		FF3F1DD1245AC8A7004B674E /* Router.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D06245AC4AA004B674E /* Router.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF3F20BA245AD8E6004B674E /* mengzi.json in Resources */ = {isa = PBXBuildFile; fileRef = FF3F1E13245AD8E3004B674E /* mengzi.json */; };
@@ -697,6 +698,8 @@
 		FF6A29382462962300FC4E4E /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D84245AC6DB004B674E /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF6A29392462962800FC4E4E /* GPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D9F245AC736004B674E /* GPFoundation.framework */; };
 		FF6A293A2462962800FC4E4E /* GPFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D9F245AC736004B674E /* GPFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF7374F1248E41D700171BB4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7374F0248E41D700171BB4 /* R.generated.swift */; };
+		FF7374FF248E436100171BB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7374FE248E436100171BB4 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -777,6 +780,7 @@
 		FF1A7E762458216F0068BC26 /* Pods_GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF1A7E892458241E0068BC26 /* Pods_Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF1A7E99245826050068BC26 /* Pods_Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF23FFA7246F8CBE00465A43 /* GPEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPEnum.swift; sourceTree = "<group>"; };
 		FF3F1C92245ABDD1004B674E /* Pods_RouterTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_RouterTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3F1D01245AC4A9004B674E /* Router.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Router.xcodeproj; path = Router/Router.xcodeproj; sourceTree = "<group>"; };
 		FF3F1D22245AC588004B674E /* Mine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mine.xcodeproj; path = Mine/Mine.xcodeproj; sourceTree = "<group>"; };
@@ -1467,6 +1471,8 @@
 		FF44EBA224494E660081F59C /* GreatPeotryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatPeotryUITests.swift; sourceTree = "<group>"; };
 		FF44EBA424494E660081F59C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF6227ED246D397E00B363C1 /* poetTest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = poetTest.json; sourceTree = "<group>"; };
+		FF7374F0248E41D700171BB4 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = R/R.generated.swift; sourceTree = SOURCE_ROOT; };
+		FF7374FE248E436100171BB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1517,6 +1523,14 @@
 				FF1A7E99245826050068BC26 /* Pods_Router.framework */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		FF23FF9B246F8C6700465A43 /* Untils */ = {
+			isa = PBXGroup;
+			children = (
+				FF23FFA7246F8CBE00465A43 /* GPEnum.swift */,
+			);
+			path = Untils;
 			sourceTree = "<group>";
 		};
 		FF3F1D02245AC4A9004B674E /* Products */ = {
@@ -2347,11 +2361,14 @@
 		FF44EB7F24494E620081F59C /* GreatPeotry */ = {
 			isa = PBXGroup;
 			children = (
+				FF23FF9B246F8C6700465A43 /* Untils */,
 				FF6227ED246D397E00B363C1 /* poetTest.json */,
 				FF3F1E08245AD89A004B674E /* DataSource */,
 				FF44EB8024494E620081F59C /* AppDelegate.swift */,
 				FF44EB8224494E620081F59C /* SceneDelegate.swift */,
 				FF1A7E6824581E5A0068BC26 /* GPTabBarViewController.swift */,
+				FF7374FE248E436100171BB4 /* ViewController.swift */,
+				FF7374F0248E41D700171BB4 /* R.generated.swift */,
 				FF44EB8624494E620081F59C /* Main.storyboard */,
 				FF44EB8924494E660081F59C /* Assets.xcassets */,
 				FF44EB8B24494E660081F59C /* LaunchScreen.storyboard */,
@@ -2395,6 +2412,7 @@
 			buildConfigurationList = FF44EBA724494E660081F59C /* Build configuration list for PBXNativeTarget "GreatPeotry" */;
 			buildPhases = (
 				E5F3C977CD5E2F966BF4BFF9 /* [CP] Check Pods Manifest.lock */,
+				FF7374D2248E3EDC00171BB4 /* ShellScript */,
 				FF44EB7924494E620081F59C /* Sources */,
 				FF44EB7A24494E620081F59C /* Frameworks */,
 				FF44EB7B24494E620081F59C /* Resources */,
@@ -3287,6 +3305,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FF7374D2248E3EDC00171BB4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -3294,9 +3331,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF7374FF248E436100171BB4 /* ViewController.swift in Sources */,
 				FF1A7E6924581E5A0068BC26 /* GPTabBarViewController.swift in Sources */,
 				FF44EB8124494E620081F59C /* AppDelegate.swift in Sources */,
+				FF7374F1248E41D700171BB4 /* R.generated.swift in Sources */,
 				FF44EB8324494E620081F59C /* SceneDelegate.swift in Sources */,
+				FF23FFA8246F8CBE00465A43 /* GPEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

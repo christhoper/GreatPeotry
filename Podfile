@@ -14,11 +14,12 @@ def pods_common
   pod 'RxCocoa'
   pod 'HandyJSON'
   pod 'Kingfisher'
-  pod "KRProgressHUD"
+  pod 'KRProgressHUD'
   pod 'R.swift'
-  pod 'Localize-Swift'
+  pod 'RealmSwift'
   pod 'VerticalCardSwiper'
-  pod "SkeletonView"
+  pod 'SkeletonView'
+  
 end
 
 def pods_router
