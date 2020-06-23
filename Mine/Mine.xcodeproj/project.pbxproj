@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		700EE1A0965A4C1F6720DFBC /* Pods_Mine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6B18A7FBF9B844D581F2D9 /* Pods_Mine.framework */; };
-		FF028FE924624CB600605F61 /* Target_Mine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF028FE824624CB600605F61 /* Target_Mine.swift */; };
+		FF0160F324A22FE400BD27B0 /* MineRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0160F224A22FE300BD27B0 /* MineRoutable.swift */; };
+		FF0160FE24A2325D00BD27B0 /* Mine_Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0160FD24A2325D00BD27B0 /* Mine_Header.swift */; };
+		FF01610024A233BE00BD27B0 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0160FF24A233BE00BD27B0 /* UserInfoView.swift */; };
 		FF3F1D1C245AC588004B674E /* Mine.h in Headers */ = {isa = PBXBuildFile; fileRef = FF3F1D1A245AC588004B674E /* Mine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF3F1D30245AC5DC004B674E /* MainPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D2A245AC5DC004B674E /* MainPagePresenter.swift */; };
 		FF3F1D31245AC5DC004B674E /* MainPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D2B245AC5DC004B674E /* MainPageProtocols.swift */; };
@@ -20,7 +22,9 @@
 		C0E20F0AB336BB8F311B7DCD /* Pods-Mine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mine.release.xcconfig"; path = "Target Support Files/Pods-Mine/Pods-Mine.release.xcconfig"; sourceTree = "<group>"; };
 		CC6B18A7FBF9B844D581F2D9 /* Pods_Mine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F648935B0B6755E76E8F0619 /* Pods-Mine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mine.debug.xcconfig"; path = "Target Support Files/Pods-Mine/Pods-Mine.debug.xcconfig"; sourceTree = "<group>"; };
-		FF028FE824624CB600605F61 /* Target_Mine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target_Mine.swift; sourceTree = "<group>"; };
+		FF0160F224A22FE300BD27B0 /* MineRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineRoutable.swift; sourceTree = "<group>"; };
+		FF0160FD24A2325D00BD27B0 /* Mine_Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mine_Header.swift; sourceTree = "<group>"; };
+		FF0160FF24A233BE00BD27B0 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		FF3F1D17245AC588004B674E /* Mine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3F1D1A245AC588004B674E /* Mine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mine.h; sourceTree = "<group>"; };
 		FF3F1D1B245AC588004B674E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,18 +64,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FF028FE724624CA000605F61 /* Target_Mine */ = {
-			isa = PBXGroup;
-			children = (
-				FF028FE824624CB600605F61 /* Target_Mine.swift */,
-			);
-			path = Target_Mine;
-			sourceTree = "<group>";
-		};
 		FF3F1D0D245AC588004B674E = {
 			isa = PBXGroup;
 			children = (
-				FF028FE724624CA000605F61 /* Target_Mine */,
+				FF0160F224A22FE300BD27B0 /* MineRoutable.swift */,
 				FF3F1D19245AC588004B674E /* Mine */,
 				FF3F1D18245AC588004B674E /* Products */,
 				09C115372CE004F12C6C0278 /* Pods */,
@@ -92,6 +88,7 @@
 			children = (
 				FF3F1D28245AC5DC004B674E /* MainPage */,
 				FF3F1D1A245AC588004B674E /* Mine.h */,
+				FF0160FD24A2325D00BD27B0 /* Mine_Header.swift */,
 				FF3F1D1B245AC588004B674E /* Info.plist */,
 			);
 			path = Mine;
@@ -128,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				FF3F1D2F245AC5DC004B674E /* MainPageViewController.swift */,
+				FF0160FF24A233BE00BD27B0 /* UserInfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,8 +236,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF3F1D33245AC5DC004B674E /* MainPageViewController.swift in Sources */,
+				FF01610024A233BE00BD27B0 /* UserInfoView.swift in Sources */,
+				FF0160FE24A2325D00BD27B0 /* Mine_Header.swift in Sources */,
+				FF0160F324A22FE400BD27B0 /* MineRoutable.swift in Sources */,
 				FF3F1D30245AC5DC004B674E /* MainPagePresenter.swift in Sources */,
-				FF028FE924624CB600605F61 /* Target_Mine.swift in Sources */,
 				FF3F1D32245AC5DC004B674E /* MainPageInteractor.swift in Sources */,
 				FF3F1D31245AC5DC004B674E /* MainPageProtocols.swift in Sources */,
 			);

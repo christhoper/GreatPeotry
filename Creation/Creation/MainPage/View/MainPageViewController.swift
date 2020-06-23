@@ -30,7 +30,6 @@ extension MainPageViewController {
     
     func setupSubViews() {
         view.backgroundColor = .yellow
-        self.title = "创作"
     }
     
     func addObserverForNoti() {}

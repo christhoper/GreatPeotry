@@ -19,11 +19,10 @@ def pods_common
   pod 'RealmSwift'
   pod 'VerticalCardSwiper'
   pod 'SkeletonView'
+  pod 'SwiftEntryKit'
+  pod 'Nuke'
+  pod 'CryptoSwift'
   
-end
-
-def pods_router
-  pod 'CTMediator'
 end
 
 def pods_home
@@ -43,7 +42,6 @@ target 'GreatPeotry' do
 
   project './GreatPeotry.xcodeproj'
   pods_common
-  pods_router
   pods_home
   pods_creation
   pods_mine
@@ -55,7 +53,6 @@ target 'Mine' do
   
   project './Mine/Mine.xcodeproj'
   pods_common
-  pods_router
   pods_mine
 
 end
@@ -64,7 +61,6 @@ target 'Home' do
 
   project './Home/Home.xcodeproj'
   pods_common
-  pods_router
   pods_home
 
 end
@@ -74,7 +70,6 @@ target 'Creation' do
 
   project './Creation/Creation.xcodeproj'
   pods_common
-  pods_router
   pods_creation
 
 end
@@ -83,7 +78,6 @@ target 'Router' do
 
   project './Router/Router.xcodeproj'
   pods_common
-  pods_router
 
 end
 
@@ -92,7 +86,6 @@ target 'GPFoundation' do
 
   project './GPFoundation/GPFoundation.xcodeproj'
   pods_common
-  pods_router
 
 end
 

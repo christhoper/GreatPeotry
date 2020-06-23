@@ -8,21 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		5EA54506308B86722835773A /* Pods_Router.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5E3309AE2BBA6234BB3AE1 /* Pods_Router.framework */; };
+		FF0160DB24A21EA300BD27B0 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0160DA24A21EA300BD27B0 /* Routable.swift */; };
 		FF3F1CFB245AC4A9004B674E /* Router.h in Headers */ = {isa = PBXBuildFile; fileRef = FF3F1CF9245AC4A9004B674E /* Router.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FF3F1D0A245AC4EE004B674E /* Home_Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D07245AC4EE004B674E /* Home_Mediator.swift */; };
-		FF3F1D0B245AC4EE004B674E /* Creation_Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D08245AC4EE004B674E /* Creation_Mediator.swift */; };
-		FF3F1D0C245AC4EE004B674E /* Mine_Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D09245AC4EE004B674E /* Mine_Mediator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D5E3309AE2BBA6234BB3AE1 /* Pods_Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C77FBED8B0BE0F5A0D7609A /* Pods-Router.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.release.xcconfig"; path = "Target Support Files/Pods-Router/Pods-Router.release.xcconfig"; sourceTree = "<group>"; };
+		FF0160DA24A21EA300BD27B0 /* Routable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		FF3F1CF6245AC4A9004B674E /* Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3F1CF9245AC4A9004B674E /* Router.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
 		FF3F1CFA245AC4A9004B674E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF3F1D07245AC4EE004B674E /* Home_Mediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home_Mediator.swift; sourceTree = "<group>"; };
-		FF3F1D08245AC4EE004B674E /* Creation_Mediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Creation_Mediator.swift; sourceTree = "<group>"; };
-		FF3F1D09245AC4EE004B674E /* Mine_Mediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mine_Mediator.swift; sourceTree = "<group>"; };
 		FFF565DCBB48FDAA4DE07307 /* Pods-Router.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Router.debug.xcconfig"; path = "Target Support Files/Pods-Router/Pods-Router.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,9 +73,7 @@
 		FF3F1CF8245AC4A9004B674E /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				FF3F1D08245AC4EE004B674E /* Creation_Mediator.swift */,
-				FF3F1D07245AC4EE004B674E /* Home_Mediator.swift */,
-				FF3F1D09245AC4EE004B674E /* Mine_Mediator.swift */,
+				FF0160DA24A21EA300BD27B0 /* Routable.swift */,
 				FF3F1CF9245AC4A9004B674E /* Router.h */,
 				FF3F1CFA245AC4A9004B674E /* Info.plist */,
 			);
@@ -192,9 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3F1D0A245AC4EE004B674E /* Home_Mediator.swift in Sources */,
-				FF3F1D0B245AC4EE004B674E /* Creation_Mediator.swift in Sources */,
-				FF3F1D0C245AC4EE004B674E /* Mine_Mediator.swift in Sources */,
+				FF0160DB24A21EA300BD27B0 /* Routable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CryptoSwift
 
 class MainPageViewController: UIViewController {
 
@@ -36,16 +37,41 @@ class MainPageViewController: UIViewController {
         addObserverForNoti()
         self.output.fetchPeotry()
         self.loadingView.showAnimatedGradientSkeleton()
+        
+        var circle = Circle()
+        circle.radius = 20
+        print(circle)
     }
+    
+    
+    
+
 }
+
+
+struct Circle {
+    var radius: Double {
+        willSet {
+            print(newValue)
+        }
+        
+        didSet {
+            print(oldValue, radius)
+        }
+    }
+    
+    init() {
+        self.radius = 10
+    }
+    
+}
+
 
 // MARK: - Assistant
 
 extension MainPageViewController {
 
-    func setupNavItems() {
-        self.title = "首页"
-    }
+    func setupNavItems() {}
     
     func setupSubViews() {
         view.backgroundColor = .white

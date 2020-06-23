@@ -12,6 +12,12 @@ class MainPageViewController: UIViewController {
 
     var output: MainPageViewOutput!
     
+    lazy var userInfoView: UserInfoView = {
+        let view = UserInfoView()
+        view.backgroundColor = .red
+        return view
+    }()
+    
 
     // MARK: override
     override func viewDidLoad() {
@@ -30,31 +36,18 @@ extension MainPageViewController {
     func setupNavItems() {}
     
     func setupSubViews() {
-        view.backgroundColor = .red
-        self.title = "我的"
+        view.backgroundColor = .white
+        view.addSubview(userInfoView)
         
-        let person = Person()
-        print(person.city)
-        
-        
-        self.block { () -> Bool in
-            3 > 1
+        userInfoView.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(88)
+            make.left.equalToSuperview().offset(16)
+            make.right.equalToSuperview().offset(-16)
+            make.height.equalTo(260)
         }
-        
-        self.autoBlcok(param: 3 > 1)
-        
-      
-        
     }
     
-    
-    func block(param: () -> Bool) {
-        
-    }
-    
-    func autoBlcok(param: @autoclosure () -> Bool) {
-        
-    }
+
     
     func addObserverForNoti() {}
 }
