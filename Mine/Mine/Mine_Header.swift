@@ -9,3 +9,4 @@
 @_exported import SnapKit
 @_exported import GPFoundation
 @_exported import RxSwift
+@_exported import RxCocoa

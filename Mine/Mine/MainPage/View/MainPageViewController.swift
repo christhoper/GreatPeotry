@@ -8,13 +8,23 @@
 
 import UIKit
 
+
 class MainPageViewController: UIViewController {
 
     var output: MainPageViewOutput!
     
     lazy var userInfoView: UserInfoView = {
-        let view = UserInfoView()
+        let view = UserInfoView(frame: CGRect(x: 0, y: 0, width: GPConstant.width, height: 260))
         view.backgroundColor = .red
+        return view
+    }()
+    
+    lazy var tableView: UITableView = {
+        let view = UITableView(frame: .zero, style: .plain)
+        view.delegate = self
+        view.dataSource = self
+        view.register(MainPageTableViewCell.self, forCellReuseIdentifier: MainPageTableViewCell.identifier)
+        view.defaultConfigure()
         return view
     }()
     
@@ -37,18 +47,18 @@ extension MainPageViewController {
     
     func setupSubViews() {
         view.backgroundColor = .white
-        view.addSubview(userInfoView)
+        view.addSubview(tableView)
+        tableView.tableHeaderView = userInfoView
         
-        userInfoView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(88)
-            make.left.equalToSuperview().offset(16)
-            make.right.equalToSuperview().offset(-16)
-            make.height.equalTo(260)
-        }
+        setupSubviewsContraints()
     }
     
+    func setupSubviewsContraints() {
+        tableView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+    }
 
-    
     func addObserverForNoti() {}
 }
 
@@ -58,7 +68,18 @@ extension MainPageViewController {}
 
 // MARK: - Delegate
 
-extension MainPageViewController {}
+extension MainPageViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MainPageTableViewCell.identifier, for: indexPath) as! MainPageTableViewCell
+        return cell
+    }
+    
+    
+}
 
 // MARK: - Selector
 

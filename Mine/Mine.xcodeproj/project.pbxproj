@@ -16,6 +16,7 @@
 		FF3F1D31245AC5DC004B674E /* MainPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D2B245AC5DC004B674E /* MainPageProtocols.swift */; };
 		FF3F1D32245AC5DC004B674E /* MainPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D2D245AC5DC004B674E /* MainPageInteractor.swift */; };
 		FF3F1D33245AC5DC004B674E /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D2F245AC5DC004B674E /* MainPageViewController.swift */; };
+		FF8C547124A32335009FEB57 /* MainPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8C547024A32335009FEB57 /* MainPageTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FF3F1D2B245AC5DC004B674E /* MainPageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageProtocols.swift; sourceTree = "<group>"; };
 		FF3F1D2D245AC5DC004B674E /* MainPageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageInteractor.swift; sourceTree = "<group>"; };
 		FF3F1D2F245AC5DC004B674E /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		FF8C547024A32335009FEB57 /* MainPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				FF3F1D2F245AC5DC004B674E /* MainPageViewController.swift */,
 				FF0160FF24A233BE00BD27B0 /* UserInfoView.swift */,
+				FF8C547024A32335009FEB57 /* MainPageTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				FF3F1D33245AC5DC004B674E /* MainPageViewController.swift in Sources */,
 				FF01610024A233BE00BD27B0 /* UserInfoView.swift in Sources */,
 				FF0160FE24A2325D00BD27B0 /* Mine_Header.swift in Sources */,
+				FF8C547124A32335009FEB57 /* MainPageTableViewCell.swift in Sources */,
 				FF0160F324A22FE400BD27B0 /* MineRoutable.swift in Sources */,
 				FF3F1D30245AC5DC004B674E /* MainPagePresenter.swift in Sources */,
 				FF3F1D32245AC5DC004B674E /* MainPageInteractor.swift in Sources */,
