@@ -9,7 +9,7 @@
 import Router
 import UIKit
 
-extension RouterManager: HomeRoutable {
+extension Router: HomeRoutable {
     public func createViewController() -> UIViewController {
         let (viewController, _) = MainPageModuleBuilder.setupModule()
         return viewController

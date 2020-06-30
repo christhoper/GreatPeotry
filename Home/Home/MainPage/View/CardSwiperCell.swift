@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class CardSwiperCell: CardCell {
     
     static let identifier = "CardSwiperCell"

@@ -10,6 +10,8 @@
 		101E4B5A3F92401FCA2EEF0A /* Pods_Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 445216CAD4FDBC19D4727541 /* Pods_Home.framework */; };
 		FF0160F724A2303600BD27B0 /* HomeRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0160F624A2303600BD27B0 /* HomeRoutable.swift */; };
 		FF23FF7D246E418E00465A43 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23FF7C246E418E00465A43 /* LoadingView.swift */; };
+		FF2C08F624AB08780004C7BA /* GPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C08F524AB08780004C7BA /* GPFoundation.framework */; };
+		FF2C08F724AB08780004C7BA /* GPFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C08F524AB08780004C7BA /* GPFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF3F1D79245AC6DA004B674E /* Home.h in Headers */ = {isa = PBXBuildFile; fileRef = FF3F1D77245AC6DA004B674E /* Home.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF3F1DBC245AC80D004B674E /* MainPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1DB6245AC80D004B674E /* MainPagePresenter.swift */; };
 		FF3F1DBD245AC80D004B674E /* MainPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1DB7245AC80D004B674E /* MainPageProtocols.swift */; };
@@ -19,12 +21,27 @@
 		FF6A29412462B0B000FC4E4E /* CardSwiperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6A29402462B0B000FC4E4E /* CardSwiperCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FF2C08F824AB08780004C7BA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FF2C08F724AB08780004C7BA /* GPFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		019BC1F14EEDB1CFD63C17EB /* Pods-Home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home.release.xcconfig"; path = "Target Support Files/Pods-Home/Pods-Home.release.xcconfig"; sourceTree = "<group>"; };
 		445216CAD4FDBC19D4727541 /* Pods_Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D03722B4C1A5C53450B6E4E /* Pods-Home.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Home.debug.xcconfig"; path = "Target Support Files/Pods-Home/Pods-Home.debug.xcconfig"; sourceTree = "<group>"; };
 		FF0160F624A2303600BD27B0 /* HomeRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRoutable.swift; sourceTree = "<group>"; };
 		FF23FF7C246E418E00465A43 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		FF2C08F524AB08780004C7BA /* GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3F1D74245AC6DA004B674E /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3F1D77245AC6DA004B674E /* Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
 		FF3F1D78245AC6DA004B674E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF2C08F624AB08780004C7BA /* GPFoundation.framework in Frameworks */,
 				101E4B5A3F92401FCA2EEF0A /* Pods_Home.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +79,7 @@
 		C582344B1EA32C84AF3BB859 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF2C08F524AB08780004C7BA /* GPFoundation.framework */,
 				445216CAD4FDBC19D4727541 /* Pods_Home.framework */,
 			);
 			name = Frameworks;
@@ -156,6 +175,7 @@
 				FF3F1D70245AC6DA004B674E /* Sources */,
 				FF3F1D71245AC6DA004B674E /* Frameworks */,
 				FF3F1D72245AC6DA004B674E /* Resources */,
+				FF2C08F824AB08780004C7BA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

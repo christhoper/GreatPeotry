@@ -7,141 +7,147 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BAFBBD21FFF41AEC6A050729 /* Pods_GPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7312B061FAEE653DAAA02EF1 /* Pods_GPFoundation.framework */; };
-		FF23FF80246E6C1400465A43 /* AnimateLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23FF7F246E6C1400465A43 /* AnimateLoadingView.swift */; };
-		FF3F1D94245AC735004B674E /* GPFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = FF3F1D92245AC735004B674E /* GPFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FF3F1DA3245AC79C004B674E /* GPFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1DA1245AC79C004B674E /* GPFont.swift */; };
-		FF3F1DA4245AC79C004B674E /* GPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1DA2245AC79C004B674E /* GPColor.swift */; };
-		FF8C547D24A32850009FEB57 /* GPTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8C547C24A32850009FEB57 /* GPTableView.swift */; };
-		FF8C548524A32BDB009FEB57 /* GPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8C548424A32BDB009FEB57 /* GPTableViewCell.swift */; };
-		FF8C549624A3376B009FEB57 /* GPConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8C549524A3376B009FEB57 /* GPConstant.swift */; };
+		1A3495135FE41A004ABFD2F6 /* Pods_GPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29099DF42CF407721EC79FEE /* Pods_GPFoundation.framework */; };
+		FF2C08B624AAE8280004C7BA /* GPFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = FF2C08B424AAE8280004C7BA /* GPFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF2C08D124AAE9060004C7BA /* GPConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C08D024AAE9060004C7BA /* GPConstant.swift */; };
+		FF2C08D424AAE97B0004C7BA /* AnimateLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C08D324AAE97B0004C7BA /* AnimateLoadingView.swift */; };
+		FF2C08D724AAE9860004C7BA /* GPFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C08D524AAE9860004C7BA /* GPFont.swift */; };
+		FF2C08D824AAE9860004C7BA /* GPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C08D624AAE9860004C7BA /* GPColor.swift */; };
+		FFB60E1E24AB0EF8007FF836 /* GPUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E1D24AB0EF8007FF836 /* GPUITableView.swift */; };
+		FFB60E2024AB0F74007FF836 /* GPUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E1F24AB0F74007FF836 /* GPUITableViewCell.swift */; };
+		FFB60E3024AB2020007FF836 /* GPUIDevive.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E2F24AB2020007FF836 /* GPUIDevive.swift */; };
+		FFB60E5024AB3883007FF836 /* GPUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E4F24AB3883007FF836 /* GPUILabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1EE99AC5EF6796E7F4424A47 /* Pods-GPFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPFoundation.release.xcconfig"; path = "Target Support Files/Pods-GPFoundation/Pods-GPFoundation.release.xcconfig"; sourceTree = "<group>"; };
-		7312B061FAEE653DAAA02EF1 /* Pods_GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9CC0F7454129FC5234BAFAE /* Pods-GPFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPFoundation.debug.xcconfig"; path = "Target Support Files/Pods-GPFoundation/Pods-GPFoundation.debug.xcconfig"; sourceTree = "<group>"; };
-		FF23FF7F246E6C1400465A43 /* AnimateLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateLoadingView.swift; sourceTree = "<group>"; };
-		FF3F1D8F245AC735004B674E /* GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF3F1D92245AC735004B674E /* GPFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPFoundation.h; sourceTree = "<group>"; };
-		FF3F1D93245AC735004B674E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF3F1DA1245AC79C004B674E /* GPFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPFont.swift; sourceTree = "<group>"; };
-		FF3F1DA2245AC79C004B674E /* GPColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPColor.swift; sourceTree = "<group>"; };
-		FF8C547C24A32850009FEB57 /* GPTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTableView.swift; sourceTree = "<group>"; };
-		FF8C548424A32BDB009FEB57 /* GPTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTableViewCell.swift; sourceTree = "<group>"; };
-		FF8C549524A3376B009FEB57 /* GPConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPConstant.swift; sourceTree = "<group>"; };
+		12C553FF70CE095C517AC8F6 /* Pods-GPFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPFoundation.debug.xcconfig"; path = "Target Support Files/Pods-GPFoundation/Pods-GPFoundation.debug.xcconfig"; sourceTree = "<group>"; };
+		238B3271B4D223BB169DAFAA /* Pods-GPFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPFoundation.release.xcconfig"; path = "Target Support Files/Pods-GPFoundation/Pods-GPFoundation.release.xcconfig"; sourceTree = "<group>"; };
+		29099DF42CF407721EC79FEE /* Pods_GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF2C08B124AAE8280004C7BA /* GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF2C08B424AAE8280004C7BA /* GPFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPFoundation.h; sourceTree = "<group>"; };
+		FF2C08B524AAE8280004C7BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF2C08D024AAE9060004C7BA /* GPConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPConstant.swift; sourceTree = "<group>"; };
+		FF2C08D324AAE97B0004C7BA /* AnimateLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateLoadingView.swift; sourceTree = "<group>"; };
+		FF2C08D524AAE9860004C7BA /* GPFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPFont.swift; sourceTree = "<group>"; };
+		FF2C08D624AAE9860004C7BA /* GPColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPColor.swift; sourceTree = "<group>"; };
+		FFB60E1D24AB0EF8007FF836 /* GPUITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUITableView.swift; sourceTree = "<group>"; };
+		FFB60E1F24AB0F74007FF836 /* GPUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUITableViewCell.swift; sourceTree = "<group>"; };
+		FFB60E2F24AB2020007FF836 /* GPUIDevive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUIDevive.swift; sourceTree = "<group>"; };
+		FFB60E4F24AB3883007FF836 /* GPUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUILabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FF3F1D8C245AC735004B674E /* Frameworks */ = {
+		FF2C08AE24AAE8280004C7BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAFBBD21FFF41AEC6A050729 /* Pods_GPFoundation.framework in Frameworks */,
+				1A3495135FE41A004ABFD2F6 /* Pods_GPFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		571CD7DA032BCB162DE25770 /* Frameworks */ = {
+		00278BCBA5D0455DE5F9AC42 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7312B061FAEE653DAAA02EF1 /* Pods_GPFoundation.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		83A7EC3C973225BAE5CE28C5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E9CC0F7454129FC5234BAFAE /* Pods-GPFoundation.debug.xcconfig */,
-				1EE99AC5EF6796E7F4424A47 /* Pods-GPFoundation.release.xcconfig */,
+				12C553FF70CE095C517AC8F6 /* Pods-GPFoundation.debug.xcconfig */,
+				238B3271B4D223BB169DAFAA /* Pods-GPFoundation.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
-		FF23FF7E246E6BF000465A43 /* UI */ = {
+		8F34458A78C57941AA4276C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FF23FF7F246E6C1400465A43 /* AnimateLoadingView.swift */,
+				29099DF42CF407721EC79FEE /* Pods_GPFoundation.framework */,
 			);
-			path = UI;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FF3F1D85245AC735004B674E = {
+		FF2C08A724AAE8280004C7BA = {
 			isa = PBXGroup;
 			children = (
-				FF3F1D91245AC735004B674E /* GPFoundation */,
-				FF3F1D90245AC735004B674E /* Products */,
-				83A7EC3C973225BAE5CE28C5 /* Pods */,
-				571CD7DA032BCB162DE25770 /* Frameworks */,
+				FF2C08B324AAE8280004C7BA /* GPFoundation */,
+				FF2C08B224AAE8280004C7BA /* Products */,
+				00278BCBA5D0455DE5F9AC42 /* Pods */,
+				8F34458A78C57941AA4276C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		FF3F1D90245AC735004B674E /* Products */ = {
+		FF2C08B224AAE8280004C7BA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FF3F1D8F245AC735004B674E /* GPFoundation.framework */,
+				FF2C08B124AAE8280004C7BA /* GPFoundation.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FF3F1D91245AC735004B674E /* GPFoundation */ = {
+		FF2C08B324AAE8280004C7BA /* GPFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				FF8C549424A33748009FEB57 /* Constant */,
-				FF23FF7E246E6BF000465A43 /* UI */,
-				FF3F1DA0245AC79C004B674E /* Extenstion */,
-				FF3F1D92245AC735004B674E /* GPFoundation.h */,
-				FF3F1D93245AC735004B674E /* Info.plist */,
+				FF2C08D224AAE9300004C7BA /* UI */,
+				FF2C08CF24AAE8E10004C7BA /* Constant */,
+				FF2C08CC24AAE8910004C7BA /* Extention */,
+				FF2C08B424AAE8280004C7BA /* GPFoundation.h */,
+				FF2C08B524AAE8280004C7BA /* Info.plist */,
 			);
 			path = GPFoundation;
 			sourceTree = "<group>";
 		};
-		FF3F1DA0245AC79C004B674E /* Extenstion */ = {
+		FF2C08CC24AAE8910004C7BA /* Extention */ = {
 			isa = PBXGroup;
 			children = (
-				FF3F1DA1245AC79C004B674E /* GPFont.swift */,
-				FF3F1DA2245AC79C004B674E /* GPColor.swift */,
-				FF8C547C24A32850009FEB57 /* GPTableView.swift */,
-				FF8C548424A32BDB009FEB57 /* GPTableViewCell.swift */,
+				FF2C08D624AAE9860004C7BA /* GPColor.swift */,
+				FF2C08D524AAE9860004C7BA /* GPFont.swift */,
+				FFB60E1D24AB0EF8007FF836 /* GPUITableView.swift */,
+				FFB60E1F24AB0F74007FF836 /* GPUITableViewCell.swift */,
+				FFB60E2F24AB2020007FF836 /* GPUIDevive.swift */,
+				FFB60E4F24AB3883007FF836 /* GPUILabel.swift */,
 			);
-			path = Extenstion;
+			path = Extention;
 			sourceTree = "<group>";
 		};
-		FF8C549424A33748009FEB57 /* Constant */ = {
+		FF2C08CF24AAE8E10004C7BA /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				FF8C549524A3376B009FEB57 /* GPConstant.swift */,
+				FF2C08D024AAE9060004C7BA /* GPConstant.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		FF2C08D224AAE9300004C7BA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FF2C08D324AAE97B0004C7BA /* AnimateLoadingView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		FF3F1D8A245AC735004B674E /* Headers */ = {
+		FF2C08AC24AAE8280004C7BA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3F1D94245AC735004B674E /* GPFoundation.h in Headers */,
+				FF2C08B624AAE8280004C7BA /* GPFoundation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		FF3F1D8E245AC735004B674E /* GPFoundation */ = {
+		FF2C08B024AAE8280004C7BA /* GPFoundation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF3F1D97245AC735004B674E /* Build configuration list for PBXNativeTarget "GPFoundation" */;
+			buildConfigurationList = FF2C08B924AAE8280004C7BA /* Build configuration list for PBXNativeTarget "GPFoundation" */;
 			buildPhases = (
-				69F80B453463025486438BAE /* [CP] Check Pods Manifest.lock */,
-				FF3F1D8A245AC735004B674E /* Headers */,
-				FF3F1D8B245AC735004B674E /* Sources */,
-				FF3F1D8C245AC735004B674E /* Frameworks */,
-				FF3F1D8D245AC735004B674E /* Resources */,
+				048D74E4281E1F1CBDF8CB2E /* [CP] Check Pods Manifest.lock */,
+				FF2C08AC24AAE8280004C7BA /* Headers */,
+				FF2C08AD24AAE8280004C7BA /* Sources */,
+				FF2C08AE24AAE8280004C7BA /* Frameworks */,
+				FF2C08AF24AAE8280004C7BA /* Resources */,
 			);
 			buildRules = (
 			);
@@ -149,24 +155,25 @@
 			);
 			name = GPFoundation;
 			productName = GPFoundation;
-			productReference = FF3F1D8F245AC735004B674E /* GPFoundation.framework */;
+			productReference = FF2C08B124AAE8280004C7BA /* GPFoundation.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FF3F1D86245AC735004B674E /* Project object */ = {
+		FF2C08A824AAE8280004C7BA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = hend;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = Baillun;
 				TargetAttributes = {
-					FF3F1D8E245AC735004B674E = {
-						CreatedOnToolsVersion = 11.3.1;
+					FF2C08B024AAE8280004C7BA = {
+						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
-			buildConfigurationList = FF3F1D89245AC735004B674E /* Build configuration list for PBXProject "GPFoundation" */;
+			buildConfigurationList = FF2C08AB24AAE8280004C7BA /* Build configuration list for PBXProject "GPFoundation" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -174,18 +181,18 @@
 				en,
 				Base,
 			);
-			mainGroup = FF3F1D85245AC735004B674E;
-			productRefGroup = FF3F1D90245AC735004B674E /* Products */;
+			mainGroup = FF2C08A724AAE8280004C7BA;
+			productRefGroup = FF2C08B224AAE8280004C7BA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FF3F1D8E245AC735004B674E /* GPFoundation */,
+				FF2C08B024AAE8280004C7BA /* GPFoundation */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FF3F1D8D245AC735004B674E /* Resources */ = {
+		FF2C08AF24AAE8280004C7BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -195,7 +202,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		69F80B453463025486438BAE /* [CP] Check Pods Manifest.lock */ = {
+		048D74E4281E1F1CBDF8CB2E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,23 +227,25 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FF3F1D8B245AC735004B674E /* Sources */ = {
+		FF2C08AD24AAE8280004C7BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF8C549624A3376B009FEB57 /* GPConstant.swift in Sources */,
-				FF3F1DA4245AC79C004B674E /* GPColor.swift in Sources */,
-				FF3F1DA3245AC79C004B674E /* GPFont.swift in Sources */,
-				FF8C547D24A32850009FEB57 /* GPTableView.swift in Sources */,
-				FF8C548524A32BDB009FEB57 /* GPTableViewCell.swift in Sources */,
-				FF23FF80246E6C1400465A43 /* AnimateLoadingView.swift in Sources */,
+				FFB60E2024AB0F74007FF836 /* GPUITableViewCell.swift in Sources */,
+				FF2C08D124AAE9060004C7BA /* GPConstant.swift in Sources */,
+				FF2C08D424AAE97B0004C7BA /* AnimateLoadingView.swift in Sources */,
+				FFB60E1E24AB0EF8007FF836 /* GPUITableView.swift in Sources */,
+				FF2C08D824AAE9860004C7BA /* GPColor.swift in Sources */,
+				FF2C08D724AAE9860004C7BA /* GPFont.swift in Sources */,
+				FFB60E3024AB2020007FF836 /* GPUIDevive.swift in Sources */,
+				FFB60E5024AB3883007FF836 /* GPUILabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		FF3F1D95245AC735004B674E /* Debug */ = {
+		FF2C08B724AAE8280004C7BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -299,7 +308,7 @@
 			};
 			name = Debug;
 		};
-		FF3F1D96245AC735004B674E /* Release */ = {
+		FF2C08B824AAE8280004C7BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -356,12 +365,14 @@
 			};
 			name = Release;
 		};
-		FF3F1D98245AC735004B674E /* Debug */ = {
+		FF2C08BA24AAE8280004C7BA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9CC0F7454129FC5234BAFAE /* Pods-GPFoundation.debug.xcconfig */;
+			baseConfigurationReference = 12C553FF70CE095C517AC8F6 /* Pods-GPFoundation.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6C95N65QXM;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -372,20 +383,23 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.GPFoundation;
+				PRODUCT_BUNDLE_IDENTIFIER = rockest.com.GPFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		FF3F1D99245AC735004B674E /* Release */ = {
+		FF2C08BB24AAE8280004C7BA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EE99AC5EF6796E7F4424A47 /* Pods-GPFoundation.release.xcconfig */;
+			baseConfigurationReference = 238B3271B4D223BB169DAFAA /* Pods-GPFoundation.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6C95N65QXM;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -396,7 +410,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lancoo.com.GPFoundation;
+				PRODUCT_BUNDLE_IDENTIFIER = rockest.com.GPFoundation;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -407,25 +421,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FF3F1D89245AC735004B674E /* Build configuration list for PBXProject "GPFoundation" */ = {
+		FF2C08AB24AAE8280004C7BA /* Build configuration list for PBXProject "GPFoundation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FF3F1D95245AC735004B674E /* Debug */,
-				FF3F1D96245AC735004B674E /* Release */,
+				FF2C08B724AAE8280004C7BA /* Debug */,
+				FF2C08B824AAE8280004C7BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FF3F1D97245AC735004B674E /* Build configuration list for PBXNativeTarget "GPFoundation" */ = {
+		FF2C08B924AAE8280004C7BA /* Build configuration list for PBXNativeTarget "GPFoundation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FF3F1D98245AC735004B674E /* Debug */,
-				FF3F1D99245AC735004B674E /* Release */,
+				FF2C08BA24AAE8280004C7BA /* Debug */,
+				FF2C08BB24AAE8280004C7BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FF3F1D86245AC735004B674E /* Project object */;
+	rootObject = FF2C08A824AAE8280004C7BA /* Project object */;
 }

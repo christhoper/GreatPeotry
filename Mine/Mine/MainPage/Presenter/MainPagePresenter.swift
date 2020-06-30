@@ -17,7 +17,6 @@ class MainPagePresenter {
     weak var transitionHandler: UIViewController!
     var interactor: MainPageInteractorInput!
     var outer: MainPageModuleOutput?
-    var block: ((Int, String, Bool) -> Void)?
 }
 
 extension MainPagePresenter {
@@ -30,7 +29,10 @@ extension MainPagePresenter {
 // MARK: - MainPagePresenterView
 
 extension MainPagePresenter: MainPagePresenterView {
-    
+    func openWriteSence() {
+        let controller = Router.creation.createWrittingViewController()
+        nav?.pushViewController(controller, animated: true)
+    }
 }
 
 // MARK: - MainPagePresenterInteractor

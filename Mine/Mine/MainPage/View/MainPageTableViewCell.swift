@@ -44,6 +44,5 @@ class MainPageTableViewCell: UITableViewCell {
             make.edges.equalToSuperview()
         }
     }
-    
-    
 }
+

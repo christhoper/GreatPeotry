@@ -10,9 +10,14 @@ import UIKit
 import Router
 
 
-extension RouterManager: CreationRoutable {
+extension Router: CreationRoutable {
     public func createViewController() -> UIViewController {
         let (viewController, _) = MainPageModuleBuilder.setupModule()
+        return viewController
+    }
+    
+    public func createWrittingViewController() -> UIViewController {
+        let (viewController, _) = WrittingPageModuleBuilder.setupModule()
         return viewController
     }
 }

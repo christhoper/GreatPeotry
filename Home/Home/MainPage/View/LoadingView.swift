@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 enum LoadingType {
     case `default`
     case custom

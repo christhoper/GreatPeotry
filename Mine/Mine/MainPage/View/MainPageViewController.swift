@@ -8,26 +8,33 @@
 
 import UIKit
 
-
 class MainPageViewController: UIViewController {
 
     var output: MainPageViewOutput!
-    
+
     lazy var userInfoView: UserInfoView = {
-        let view = UserInfoView(frame: CGRect(x: 0, y: 0, width: GPConstant.width, height: 260))
+        let view = UserInfoView(frame: CGRect(x: 0, y: 0, width: GPConstant.width, height: 220))
         view.backgroundColor = .red
         return view
     }()
-    
+
     lazy var tableView: UITableView = {
         let view = UITableView(frame: .zero, style: .plain)
         view.delegate = self
         view.dataSource = self
         view.register(MainPageTableViewCell.self, forCellReuseIdentifier: MainPageTableViewCell.identifier)
+        view.rowHeight = 60
         view.defaultConfigure()
         return view
     }()
     
+    lazy var topView: TopBarView = {
+        let view = TopBarView()
+        view.backgroundColor = .green
+        view.alpha = 0
+        return view
+    }()
+
 
     // MARK: override
     override func viewDidLoad() {
@@ -36,6 +43,7 @@ class MainPageViewController: UIViewController {
         setupNavItems()
         setupSubViews()
         addObserverForNoti()
+        topViewEvents()
     }
 }
 
@@ -43,23 +51,44 @@ class MainPageViewController: UIViewController {
 
 extension MainPageViewController {
 
-    func setupNavItems() {}
+    func setupNavItems() {
+        navigationController?.navigationBar.isHidden = true
+    }
     
     func setupSubViews() {
         view.backgroundColor = .white
         view.addSubview(tableView)
+        view.addSubview(topView)
         tableView.tableHeaderView = userInfoView
-        
+
         setupSubviewsContraints()
     }
     
     func setupSubviewsContraints() {
         tableView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
+            make.left.right.bottom.equalToSuperview()
+            make.top.equalToSuperview().offset(GPConstant.kSafeAreaTopInset)
+        }
+        
+        topView.snp.makeConstraints { (make) in
+            make.top.left.right.equalToSuperview()
+            make.height.equalTo(GPConstant.kNavigationBarHeight)
         }
     }
 
     func addObserverForNoti() {}
+}
+
+extension MainPageViewController {
+    func topViewEvents() {
+        topView.onClickQrButtonHandler = { [weak self] in
+            
+        }
+        
+        topView.onClickWriteButtonHandler = { [weak self] in
+            
+        }
+    }
 }
 
 // MARK: - Network
@@ -70,16 +99,29 @@ extension MainPageViewController {}
 
 extension MainPageViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 20
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MainPageTableViewCell.identifier, for: indexPath) as! MainPageTableViewCell
         return cell
     }
     
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        if offsetY >= 0 && offsetY <= GPConstant.kNavigationBarHeight {
+            let topViewAlpha = offsetY / GPConstant.kNavigationBarHeight
+            topView.alpha = topViewAlpha
+        } else if(offsetY > GPConstant.kNavigationBarHeight) {
+            topView.alpha = 1.0
+        } else {
+            topView.alpha = 0.0
+        }
+    }
+
 }
+
+
 
 // MARK: - Selector
 
@@ -122,29 +164,29 @@ class MainPageModuleBuilder {
  动态查询成员，在使用了它标记了对象后（对象，结构体，枚举，protocol），实现了subscript(dynamicMember member: String) （但是代码联想不出来）后，我们可以访问到对象不存在的属性，如果访问的对象属性不存在，就会调用subscript(dynamicMember member: String)方法，访问不到的key作为member传入，访问不到时编译器并不会报错
  */
 
-@dynamicMemberLookup
-struct Person {
-    subscript(dynamicMember member: String) -> String {
-        let properties = ["nickname": "Zhuo", "city": "Hangzhou"]
-        return properties[member, default: "undefined"]
-    }
-}
-
-
-//MARK: - dynamicCallable
-
-/*
-  动态调用，当某一类型作此声明时，需要实现dynamicallyCall(withArguments:)或者dynamicallyCall(withKeywordArguments:)
- */
-
-@dynamicCallable
-struct Car {
-    func dynamicallyCall(withArguments: [String]) {
-        for item in withArguments {
-            print(item)
-        }
-    }
-}
+//@dynamicMemberLookup
+//struct Person {
+//    subscript(dynamicMember member: String) -> String {
+//        let properties = ["nickname": "Zhuo", "city": "Hangzhou"]
+//        return properties[member, default: "undefined"]
+//    }
+//}
+//
+//
+////MARK: - dynamicCallable
+//
+///*
+//  动态调用，当某一类型作此声明时，需要实现dynamicallyCall(withArguments:)或者dynamicallyCall(withKeywordArguments:)
+// */
+//
+//@dynamicCallable
+//struct Car {
+//    func dynamicallyCall(withArguments: [String]) {
+//        for item in withArguments {
+//            print(item)
+//        }
+//    }
+//}
 
 
 //MARK: - 一个动态查询成员变量，一个动态方法调用，这让swift也可以变成动态语言

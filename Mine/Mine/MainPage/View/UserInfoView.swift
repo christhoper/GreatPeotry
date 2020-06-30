@@ -9,23 +9,29 @@
 import UIKit
 
 class UserInfoView: UIView {
+    
+    private let avatarImageHeight: CGFloat = 80.0
+    
     lazy var avatarImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.layer.cornerRadius = 20
+        imageView.layer.cornerRadius = avatarImageHeight / 2
         imageView.backgroundColor = .green
         imageView.clipsToBounds = true
+        imageView.kf.setImage(with: URL(string: "https://img.wbp5.com/upload/images/fazzaco/2020/05/20/101045944.webp"))
         return imageView
     }()
     
     lazy var userNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Hendy"
+        label.defaultConfigure()
         return label
     }()
     
     lazy var followNumberLabel: UILabel = {
         let label = UILabel()
-        label.text = "9999w"
+        label.text = "关注: 9999w"
+        label.defaultConfigure()
         return label
     }()
     
@@ -77,14 +83,14 @@ class UserInfoView: UIView {
         
         avatarImageView.snp.makeConstraints { (make) in
             make.left.top.equalToSuperview().offset(offsetX)
-            make.size.equalTo(CGSize(width: 40, height: 40))
+            make.size.equalTo(CGSize(width: avatarImageHeight, height: avatarImageHeight))
         }
         
         userNameLabel.snp.makeConstraints { (make) in
             make.top.equalTo(avatarImageView)
             make.left.equalTo(avatarImageView.snp.right).offset(5)
-            make.right.equalTo(avatarImageView).offset(-5).priority(999)
-            make.height.equalTo(avatarImageView).multipliedBy(0.5)
+            make.right.equalToSuperview().offset(-5).priority(999)
+            make.height.equalTo(40)
         }
         
         followNumberLabel.snp.makeConstraints { (make) in

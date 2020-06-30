@@ -29,8 +29,7 @@ protocol MainPageViewInput: class {
 
 /// methods for communication View -> Presenter
 protocol MainPageViewOutput {
-    
-     var block: ((Int, String, Bool) -> Void)? { get set }
+    func openWriteSence()
 }
 
 /// methods for communication Presenter -> Interactor

@@ -10,14 +10,33 @@
 		700EE1A0965A4C1F6720DFBC /* Pods_Mine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6B18A7FBF9B844D581F2D9 /* Pods_Mine.framework */; };
 		FF0160F324A22FE400BD27B0 /* MineRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0160F224A22FE300BD27B0 /* MineRoutable.swift */; };
 		FF0160FE24A2325D00BD27B0 /* Mine_Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0160FD24A2325D00BD27B0 /* Mine_Header.swift */; };
-		FF01610024A233BE00BD27B0 /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0160FF24A233BE00BD27B0 /* UserInfoView.swift */; };
+		FF2C08F224AB08600004C7BA /* GPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C08F124AB08600004C7BA /* GPFoundation.framework */; };
+		FF2C08F324AB08600004C7BA /* GPFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C08F124AB08600004C7BA /* GPFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF2C090324AB0C040004C7BA /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C090224AB0C040004C7BA /* UserInfoView.swift */; };
 		FF3F1D1C245AC588004B674E /* Mine.h in Headers */ = {isa = PBXBuildFile; fileRef = FF3F1D1A245AC588004B674E /* Mine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF3F1D30245AC5DC004B674E /* MainPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D2A245AC5DC004B674E /* MainPagePresenter.swift */; };
 		FF3F1D31245AC5DC004B674E /* MainPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D2B245AC5DC004B674E /* MainPageProtocols.swift */; };
 		FF3F1D32245AC5DC004B674E /* MainPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D2D245AC5DC004B674E /* MainPageInteractor.swift */; };
 		FF3F1D33245AC5DC004B674E /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D2F245AC5DC004B674E /* MainPageViewController.swift */; };
 		FF8C547124A32335009FEB57 /* MainPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8C547024A32335009FEB57 /* MainPageTableViewCell.swift */; };
+		FFB60E3224AB250A007FF836 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E3124AB250A007FF836 /* TopBarView.swift */; };
+		FFB60E4024AB2B5C007FF836 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E3F24AB2B5C007FF836 /* R.generated.swift */; };
+		FFB60E4224AB2C56007FF836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB60E4124AB2C56007FF836 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FF2C08F424AB08600004C7BA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FF2C08F324AB08600004C7BA /* GPFoundation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C0E20F0AB336BB8F311B7DCD /* Pods-Mine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mine.release.xcconfig"; path = "Target Support Files/Pods-Mine/Pods-Mine.release.xcconfig"; sourceTree = "<group>"; };
@@ -25,7 +44,8 @@
 		F648935B0B6755E76E8F0619 /* Pods-Mine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mine.debug.xcconfig"; path = "Target Support Files/Pods-Mine/Pods-Mine.debug.xcconfig"; sourceTree = "<group>"; };
 		FF0160F224A22FE300BD27B0 /* MineRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineRoutable.swift; sourceTree = "<group>"; };
 		FF0160FD24A2325D00BD27B0 /* Mine_Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mine_Header.swift; sourceTree = "<group>"; };
-		FF0160FF24A233BE00BD27B0 /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
+		FF2C08F124AB08600004C7BA /* GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF2C090224AB0C040004C7BA /* UserInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		FF3F1D17245AC588004B674E /* Mine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3F1D1A245AC588004B674E /* Mine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mine.h; sourceTree = "<group>"; };
 		FF3F1D1B245AC588004B674E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +54,9 @@
 		FF3F1D2D245AC5DC004B674E /* MainPageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageInteractor.swift; sourceTree = "<group>"; };
 		FF3F1D2F245AC5DC004B674E /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		FF8C547024A32335009FEB57 /* MainPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTableViewCell.swift; sourceTree = "<group>"; };
+		FFB60E3124AB250A007FF836 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
+		FFB60E3F24AB2B5C007FF836 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = R/R.generated.swift; sourceTree = SOURCE_ROOT; };
+		FFB60E4124AB2C56007FF836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF2C08F224AB08600004C7BA /* GPFoundation.framework in Frameworks */,
 				700EE1A0965A4C1F6720DFBC /* Pods_Mine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +85,7 @@
 		9DC8FE830DE7BAABB070E34D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF2C08F124AB08600004C7BA /* GPFoundation.framework */,
 				CC6B18A7FBF9B844D581F2D9 /* Pods_Mine.framework */,
 			);
 			name = Frameworks;
@@ -91,6 +116,8 @@
 				FF3F1D28245AC5DC004B674E /* MainPage */,
 				FF3F1D1A245AC588004B674E /* Mine.h */,
 				FF0160FD24A2325D00BD27B0 /* Mine_Header.swift */,
+				FFB60E3F24AB2B5C007FF836 /* R.generated.swift */,
+				FFB60E4124AB2C56007FF836 /* Assets.xcassets */,
 				FF3F1D1B245AC588004B674E /* Info.plist */,
 			);
 			path = Mine;
@@ -126,9 +153,10 @@
 		FF3F1D2E245AC5DC004B674E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FF2C090224AB0C040004C7BA /* UserInfoView.swift */,
 				FF3F1D2F245AC5DC004B674E /* MainPageViewController.swift */,
-				FF0160FF24A233BE00BD27B0 /* UserInfoView.swift */,
 				FF8C547024A32335009FEB57 /* MainPageTableViewCell.swift */,
+				FFB60E3124AB250A007FF836 /* TopBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,10 +180,12 @@
 			buildConfigurationList = FF3F1D1F245AC588004B674E /* Build configuration list for PBXNativeTarget "Mine" */;
 			buildPhases = (
 				709023727CD692458C1E87CF /* [CP] Check Pods Manifest.lock */,
+				FFB60E3924AB2ACC007FF836 /* ShellScript */,
 				FF3F1D12245AC588004B674E /* Headers */,
 				FF3F1D13245AC588004B674E /* Sources */,
 				FF3F1D14245AC588004B674E /* Frameworks */,
 				FF3F1D15245AC588004B674E /* Resources */,
+				FF2C08F424AB08600004C7BA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFB60E4224AB2C56007FF836 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +262,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FFB60E3924AB2ACC007FF836 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -239,11 +289,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF3F1D33245AC5DC004B674E /* MainPageViewController.swift in Sources */,
-				FF01610024A233BE00BD27B0 /* UserInfoView.swift in Sources */,
+				FFB60E3224AB250A007FF836 /* TopBarView.swift in Sources */,
 				FF0160FE24A2325D00BD27B0 /* Mine_Header.swift in Sources */,
 				FF8C547124A32335009FEB57 /* MainPageTableViewCell.swift in Sources */,
+				FF2C090324AB0C040004C7BA /* UserInfoView.swift in Sources */,
 				FF0160F324A22FE400BD27B0 /* MineRoutable.swift in Sources */,
 				FF3F1D30245AC5DC004B674E /* MainPagePresenter.swift in Sources */,
+				FFB60E4024AB2B5C007FF836 /* R.generated.swift in Sources */,
 				FF3F1D32245AC5DC004B674E /* MainPageInteractor.swift in Sources */,
 				FF3F1D31245AC5DC004B674E /* MainPageProtocols.swift in Sources */,
 			);

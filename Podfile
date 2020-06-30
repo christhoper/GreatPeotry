@@ -1,4 +1,5 @@
-source 'https://github.com/CocoaPods/Specs.git'
+#source 'https://github.com/CocoaPods/Specs.git'
+source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 platform :ios, '11.0'
 
 workspace 'GreatPeotry'
@@ -16,7 +17,7 @@ def pods_common
   pod 'Kingfisher'
   pod 'KRProgressHUD'
   pod 'R.swift'
-  pod 'RealmSwift'
+#  pod 'RealmSwift'
   pod 'VerticalCardSwiper'
   pod 'SkeletonView'
   pod 'SwiftEntryKit'

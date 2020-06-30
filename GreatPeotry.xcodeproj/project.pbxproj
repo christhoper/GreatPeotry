@@ -10,6 +10,8 @@
 		E15014045CD43013ADE380D7 /* Pods_GreatPeotry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B936DA7DDF2ABBECC18ADC84 /* Pods_GreatPeotry.framework */; };
 		FF1A7E6924581E5A0068BC26 /* GPTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A7E6824581E5A0068BC26 /* GPTabBarViewController.swift */; };
 		FF23FFA8246F8CBE00465A43 /* GPEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF23FFA7246F8CBE00465A43 /* GPEnum.swift */; };
+		FF2C08DA24AAE9980004C7BA /* GPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C08C124AAE8290004C7BA /* GPFoundation.framework */; };
+		FF2C08DB24AAE9980004C7BA /* GPFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C08C124AAE8290004C7BA /* GPFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF3F1DD0245AC8A7004B674E /* Router.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D06245AC4AA004B674E /* Router.framework */; };
 		FF3F1DD1245AC8A7004B674E /* Router.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D06245AC4AA004B674E /* Router.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF3F20BA245AD8E6004B674E /* mengzi.json in Resources */ = {isa = PBXBuildFile; fileRef = FF3F1E13245AD8E3004B674E /* mengzi.json */; };
@@ -696,13 +698,18 @@
 		FF6A2932246291EB00FC4E4E /* Mine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D27245AC589004B674E /* Mine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF6A29372462962300FC4E4E /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D84245AC6DB004B674E /* Home.framework */; };
 		FF6A29382462962300FC4E4E /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D84245AC6DB004B674E /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FF6A29392462962800FC4E4E /* GPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D9F245AC736004B674E /* GPFoundation.framework */; };
-		FF6A293A2462962800FC4E4E /* GPFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF3F1D9F245AC736004B674E /* GPFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF7374F1248E41D700171BB4 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7374F0248E41D700171BB4 /* R.generated.swift */; };
 		FF7374FF248E436100171BB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7374FE248E436100171BB4 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FF2C08C024AAE8290004C7BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF2C08BC24AAE8280004C7BA /* GPFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FF2C08B124AAE8280004C7BA;
+			remoteInfo = GPFoundation;
+		};
 		FF3F1D05245AC4AA004B674E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FF3F1D01245AC4A9004B674E /* Router.xcodeproj */;
@@ -731,13 +738,6 @@
 			remoteGlobalIDString = FF3F1D74245AC6DA004B674E;
 			remoteInfo = Home;
 		};
-		FF3F1D9E245AC736004B674E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF3F1D9A245AC735004B674E /* GPFoundation.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FF3F1D8F245AC735004B674E;
-			remoteInfo = GPFoundation;
-		};
 		FF44EB9424494E660081F59C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FF44EB7524494E620081F59C /* Project object */;
@@ -761,7 +761,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FF6A293A2462962800FC4E4E /* GPFoundation.framework in Embed Frameworks */,
+				FF2C08DB24AAE9980004C7BA /* GPFoundation.framework in Embed Frameworks */,
 				FF3F1DD1245AC8A7004B674E /* Router.framework in Embed Frameworks */,
 				FF6A2932246291EB00FC4E4E /* Mine.framework in Embed Frameworks */,
 				FF6A2926246288E700FC4E4E /* Creation.framework in Embed Frameworks */,
@@ -779,14 +779,13 @@
 		FF1A7E6824581E5A0068BC26 /* GPTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTabBarViewController.swift; sourceTree = "<group>"; };
 		FF1A7E762458216F0068BC26 /* Pods_GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF1A7E892458241E0068BC26 /* Pods_Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF1A7E99245826050068BC26 /* Pods_Router.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Router.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF23FFA7246F8CBE00465A43 /* GPEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPEnum.swift; sourceTree = "<group>"; };
+		FF2C08BC24AAE8280004C7BA /* GPFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPFoundation.xcodeproj; path = GPFoundation/GPFoundation.xcodeproj; sourceTree = "<group>"; };
 		FF3F1C92245ABDD1004B674E /* Pods_RouterTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_RouterTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3F1D01245AC4A9004B674E /* Router.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Router.xcodeproj; path = Router/Router.xcodeproj; sourceTree = "<group>"; };
 		FF3F1D22245AC588004B674E /* Mine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mine.xcodeproj; path = Mine/Mine.xcodeproj; sourceTree = "<group>"; };
 		FF3F1D49245AC636004B674E /* Creation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Creation.xcodeproj; path = Creation/Creation.xcodeproj; sourceTree = "<group>"; };
 		FF3F1D7F245AC6DA004B674E /* Home.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Home.xcodeproj; path = Home/Home.xcodeproj; sourceTree = "<group>"; };
-		FF3F1D9A245AC735004B674E /* GPFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPFoundation.xcodeproj; path = GPFoundation/GPFoundation.xcodeproj; sourceTree = "<group>"; };
 		FF3F1E13245AD8E3004B674E /* mengzi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mengzi.json; sourceTree = "<group>"; };
 		FF3F1E14245AD8E3004B674E /* daxue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = daxue.json; sourceTree = "<group>"; };
 		FF3F1E15245AD8E3004B674E /* zhongyong.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = zhongyong.json; sourceTree = "<group>"; };
@@ -1484,7 +1483,7 @@
 				E15014045CD43013ADE380D7 /* Pods_GreatPeotry.framework in Frameworks */,
 				FF3F1DD0245AC8A7004B674E /* Router.framework in Frameworks */,
 				FF6A2925246288E700FC4E4E /* Creation.framework in Frameworks */,
-				FF6A29392462962800FC4E4E /* GPFoundation.framework in Frameworks */,
+				FF2C08DA24AAE9980004C7BA /* GPFoundation.framework in Frameworks */,
 				FF6A29372462962300FC4E4E /* Home.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1520,7 +1519,6 @@
 			children = (
 				FF1A7E762458216F0068BC26 /* Pods_GPFoundation.framework */,
 				FF1A7E892458241E0068BC26 /* Pods_Router.framework */,
-				FF1A7E99245826050068BC26 /* Pods_Router.framework */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -1531,6 +1529,14 @@
 				FF23FFA7246F8CBE00465A43 /* GPEnum.swift */,
 			);
 			path = Untils;
+			sourceTree = "<group>";
+		};
+		FF2C08BD24AAE8280004C7BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF2C08C124AAE8290004C7BA /* GPFoundation.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		FF3F1D02245AC4A9004B674E /* Products */ = {
@@ -1561,14 +1567,6 @@
 			isa = PBXGroup;
 			children = (
 				FF3F1D84245AC6DB004B674E /* Home.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FF3F1D9B245AC735004B674E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FF3F1D9F245AC736004B674E /* GPFoundation.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2333,7 +2331,7 @@
 		FF44EB7424494E620081F59C = {
 			isa = PBXGroup;
 			children = (
-				FF3F1D9A245AC735004B674E /* GPFoundation.xcodeproj */,
+				FF2C08BC24AAE8280004C7BA /* GPFoundation.xcodeproj */,
 				FF3F1D7F245AC6DA004B674E /* Home.xcodeproj */,
 				FF3F1D49245AC636004B674E /* Creation.xcodeproj */,
 				FF3F1D22245AC588004B674E /* Mine.xcodeproj */,
@@ -2504,8 +2502,8 @@
 					ProjectRef = FF3F1D49245AC636004B674E /* Creation.xcodeproj */;
 				},
 				{
-					ProductGroup = FF3F1D9B245AC735004B674E /* Products */;
-					ProjectRef = FF3F1D9A245AC735004B674E /* GPFoundation.xcodeproj */;
+					ProductGroup = FF2C08BD24AAE8280004C7BA /* Products */;
+					ProjectRef = FF2C08BC24AAE8280004C7BA /* GPFoundation.xcodeproj */;
 				},
 				{
 					ProductGroup = FF3F1D80245AC6DA004B674E /* Products */;
@@ -2530,6 +2528,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		FF2C08C124AAE8290004C7BA /* GPFoundation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPFoundation.framework;
+			remoteRef = FF2C08C024AAE8290004C7BA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		FF3F1D06245AC4AA004B674E /* Router.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -2556,13 +2561,6 @@
 			fileType = wrapper.framework;
 			path = Home.framework;
 			remoteRef = FF3F1D83245AC6DB004B674E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FF3F1D9F245AC736004B674E /* GPFoundation.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GPFoundation.framework;
-			remoteRef = FF3F1D9E245AC736004B674E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -3512,7 +3510,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6C95N65QXM;
+				DEVELOPMENT_TEAM = J6Z2UB3ZFD;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/CTMediator/CTMediator.framework/Headers\"",
@@ -3549,7 +3547,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6C95N65QXM;
+				DEVELOPMENT_TEAM = J6Z2UB3ZFD;
 				INFOPLIST_FILE = GreatPeotry/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

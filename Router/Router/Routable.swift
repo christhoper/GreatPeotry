@@ -8,8 +8,8 @@
 
 import UIKit
 
-public class RouterManager {
-    static let shared: RouterManager = RouterManager()
+public class Router {
+    static let shared: Router = Router()
     private init() {}
     
     public static var home: HomeRoutable {
@@ -19,16 +19,14 @@ public class RouterManager {
     public static var creation: CreationRoutable {
         shared as! CreationRoutable
     }
-    
+
     public static var mine: MineRoutable {
         shared as! MineRoutable
     }
 }
 
 
-public protocol Routable {
-    
-}
+public protocol Routable {}
 
 public protocol HomeRoutable: Routable {
     func createViewController() -> UIViewController
@@ -36,6 +34,7 @@ public protocol HomeRoutable: Routable {
 
 public protocol CreationRoutable: Routable {
     func createViewController() -> UIViewController
+    func createWrittingViewController() -> UIViewController
 }
 
 public protocol MineRoutable: Routable {
