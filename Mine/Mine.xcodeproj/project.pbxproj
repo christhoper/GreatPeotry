@@ -19,6 +19,11 @@
 		FF3F1D32245AC5DC004B674E /* MainPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D2D245AC5DC004B674E /* MainPageInteractor.swift */; };
 		FF3F1D33245AC5DC004B674E /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1D2F245AC5DC004B674E /* MainPageViewController.swift */; };
 		FF8C547124A32335009FEB57 /* MainPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8C547024A32335009FEB57 /* MainPageTableViewCell.swift */; };
+		FF96835624AC1ED700024CCA /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF96835524AC1ED700024CCA /* NetworkExtension.framework */; };
+		FF96837924AC7A2600024CCA /* ScanPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96837324AC7A2600024CCA /* ScanPagePresenter.swift */; };
+		FF96837A24AC7A2600024CCA /* ScanPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96837424AC7A2600024CCA /* ScanPageProtocols.swift */; };
+		FF96837B24AC7A2600024CCA /* ScanPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96837624AC7A2600024CCA /* ScanPageInteractor.swift */; };
+		FF96837C24AC7A2600024CCA /* ScanPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96837824AC7A2600024CCA /* ScanPageViewController.swift */; };
 		FFB60E3224AB250A007FF836 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E3124AB250A007FF836 /* TopBarView.swift */; };
 		FFB60E4024AB2B5C007FF836 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E3F24AB2B5C007FF836 /* R.generated.swift */; };
 		FFB60E4224AB2C56007FF836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB60E4124AB2C56007FF836 /* Assets.xcassets */; };
@@ -54,6 +59,11 @@
 		FF3F1D2D245AC5DC004B674E /* MainPageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageInteractor.swift; sourceTree = "<group>"; };
 		FF3F1D2F245AC5DC004B674E /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		FF8C547024A32335009FEB57 /* MainPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTableViewCell.swift; sourceTree = "<group>"; };
+		FF96835524AC1ED700024CCA /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/NetworkExtension.framework; sourceTree = DEVELOPER_DIR; };
+		FF96837324AC7A2600024CCA /* ScanPagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanPagePresenter.swift; sourceTree = "<group>"; };
+		FF96837424AC7A2600024CCA /* ScanPageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanPageProtocols.swift; sourceTree = "<group>"; };
+		FF96837624AC7A2600024CCA /* ScanPageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanPageInteractor.swift; sourceTree = "<group>"; };
+		FF96837824AC7A2600024CCA /* ScanPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanPageViewController.swift; sourceTree = "<group>"; };
 		FFB60E3124AB250A007FF836 /* TopBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		FFB60E3F24AB2B5C007FF836 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = R/R.generated.swift; sourceTree = SOURCE_ROOT; };
 		FFB60E4124AB2C56007FF836 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF2C08F224AB08600004C7BA /* GPFoundation.framework in Frameworks */,
+				FF96835624AC1ED700024CCA /* NetworkExtension.framework in Frameworks */,
 				700EE1A0965A4C1F6720DFBC /* Pods_Mine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +96,7 @@
 		9DC8FE830DE7BAABB070E34D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF96835524AC1ED700024CCA /* NetworkExtension.framework */,
 				FF2C08F124AB08600004C7BA /* GPFoundation.framework */,
 				CC6B18A7FBF9B844D581F2D9 /* Pods_Mine.framework */,
 			);
@@ -113,6 +125,7 @@
 		FF3F1D19245AC588004B674E /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				FF96837124AC7A2600024CCA /* ScanPage */,
 				FF3F1D28245AC5DC004B674E /* MainPage */,
 				FF3F1D1A245AC588004B674E /* Mine.h */,
 				FF0160FD24A2325D00BD27B0 /* Mine_Header.swift */,
@@ -157,6 +170,41 @@
 				FF3F1D2F245AC5DC004B674E /* MainPageViewController.swift */,
 				FF8C547024A32335009FEB57 /* MainPageTableViewCell.swift */,
 				FFB60E3124AB250A007FF836 /* TopBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF96837124AC7A2600024CCA /* ScanPage */ = {
+			isa = PBXGroup;
+			children = (
+				FF96837424AC7A2600024CCA /* ScanPageProtocols.swift */,
+				FF96837524AC7A2600024CCA /* Model */,
+				FF96837224AC7A2600024CCA /* Presenter */,
+				FF96837724AC7A2600024CCA /* View */,
+			);
+			path = ScanPage;
+			sourceTree = "<group>";
+		};
+		FF96837224AC7A2600024CCA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FF96837324AC7A2600024CCA /* ScanPagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FF96837524AC7A2600024CCA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF96837624AC7A2600024CCA /* ScanPageInteractor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF96837724AC7A2600024CCA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF96837824AC7A2600024CCA /* ScanPageViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,9 +341,13 @@
 				FF0160FE24A2325D00BD27B0 /* Mine_Header.swift in Sources */,
 				FF8C547124A32335009FEB57 /* MainPageTableViewCell.swift in Sources */,
 				FF2C090324AB0C040004C7BA /* UserInfoView.swift in Sources */,
+				FF96837A24AC7A2600024CCA /* ScanPageProtocols.swift in Sources */,
 				FF0160F324A22FE400BD27B0 /* MineRoutable.swift in Sources */,
 				FF3F1D30245AC5DC004B674E /* MainPagePresenter.swift in Sources */,
 				FFB60E4024AB2B5C007FF836 /* R.generated.swift in Sources */,
+				FF96837924AC7A2600024CCA /* ScanPagePresenter.swift in Sources */,
+				FF96837C24AC7A2600024CCA /* ScanPageViewController.swift in Sources */,
+				FF96837B24AC7A2600024CCA /* ScanPageInteractor.swift in Sources */,
 				FF3F1D32245AC5DC004B674E /* MainPageInteractor.swift in Sources */,
 				FF3F1D31245AC5DC004B674E /* MainPageProtocols.swift in Sources */,
 			);

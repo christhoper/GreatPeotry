@@ -11,11 +11,24 @@ import UIKit
 class MainPageViewController: UIViewController {
 
     var output: MainPageViewOutput!
-
+    private let bag = DisposeBag()
+    
     lazy var userInfoView: UserInfoView = {
-        let view = UserInfoView(frame: CGRect(x: 0, y: 0, width: GPConstant.width, height: 220))
-        view.backgroundColor = .red
+        let view = UserInfoView(frame: CGRect(x: 0, y: 0, width: GPConstant.width, height: 280 + GPConstant.kSafeAreaTopInset))
         return view
+    }()
+    
+    /// 扫描二维码
+    lazy var qrBtn: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setImage(R.image.mine_main_qr(), for: .normal)
+        return button
+    }()
+    
+    lazy var writeBtn: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setImage(R.image.mine_main_write(), for: .normal)
+        return button
     }()
 
     lazy var tableView: UITableView = {
@@ -25,6 +38,7 @@ class MainPageViewController: UIViewController {
         view.register(MainPageTableViewCell.self, forCellReuseIdentifier: MainPageTableViewCell.identifier)
         view.rowHeight = 60
         view.defaultConfigure()
+        view.backgroundColor = .gray235
         return view
     }()
     
@@ -35,6 +49,15 @@ class MainPageViewController: UIViewController {
         return view
     }()
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationHidden(for: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationHidden(for: false)
+    }
 
     // MARK: override
     override func viewDidLoad() {
@@ -44,6 +67,8 @@ class MainPageViewController: UIViewController {
         setupSubViews()
         addObserverForNoti()
         topViewEvents()
+        output.getWifiList()
+        onClickButtonEvents()
     }
 }
 
@@ -52,41 +77,59 @@ class MainPageViewController: UIViewController {
 extension MainPageViewController {
 
     func setupNavItems() {
-        navigationController?.navigationBar.isHidden = true
     }
     
     func setupSubViews() {
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(red: 226, green: 71, blue: 64)
         view.addSubview(tableView)
         view.addSubview(topView)
+        view.addSubview(qrBtn)
+        view.addSubview(writeBtn)
+        
         tableView.tableHeaderView = userInfoView
-
         setupSubviewsContraints()
     }
     
     func setupSubviewsContraints() {
         tableView.snp.makeConstraints { (make) in
             make.left.right.bottom.equalToSuperview()
-            make.top.equalToSuperview().offset(GPConstant.kSafeAreaTopInset)
+            make.top.equalToSuperview()
         }
         
         topView.snp.makeConstraints { (make) in
             make.top.left.right.equalToSuperview()
-            make.height.equalTo(GPConstant.kNavigationBarHeight)
+            make.height.equalTo(GPConstant.kNavigationBarHeight + GPConstant.kToolBarHeight)
+        }
+        
+        let offsetTop = (GPConstant.kNavigationBarHeight + GPConstant.kToolBarHeight) / 2
+        qrBtn.snp.makeConstraints { (make) in
+            make.left.equalTo(20)
+            make.top.equalToSuperview().offset(offsetTop)
+            make.size.equalTo(CGSize(width: 24, height: 24))
+        }
+        
+        writeBtn.snp.makeConstraints { (make) in
+            make.right.equalTo(-20)
+            make.centerY.size.equalTo(qrBtn)
         }
     }
 
     func addObserverForNoti() {}
+    
+    private func setupBtnAlpha(_ alpha: CGFloat) {
+        qrBtn.alpha = alpha
+        writeBtn.alpha = alpha
+    }
 }
 
 extension MainPageViewController {
     func topViewEvents() {
         topView.onClickQrButtonHandler = { [weak self] in
-            
+            self?.output.openScanSence()
         }
         
         topView.onClickWriteButtonHandler = { [weak self] in
-            
+            self?.output.openWriteSence()
         }
     }
 }
@@ -99,11 +142,13 @@ extension MainPageViewController {}
 
 extension MainPageViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return output.dataSources.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MainPageTableViewCell.identifier, for: indexPath) as! MainPageTableViewCell
+        let title = output.dataSources[indexPath.row]
+        cell.setupCellDataSource(for: title)
         return cell
     }
     
@@ -112,13 +157,15 @@ extension MainPageViewController: UITableViewDelegate, UITableViewDataSource {
         if offsetY >= 0 && offsetY <= GPConstant.kNavigationBarHeight {
             let topViewAlpha = offsetY / GPConstant.kNavigationBarHeight
             topView.alpha = topViewAlpha
+            setupBtnAlpha(1 - topViewAlpha)
         } else if(offsetY > GPConstant.kNavigationBarHeight) {
             topView.alpha = 1.0
+            setupBtnAlpha(0.0)
         } else {
             topView.alpha = 0.0
+            setupBtnAlpha(1.0)
         }
     }
-
 }
 
 
@@ -126,10 +173,16 @@ extension MainPageViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - Selector
 
 @objc extension MainPageViewController {
-
-    func onClickMainPageBtn(_ sender: UIButton) {}
-    
-    func onRecvMainPageNoti(_ noti: Notification) {}
+    private func onClickButtonEvents() {
+        qrBtn.rx.tap.subscribe { (_) in
+            self.output.openScanSence()
+        }.disposed(by: bag)
+        
+        writeBtn.rx.tap.subscribe { (events) in
+            print(events)
+            self.output.openWriteSence()
+        }.disposed(by: bag)
+    }
 }
 
 // MARK: - MainPageViewInput 

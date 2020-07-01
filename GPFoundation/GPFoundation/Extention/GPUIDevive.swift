@@ -12,7 +12,7 @@ import SystemConfiguration
 
 public extension UIDevice {
     /// 是否全面屏系列
-    static func isFullSrceen() -> Bool {
+    static func isFullScreen() -> Bool {
         if #available(iOS 11, *) {
             let window = UIApplication.shared.keyWindow
             if let safeInsetBottom = window?.safeAreaInsets.bottom {

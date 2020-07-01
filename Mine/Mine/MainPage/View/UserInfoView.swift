@@ -12,6 +12,13 @@ class UserInfoView: UIView {
     
     private let avatarImageHeight: CGFloat = 80.0
     
+    lazy var bgView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 16
+        return view
+    }()
+    
     lazy var avatarImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = avatarImageHeight / 2
@@ -70,19 +77,28 @@ class UserInfoView: UIView {
     }
     
     private func setupSubviews() {
-        addSubview(avatarImageView)
-        addSubview(followNumberLabel)
-        addSubview(userNameLabel)
-        addSubview(articleView)
-        addSubview(invitationView)
-        addSubview(favouriesView)
+        addSubview(bgView)
+        bgView.addSubview(avatarImageView)
+        bgView.addSubview(followNumberLabel)
+        bgView.addSubview(userNameLabel)
+        bgView.addSubview(articleView)
+        bgView.addSubview(invitationView)
+        bgView.addSubview(favouriesView)
     }
     
     private func setupSubviewsContraints() {
-        let offsetX = 20.0
+        let offsetX: CGFloat = 20.0
+        
+        bgView.snp.makeConstraints { (make) in
+            make.left.equalTo(offsetX)
+            make.centerX.equalToSuperview().priority(999)
+            make.bottom.equalTo(-offsetX)
+            make.height.equalTo(200)
+        }
         
         avatarImageView.snp.makeConstraints { (make) in
-            make.left.top.equalToSuperview().offset(offsetX)
+            make.left.equalTo(offsetX)
+            make.bottom.equalTo(articleView.snp.top).offset(-offsetX)
             make.size.equalTo(CGSize(width: avatarImageHeight, height: avatarImageHeight))
         }
         
@@ -101,7 +117,7 @@ class UserInfoView: UIView {
         let multiple = 1.0 / 3.0
         
         articleView.snp.makeConstraints { (make) in
-            make.top.equalTo(avatarImageView.snp.bottom).offset(30)
+            make.height.equalTo(80)
             make.left.bottom.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(multiple)
         }
@@ -151,7 +167,7 @@ class ItemView: UIView {
         
         titleLabel.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview().offset(17)
+            make.bottom.equalToSuperview().offset(-20)
         }
         
         contentLabel.snp.makeConstraints { (make) in

@@ -70,21 +70,21 @@ extension GPTabBarViewController {
 
     private func createHomeNavigationController() -> UINavigationController {
         let homePage = Router.home.createViewController()
-        let homeNav = UINavigationController(rootViewController: homePage)
+        let homeNav = GPNavigationController(rootViewController: homePage)
         homeNav.tabBarItem = UITabBarItem(title: "首页", image: R.image.home_selected(), selectedImage: R.image.home_unSelected())
         return homeNav
     }
 
     private func createCreationNavigationController() -> UINavigationController {
         let creationPage = Router.creation.createViewController()
-        let nav = UINavigationController(rootViewController: creationPage)
+        let nav = GPNavigationController(rootViewController: creationPage)
         nav.tabBarItem = UITabBarItem(title: "创作", image: R.image.complaint_selected(), selectedImage: R.image.complaint_unSelected())
         return nav
     }
 
     private func createMineNavigationController() -> UINavigationController {
         let minePage = Router.mine.createViewController()
-        let nav = UINavigationController(rootViewController: minePage)
+        let nav = GPNavigationController(rootViewController: minePage)
         nav.tabBarItem = UITabBarItem(title: "我的", image: R.image.mine_selected(), selectedImage: R.image.mine_unSelected())
         return nav
     }

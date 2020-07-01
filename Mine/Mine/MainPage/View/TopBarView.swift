@@ -56,7 +56,7 @@ class TopBarView: UIView {
         
         qrBtn.snp.makeConstraints { (make) in
             make.left.equalTo(offsetX)
-            make.centerY.equalToSuperview().offset(GPConstant.kToolBarHeight)
+            make.centerY.equalToSuperview().offset(GPConstant.kToolBarHeight/2)
             make.size.equalTo(CGSize(width: 24, height: 24))
         }
         

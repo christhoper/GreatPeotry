@@ -11,24 +11,28 @@ import UIKit
 public struct GPConstant {
     /// 顶部安全区域偏移量
     public static var kSafeAreaTopInset: CGFloat {
-        UIDevice.isFullSrceen() ? 44 : 20
+        UIDevice.isFullScreen() ? 44 : 20
     }
     
     /// 底部安全区域偏移量
     public static var kSafeAreaBottomInset: CGFloat {
-        UIDevice.isFullSrceen() ? 34 : 0
+        UIDevice.isFullScreen() ? 34 : 0
     }
     
     public static var kNavigationBarHeight: CGFloat {
-        UIDevice.isFullSrceen() ? 88 : 64
+        UIDevice.isFullScreen() ? 88 : 64
     }
     
     public static var kTabBarHeight: CGFloat {
-        UIDevice.isFullSrceen() ? 49 + 34 : 49
+        UIDevice.isFullScreen() ? 49 + 34 : 49
     }
     
     public static var kToolBarHeight: CGFloat {
         20
+    }
+    
+    public static var isFullScreen: Bool {
+        UIDevice.isFullScreen()
     }
     
     public static var width: CGFloat {

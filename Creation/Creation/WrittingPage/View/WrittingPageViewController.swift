@@ -26,9 +26,13 @@ class WrittingPageViewController: UIViewController {
 
 extension WrittingPageViewController {
 
-    func setupNavItems() {}
+    func setupNavItems() {
+        
+    }
     
-    func setupSubViews() {}
+    func setupSubViews() {
+        view.backgroundColor = .white
+    }
     
     func addObserverForNoti() {}
 }

@@ -10,7 +10,7 @@ import UIKit
 
 public class AnimateLoadingView: UIView {
     
-    public static let  `default` = AnimateLoadingView.init()
+    public static let  `default` = AnimateLoadingView()
     
     override open class var layerClass: AnyClass {
         return CAGradientLayer.classForCoder()
@@ -30,8 +30,8 @@ public class AnimateLoadingView: UIView {
         if let gradientLayer = self.layer as?  CAGradientLayer {
             let beginColor = UIColor.white.withAlphaComponent(0.05).cgColor
             let endColor = UIColor.white.withAlphaComponent(0.4).cgColor
-            gradientLayer.startPoint = CGPoint.init(x: 0, y: 0.5)
-            gradientLayer.endPoint = CGPoint.init(x: 1, y: 0.5)
+            gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+            gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
             gradientLayer.colors = [beginColor,endColor,beginColor]
         }
     }
@@ -39,7 +39,7 @@ public class AnimateLoadingView: UIView {
     public func startLoading(in parent: UIView , inset: UIEdgeInsets = UIEdgeInsets.zero){
         self.removeFromSuperview()
         parent.addSubview(self)
-        self.frame = CGRect.init(x: inset.left, y: inset.top, width: 70, height: parent.frame.height - inset.top - inset.bottom)
+        self.frame = CGRect(x: inset.left, y: inset.top, width: 70, height: parent.frame.height - inset.top - inset.bottom)
         //add animate
         let animation = CABasicAnimation(keyPath: "position.x")
         animation.duration = CFTimeInterval(parent.frame.width/400.0)
@@ -50,7 +50,7 @@ public class AnimateLoadingView: UIView {
         self.layer.add(animation, forKey: "loading")
     }
     
-    public func endLoadind(){
+    public func endLoading(){
         self.layer.removeAllAnimations()
         self.removeFromSuperview()
     }

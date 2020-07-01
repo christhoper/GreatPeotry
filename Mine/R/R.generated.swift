@@ -88,12 +88,32 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
 
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.image` struct is generated, and contains static references to 5 images.
   struct image {
+    /// Image `mine_main_back`.
+    static let mine_main_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_main_back")
+    /// Image `mine_main_comein`.
+    static let mine_main_comein = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_main_comein")
     /// Image `mine_main_qr`.
     static let mine_main_qr = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_main_qr")
     /// Image `mine_main_write`.
     static let mine_main_write = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_main_write")
+    /// Image `mine_scan_lamp`.
+    static let mine_scan_lamp = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_scan_lamp")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "mine_main_back", bundle: ..., traitCollection: ...)`
+    static func mine_main_back(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mine_main_back, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "mine_main_comein", bundle: ..., traitCollection: ...)`
+    static func mine_main_comein(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mine_main_comein, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "mine_main_qr", bundle: ..., traitCollection: ...)`
@@ -106,6 +126,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "mine_main_write", bundle: ..., traitCollection: ...)`
     static func mine_main_write(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.mine_main_write, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "mine_scan_lamp", bundle: ..., traitCollection: ...)`
+    static func mine_scan_lamp(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mine_scan_lamp, compatibleWith: traitCollection)
     }
     #endif
 

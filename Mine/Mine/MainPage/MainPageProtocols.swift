@@ -29,7 +29,14 @@ protocol MainPageViewInput: class {
 
 /// methods for communication View -> Presenter
 protocol MainPageViewOutput {
+    var dataSources: [String] { get }
+    
+    func getWifiList()
+    
+    /// 写作
     func openWriteSence()
+    /// 扫描
+    func openScanSence()
 }
 
 /// methods for communication Presenter -> Interactor
