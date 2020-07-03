@@ -45,12 +45,12 @@ extension MainPagePresenter: MainPagePresenterView {
     }
     
     func getWifiList() {
-        if #available(iOS 11.0, *) {
-            let hotspotManager = NEHotspotConfigurationManager.shared
-            hotspotManager.getConfiguredSSIDs { (wifis) in
-                print(wifis)
-            }
-        }
+//        if #available(iOS 11.0, *) {
+//            let hotspotManager = NEHotspotConfigurationManager.shared
+//            hotspotManager.getConfiguredSSIDs { (wifis) in
+//                print(wifis)
+//            }
+//        }
     }
     
 

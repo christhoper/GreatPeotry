@@ -13,6 +13,7 @@
 		FF2C08D424AAE97B0004C7BA /* AnimateLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C08D324AAE97B0004C7BA /* AnimateLoadingView.swift */; };
 		FF2C08D724AAE9860004C7BA /* GPFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C08D524AAE9860004C7BA /* GPFont.swift */; };
 		FF2C08D824AAE9860004C7BA /* GPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C08D624AAE9860004C7BA /* GPColor.swift */; };
+		FF3C900924AD7B4500DC0677 /* GPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C900824AD7B4400DC0677 /* GPData.swift */; };
 		FF96837E24AC849100024CCA /* GPUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96837D24AC849100024CCA /* GPUIViewController.swift */; };
 		FF96838024AC89DC00024CCA /* GPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96837F24AC89DC00024CCA /* GPNavigationController.swift */; };
 		FF96838224AC920800024CCA /* GPUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96838124AC920800024CCA /* GPUIButton.swift */; };
@@ -33,6 +34,7 @@
 		FF2C08D324AAE97B0004C7BA /* AnimateLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateLoadingView.swift; sourceTree = "<group>"; };
 		FF2C08D524AAE9860004C7BA /* GPFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPFont.swift; sourceTree = "<group>"; };
 		FF2C08D624AAE9860004C7BA /* GPColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPColor.swift; sourceTree = "<group>"; };
+		FF3C900824AD7B4400DC0677 /* GPData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPData.swift; sourceTree = "<group>"; };
 		FF96837D24AC849100024CCA /* GPUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUIViewController.swift; sourceTree = "<group>"; };
 		FF96837F24AC89DC00024CCA /* GPNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNavigationController.swift; sourceTree = "<group>"; };
 		FF96838124AC920800024CCA /* GPUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUIButton.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				FFB60E4F24AB3883007FF836 /* GPUILabel.swift */,
 				FF96837D24AC849100024CCA /* GPUIViewController.swift */,
 				FF96838124AC920800024CCA /* GPUIButton.swift */,
+				FF3C900824AD7B4400DC0677 /* GPData.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				FF2C08D124AAE9060004C7BA /* GPConstant.swift in Sources */,
 				FF96837E24AC849100024CCA /* GPUIViewController.swift in Sources */,
 				FF2C08D424AAE97B0004C7BA /* AnimateLoadingView.swift in Sources */,
+				FF3C900924AD7B4500DC0677 /* GPData.swift in Sources */,
 				FF96838024AC89DC00024CCA /* GPNavigationController.swift in Sources */,
 				FF96838224AC920800024CCA /* GPUIButton.swift in Sources */,
 				FFB60E1E24AB0EF8007FF836 /* GPUITableView.swift in Sources */,

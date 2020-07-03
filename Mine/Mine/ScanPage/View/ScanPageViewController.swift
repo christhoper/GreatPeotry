@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ScanPageViewController: UIViewController {
 
@@ -30,20 +31,49 @@ class ScanPageViewController: UIViewController {
     
     lazy var lampBtn: UIButton = {
         let button = UIButton(type: .custom)
-        button.setTitle("打开灯光", for: .normal)
+        button.setTitle("打开", for: .normal)
         button.setImage(R.image.mine_scan_lamp(), for: .normal)
-        
+        button.rx.tap.subscribe { (_) in
+            self.onClickLampBtn()
+        }.disposed(by: bag)
         return button
     }()
     
+    
+    var scanBoxWidth: CGFloat {
+        GPConstant.width - 120
+    }
+    
+    var scanBoxCenterY: CGFloat {
+        GPConstant.height * 0.4
+    }
+    
+    var leftTopPoint: CGPoint {
+        CGPoint(x: 120 / 2, y: scanBoxCenterY - scanBoxWidth / 2)
+    }
+    
+    var leftBottomPoint: CGPoint {
+        CGPoint(x: 120 / 2, y: scanBoxCenterY + scanBoxWidth / 2)
+    }
+    
+    var rightTopPoint: CGPoint {
+        CGPoint(x: (scanBoxCenterY + scanBoxWidth) / 2, y: scanBoxCenterY - scanBoxWidth / 2)
+    }
+    
+    var rightBottomPoint: CGPoint {
+        CGPoint(x: (scanBoxCenterY + scanBoxWidth) / 2, y: scanBoxCenterY + scanBoxWidth / 2)
+    }
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationHidden(for: true)
+        navigationHidden(for: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationHidden(for: false)
+        navigationHidden(for: false)
     }
 
     // MARK: override
@@ -78,7 +108,7 @@ extension ScanPageViewController {
         }
         
         centerView.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview()
+            make.center.equalToSuperview()
             make.left.equalTo(40)
             make.height.equalTo(centerView.snp.width)
         }
@@ -90,8 +120,34 @@ extension ScanPageViewController {
         }
         lampBtn.setupButtomImage_LabelStyle(style: .imageUpLabelDown, imageTitleSpace: 5)
         lampBtn.layoutIfNeeded()
+    }
+    
+    private func onClickLampBtn() {
+        let session = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .back)
+        let devices = session.devices.filter({ $0.position == .back}).first
+        guard let device = devices else { return }
+        if device.torchMode == AVCaptureDevice.TorchMode.off {
+            do {
+                try device.lockForConfiguration()
+            } catch {
+                return
+            }
+            device.torchMode = .on
+            device.unlockForConfiguration()
+            lampBtn.setTitle("关闭", for: .normal)
+        } else {
+            do {
+                try device.lockForConfiguration()
+            } catch {
+                return
+            }
+            device.torchMode = .off
+            device.unlockForConfiguration()
+            lampBtn.setTitle("打开", for: .normal)
+        }
         
     }
+    
     
     func addObserverForNoti() {}
 }

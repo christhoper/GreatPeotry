@@ -44,7 +44,7 @@ class MainPageViewController: UIViewController {
     
     lazy var topView: TopBarView = {
         let view = TopBarView()
-        view.backgroundColor = .green
+        view.backgroundColor = .mainColor
         view.alpha = 0
         return view
     }()

@@ -12,8 +12,6 @@ public class GPNavigationController: UINavigationController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         // 全屏侧滑返回
         self.interactivePopGestureRecognizer?.delegate = self
         self.interactivePopGestureRecognizer?.addTarget(self, action: #selector(onPopGesture(sender:)))
@@ -22,6 +20,13 @@ public class GPNavigationController: UINavigationController {
     public override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
         viewControllers = [rootViewController]
+    }
+    
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        // 全屏侧滑返回
+        self.interactivePopGestureRecognizer?.delegate = self
+        self.interactivePopGestureRecognizer?.addTarget(self, action: #selector(onPopGesture(sender:)))
     }
     
     required init?(coder aDecoder: NSCoder) {

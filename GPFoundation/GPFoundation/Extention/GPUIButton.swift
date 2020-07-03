@@ -41,11 +41,9 @@ public extension UIButton {
         //label中心移动的y距离
         let labelOffsetY = imgH / 2.0 + imageTitleSpace / 2.0
         
-        //  声明全局的imageEdgeInsets和labelEdgeInsets
         var imageEdgeInsets: UIEdgeInsets = .zero
         var labelEdgeInsets: UIEdgeInsets = .zero
         
-        //  根据style和space得到imageEdgeInsets和labelEdgeInsets的值
         switch (style) {
         case .imageUpLabelDown:
             imageEdgeInsets = UIEdgeInsets(top: -imageOffsetY, left: imageOffsetX, bottom: imageOffsetY, right: -imageOffsetX)
