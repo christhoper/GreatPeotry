@@ -12,3 +12,4 @@
 @_exported import GPFoundation
 @_exported import Kingfisher
 @_exported import Router
+@_exported import KRProgressHUD

@@ -88,7 +88,7 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
 
-  /// This `R.image` struct is generated, and contains static references to 5 images.
+  /// This `R.image` struct is generated, and contains static references to 10 images.
   struct image {
     /// Image `mine_main_back`.
     static let mine_main_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_main_back")
@@ -100,6 +100,16 @@ struct R: Rswift.Validatable {
     static let mine_main_write = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_main_write")
     /// Image `mine_scan_lamp`.
     static let mine_scan_lamp = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_scan_lamp")
+    /// Image `mine_scan_leftBottom`.
+    static let mine_scan_leftBottom = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_scan_leftBottom")
+    /// Image `mine_scan_leftTop`.
+    static let mine_scan_leftTop = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_scan_leftTop")
+    /// Image `mine_scan_line`.
+    static let mine_scan_line = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_scan_line")
+    /// Image `mine_scan_rightBottom`.
+    static let mine_scan_rightBottom = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_scan_rightBottom")
+    /// Image `mine_scan_rightTop`.
+    static let mine_scan_rightTop = Rswift.ImageResource(bundle: R.hostingBundle, name: "mine_scan_rightTop")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "mine_main_back", bundle: ..., traitCollection: ...)`
@@ -133,6 +143,41 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "mine_scan_lamp", bundle: ..., traitCollection: ...)`
     static func mine_scan_lamp(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.mine_scan_lamp, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "mine_scan_leftBottom", bundle: ..., traitCollection: ...)`
+    static func mine_scan_leftBottom(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mine_scan_leftBottom, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "mine_scan_leftTop", bundle: ..., traitCollection: ...)`
+    static func mine_scan_leftTop(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mine_scan_leftTop, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "mine_scan_line", bundle: ..., traitCollection: ...)`
+    static func mine_scan_line(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mine_scan_line, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "mine_scan_rightBottom", bundle: ..., traitCollection: ...)`
+    static func mine_scan_rightBottom(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mine_scan_rightBottom, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "mine_scan_rightTop", bundle: ..., traitCollection: ...)`
+    static func mine_scan_rightTop(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mine_scan_rightTop, compatibleWith: traitCollection)
     }
     #endif
 
