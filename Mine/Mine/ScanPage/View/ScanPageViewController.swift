@@ -14,8 +14,47 @@ class ScanPageViewController: UIViewController {
 
     var output: ScanPageViewOutput!
     private let bag = DisposeBag()
-    private var timer: Timer!
-    private var session: AVCaptureSession!
+    /// 扫描会话
+    var session = AVCaptureSession()
+    var videoInput: AVCaptureDeviceInput?
+    var timer : Timer?
+    
+    var scanZoneViewWidth: CGFloat {
+        GPConstant.width - 120
+    }
+    
+    var scanZoneViewCenterY: CGFloat {
+        GPConstant.height * 0.5
+    }
+    
+    var leftTopPoint: CGPoint {
+         CGPoint(x: (GPConstant.width - scanZoneViewWidth)/2, y: (scanZoneViewCenterY - (scanZoneViewWidth/2)))
+    }
+    
+    var rightTopPoint: CGPoint {
+        CGPoint(x: (GPConstant.width + scanZoneViewWidth)/2, y: (scanZoneViewCenterY - (scanZoneViewWidth/2)))
+    }
+    
+    var leftBottomPoint: CGPoint {
+        CGPoint(x: (GPConstant.width - scanZoneViewWidth)/2, y: (scanZoneViewCenterY + (scanZoneViewWidth/2)))
+    }
+    
+    var rightBottomPoint: CGPoint {
+        CGPoint(x: (GPConstant.width + scanZoneViewWidth)/2, y: (scanZoneViewCenterY + (scanZoneViewWidth/2)))
+    }
+    
+    lazy var scanResultLabel: UILabel = {
+        let label = UILabel()
+        label.defaultConfigure()
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    lazy var scanLineView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = R.image.mine_scan_line()
+        return imageView
+    }()
     
     lazy var backBtn: UIButton = {
         let button = UIButton(type: .custom)
@@ -26,31 +65,17 @@ class ScanPageViewController: UIViewController {
         return button
     }()
     
-    lazy var centerView: UIView = {
+    lazy var scanZoneView: UIView = {
         let view = UIView()
-        view.backgroundColor = .mainColor
+        view.backgroundColor = .clear
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.white.cgColor
         return view
-    }()
-    
-    lazy var lampBtn: UIButton = {
-        let button = UIButton(type: .custom)
-        button.setTitle("打开", for: .normal)
-        button.setImage(R.image.mine_scan_lamp(), for: .normal)
-        button.rx.tap.subscribe { (_) in
-            self.onClickLampBtn()
-        }.disposed(by: bag)
-        return button
     }()
     
     lazy var leftTopImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = R.image.mine_scan_leftTop()
-        return imageView
-    }()
-    
-    lazy var leftBottomImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = R.image.mine_scan_leftBottom()
         return imageView
     }()
     
@@ -60,281 +85,305 @@ class ScanPageViewController: UIViewController {
         return imageView
     }()
     
+    lazy var leftBottomImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = R.image.mine_scan_leftBottom()
+        return imageView
+    }()
+    
     lazy var rightBottomImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = R.image.mine_scan_rightBottom()
         return imageView
     }()
     
-    lazy var scanLineImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = R.image.mine_scan_line()
-        return imageView
+    lazy var lampBtn: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setImage(R.image.mine_scan_lamp(), for: .normal)
+        button.setTitle("打开", for: .normal)
+        button.rx.tap.subscribe { (_) in
+            self.flashClick()
+        }.disposed(by: bag)
+        return button
     }()
     
-    var scanBoxWidth: CGFloat {
-        GPConstant.width - 120
-    }
-    
-    var scanBoxCenterY: CGFloat {
-        GPConstant.height * 0.5
-    }
-    
-    var leftTopPoint: CGPoint {
-        CGPoint(x: 120 / 2, y: scanBoxCenterY - scanBoxWidth / 2)
-    }
-    
-    var leftBottomPoint: CGPoint {
-        CGPoint(x: 120 / 2, y: scanBoxCenterY + scanBoxWidth / 2)
-    }
-    
-    var rightTopPoint: CGPoint {
-        CGPoint(x: (scanBoxCenterY + scanBoxWidth) / 2, y: scanBoxCenterY - scanBoxWidth / 2)
-    }
-    
-    var rightBottomPoint: CGPoint {
-        CGPoint(x: (scanBoxCenterY + scanBoxWidth) / 2, y: scanBoxCenterY + scanBoxWidth / 2)
-    }
-    
-    // 扫描区域
-    lazy var scanPreViewLayer: AVCaptureVideoPreviewLayer = {
-        let layer = AVCaptureVideoPreviewLayer(session: session)
-        layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        layer.frame = view.layer.bounds
-        layer.backgroundColor = UIColor.black.cgColor
-        
-        return layer
+    /// 预览图层
+    lazy var previewLayer : AVCaptureVideoPreviewLayer = {
+        let preview = AVCaptureVideoPreviewLayer(session: session)
+        preview.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        preview.frame = CGRect(x: 0, y: 0, width: GPConstant.width, height:GPConstant.height)
+        preview.backgroundColor = UIColor.black.cgColor
+
+        return preview
     }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupNavView()
+        setupSubViews()
+        addObserverForNoti()
+
+        setupSesstion()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        stopRunning()
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationHidden(for: true)
-        checkAVCaptureDeviceStatus()
-        scanLineImageViewAnimation()
+        checkCameraStatus()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationHidden(for: false)
+        stopRunning()
     }
-
-    // MARK: override
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-        setupNavItems()
-        setupSubViews()
-        addObserverForNoti()
-        startScan()
+    
+    deinit {
+        print("释放了")
     }
 }
 
-// MARK: - Assistant
 
 extension ScanPageViewController {
-
-    func setupNavItems() {}
+    func addObserverForNoti() {}
     
-    func setupSubViews() {
-        view.backgroundColor = .gray51
+    func setupNavView() {}
+    
+    func setupSubViews(){
+        view.backgroundColor = UIColor.gray51
         view.addSubview(backBtn)
-        view.addSubview(centerView)
+        view.addSubview(scanZoneView)
+        scanZoneView.addSubview(leftTopImageView)
+        scanZoneView.addSubview(rightTopImageView)
+        scanZoneView.addSubview(leftBottomImageView)
+        scanZoneView.addSubview(rightBottomImageView)
+        view.addSubview(scanLineView)
         view.addSubview(lampBtn)
-        view.addSubview(leftTopImageView)
-        view.addSubview(leftBottomImageView)
-        view.addSubview(rightTopImageView)
-        view.addSubview(rightBottomImageView)
-        view.addSubview(scanLineImageView)
-        setupSubviewsContraints()
+        view.addSubview(scanResultLabel)
+        
+        setupSubviewContraints()
     }
     
-    func setupSubviewsContraints() {
-        backBtn.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(GPConstant.kToolBarHeight + GPConstant.kSafeAreaTopInset)
-            make.left.equalTo(20)
-            make.size.equalTo(CGSize(width: 28, height: 28))
-        }
-        
-        centerView.snp.makeConstraints { (make) in
+    private func setupSubviewContraints() {
+        scanZoneView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
-            make.size.equalTo(CGSize(width: scanBoxWidth, height: scanBoxWidth))
+            make.width.height.equalTo(scanZoneViewWidth)
         }
         
-        lampBtn.snp.makeConstraints { (make) in
-            make.top.equalTo(centerView.snp.bottom).offset(20)
-            make.centerX.equalToSuperview()
-            make.size.equalTo(CGSize(width: 80, height: 80))
+        backBtn.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(20)
+            make.top.equalTo(GPConstant.kNavigationBarHeight/2 + GPConstant.kToolBarHeight)
         }
-        lampBtn.setupButtomImage_LabelStyle(style: .imageUpLabelDown, imageTitleSpace: 5)
-        lampBtn.layoutIfNeeded()
         
         leftTopImageView.snp.makeConstraints { (make) in
-            make.left.top.equalTo(centerView).offset(-1)
-        }
-        
-        leftBottomImageView.snp.makeConstraints { (make) in
-            make.left.equalTo(centerView).offset(-1)
-            make.bottom.equalTo(centerView).offset(1)
+            make.top.equalToSuperview().inset(-1.5)
+            make.left.equalToSuperview().inset(-2)
         }
         
         rightTopImageView.snp.makeConstraints { (make) in
-            make.right.equalTo(centerView).offset(1)
-            make.top.equalTo(centerView).offset(-1)
+            make.top.right.equalToSuperview().inset(-1.5)
+        }
+        
+        leftBottomImageView.snp.makeConstraints { (make) in
+            make.bottom.equalToSuperview().inset(-1.5)
+            make.left.equalToSuperview().inset(-2)
         }
         
         rightBottomImageView.snp.makeConstraints { (make) in
-            make.bottom.right.equalTo(centerView).offset(1)
+            make.right.bottom.equalToSuperview().inset(-1.5)
+        }
+        
+        lampBtn.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(scanZoneView.snp.bottom).offset(30)
+            make.size.equalTo(CGSize(width: 80, height: 80))
+        }
+        
+        lampBtn.setupButtomImage_LabelStyle(style: .imageUpLabelDown, imageTitleSpace: 5)
+        lampBtn.layoutIfNeeded()
+        
+        scanResultLabel.snp.makeConstraints { (make) in
+            make.bottom.equalTo(scanZoneView.snp.top).offset(-20)
+            make.centerX.equalToSuperview()
+            make.left.equalTo(scanZoneView)
         }
     }
     
-    private func checkAVCaptureDeviceStatus() {
+    private func checkCameraStatus() {
         let status = AVCaptureDevice.authorizationStatus(for: .video)
         switch status {
-        case .denied:
-            KRProgressHUD.showWarning(withMessage: "已拒绝开启权限")
-            self.alertPromptToAllowCameraAccessViaSetting()
-        case .restricted:
-            KRProgressHUD.showInfo(withMessage: "权限未开启")
-            self.alertPromptToAllowCameraAccessViaSetting()
-        case .notDetermined:
-            KRProgressHUD.showWarning(withMessage: "需要用户开启权限，但是用户未授予或者已经拒绝")
-            self.alertPromptToAllowCameraAccessViaSetting()
         case .authorized:
-            setupAVSession()
-        @unknown default:
-            fatalError()
+            startRunning()
+        case .denied:
+            fallthrough
+        case .restricted:
+            KRProgressHUD.showError(withMessage: "用户拒绝使用相机")
+        case .notDetermined:
+            KRProgressHUD.showError(withMessage: "用户还未同意或者拒绝")
+            AVCaptureDevice.requestAccess(for: .video) { (granted: Bool) in
+                DispatchQueue.main.async {
+                    if granted {
+                        self.startRunning()
+                    } else {
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }
+            }
+        default:
+            break
         }
     }
     
-    private func setupAVSession() {
-        let deviceSession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: .video, position: .back)
-        let device = deviceSession.devices.filter({ $0.position == .back}).first
+    private func setupSesstion() {
+        /// 获取设备
+        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .back)
+        let device = deviceDiscoverySession.devices.filter({ $0.position == .back }).first
         guard let dev = device else { return }
+        /// 视频输入
         let videoInput = try? AVCaptureDeviceInput(device: dev)
-        let gloabalQueue = DispatchQueue.global()
+        let queue =  DispatchQueue.global(qos: .default)
         let videoOutput = AVCaptureMetadataOutput()
-        videoOutput.setMetadataObjectsDelegate(self, queue: gloabalQueue)
-        
-        guard let input = videoInput else { return }
-        if session.canAddInput(input) {
-            session.addInput(input)
+        videoOutput.setMetadataObjectsDelegate(self, queue: queue)
+        if session.canAddInput(videoInput!) {
+            session.addInput(videoInput!)
         }
-        
         if session.canAddOutput(videoOutput) {
             session.addOutput(videoOutput)
         }
         
-        // type说明：
-        /**
-         qr：从QR代码生成的实例将返回此标识符作为type
-         code39：从Code 39代码生成的实例返回此标识符作为type
-         code128：从代码128代码生成的实例返回此标识符作为type
-         code39Mo43：从代码39 mod 43代码生成的实例返回此标识符作为type
-         code93：从代码93代码生成的实例返回此标识符作为type
-         ean13：由EAN-13（包括UPC-A）代码生成的实例返回此标识符作为type
-         ean8：从EAN-8代码生成的实例将此标识符返回为type
-         */
-        videoOutput.metadataObjectTypes = [.qr, .code39, .code128, .code39Mod43, .ean13, .ean8, .code93]
-        let rect = CGRect(x: leftBottomPoint.x, y: scanBoxCenterY, width: scanBoxWidth, height: scanBoxWidth)
-        videoOutput.rectOfInterest = convertRectOfInterest(rect: rect)
-        view.layer.addSublayer(scanPreViewLayer)
-    }
-    
-    // CGRect转换成百分比
-    private func convertRectOfInterest(rect: CGRect) -> CGRect {
-        let screenRect = view.frame
-        let width = screenRect.width
-        let height = screenRect.height
-        let newX = 1 / (width / rect.minX)
-        let newY = 1 / (height / rect.minY)
-        let newWidth = 1 / (width / rect.width)
-        let newHeight = 1 / (height / rect.height)
+        ///扫描类型
+        videoOutput.metadataObjectTypes = [
+            .qr,
+            .code39,
+            .code128,
+            .code39Mod43,
+            .ean13,
+            .ean8,
+            .code93]
         
-        return CGRect(x: newX, y: newY, width: newWidth, height: newHeight)
+        ///可识别区域  注意看这个rectOfInterest  不是一左上角为原点，以右上角为原点 并且rect的值是个比例在【0，1】之间
+        videoOutput.rectOfInterest = CGRect(x: (scanZoneViewCenterY - (scanZoneViewWidth/2) + GPConstant.kNavigationBarHeight/2)/GPConstant.height, y: 1 - (GPConstant.width + scanZoneViewWidth)/2/GPConstant.width, width: scanZoneViewWidth/GPConstant.height, height: scanZoneViewWidth/GPConstant.width)
+        
+        view.layer.addSublayer(previewLayer)
+        view.bringSubviewToFront(scanZoneView)
+        view.bringSubviewToFront(backBtn)
+        view.bringSubviewToFront(lampBtn)
     }
     
-    private func onClickLampBtn() {
-        let session = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .back)
-        let devices = session.devices.filter({ $0.position == .back}).first
-        guard let device = devices else { return }
-        if device.torchMode == AVCaptureDevice.TorchMode.off {
-            do {
-                try device.lockForConfiguration()
-            } catch {
-                return
-            }
-            device.torchMode = .on
-            device.unlockForConfiguration()
-            lampBtn.setTitle("关闭", for: .normal)
-        } else {
-            do {
-                try device.lockForConfiguration()
-            } catch {
-                return
-            }
-            device.torchMode = .off
-            device.unlockForConfiguration()
-            lampBtn.setTitle("打开", for: .normal)
-        }
-    }
     
-    private func createBezierPath(for points: [CGPoint]) -> UIBezierPath {
+    private func createBezierPath( points : [CGPoint]) -> UIBezierPath {
         var points = points
         let path = UIBezierPath()
         path.move(to: points.first!)
         points.remove(at: 0)
-        
-        _ = points.map({path.addLine(to: $0)})
+        for point in points {
+            path.addLine(to: point)
+        }
         path.close()
         return path
     }
     
-    private func startScan() {
-        scanLineImageView.frame = CGRect(x: leftTopPoint.x, y: leftTopPoint.y, width: scanBoxWidth, height: 1)
-        timer = Timer(timeInterval: 3, repeats: true, block: { (time) in
-            self.scanLineImageViewAnimation()
-        })
-        RunLoop.main.add(timer, forMode: .common)
-    }
-    
-    private func scanLineImageViewAnimation() {
+    private func scanLineImagViewAnmination() {
         UIView.animate(withDuration: 3) {
-            let frame = self.scanLineImageView.frame
-            var newFrameY: CGFloat = self.leftTopPoint.y + self.scanBoxWidth - frame.size.height
+            let frame = self.scanLineView.frame
+            var newY : CGFloat = self.leftTopPoint.y  + self.scanZoneViewWidth - frame.size.height
             if frame.origin.y > self.leftTopPoint.y {
-                newFrameY = self.leftTopPoint.y
+                newY = self.leftTopPoint.y
             }
             
-            let newFrame = CGRect(x: frame.origin.x, y: newFrameY, width: frame.size.width, height: frame.size.height)
-            self.scanLineImageView.frame = newFrame
+            let newFrame = CGRect(x: frame.origin.x, y: newY, width: frame.size.width, height: frame.size.height)
+            self.scanLineView.frame = newFrame
         }
     }
     
+    /// 开始扫描
+    private func startRunning() {
+        session.startRunning()
+        setupTimer()
+    }
     
-    func addObserverForNoti() {}
+    /// 结束扫描
+    private func stopRunning()  {
+        session.stopRunning()
+        guard let time = timer else { return }
+        time.invalidate()
+        timer = nil
+    }
+    
+    private func setupTimer()  {
+        view.bringSubviewToFront(scanLineView)
+        scanLineView.frame = CGRect(x: leftTopPoint.x, y: leftTopPoint.y , width: scanZoneViewWidth, height: 1)
+        scanLineImagViewAnmination()
+        timer = Timer(timeInterval: 3, repeats: true, block: { [weak self] (_) in
+            self?.scanLineImagViewAnmination()
+        })
+        RunLoop.main.add(timer!, forMode: .common)
+        timer?.fire()
+    }
+    
+    private  func flashClick() {
+        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .back)
+        let device = deviceDiscoverySession.devices.filter({ $0.position == .back }).first
+        guard let dev = device else { return }
+        
+        if dev.torchMode == AVCaptureDevice.TorchMode.off {
+            do {
+                try dev.lockForConfiguration()
+            } catch {
+                return
+            }
+            dev.torchMode = .on
+            dev.unlockForConfiguration()
+        } else {
+            do {
+                try dev.lockForConfiguration()
+            } catch {
+                return
+            }
+            dev.torchMode = .off
+            dev.unlockForConfiguration()
+        }
+    }
+    
+    private func recogniateQrcodeImage(_ image : UIImage) -> String {
+        let ciImage:CIImage = CIImage(image: image)!
+        let detector = CIDetector(ofType: CIDetectorTypeQRCode, context:nil,options:[CIDetectorAccuracy:CIDetectorAccuracyHigh])
+        let feature = detector?.features(in: ciImage)
+        let obj = feature?.first as? CIQRCodeFeature
+        let str = obj?.messageString ?? ""
+        print("scan result = " + str)
+        return str
+    }
 }
 
-// MARK: - Network
-
-extension ScanPageViewController {}
-
-// MARK: - Delegate
-
-extension ScanPageViewController {}
-
-extension ScanPageViewController: AVCaptureMetadataOutputObjectsDelegate {
-    
+extension ScanPageViewController : AVCaptureMetadataOutputObjectsDelegate {
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        //扫描结果
+        if metadataObjects.isEmpty {
+           return
+        }
+        
+        let obj: AVMetadataMachineReadableCodeObject = metadataObjects.first as! AVMetadataMachineReadableCodeObject
+        let result : String = obj.stringValue!
+        print("扫描结果:",result)
+        DispatchQueue.main.async {
+            self.view.bringSubviewToFront(self.scanResultLabel)
+            self.scanResultLabel.text = result
+        }
+        stopRunning()
+    }
 }
 
-// MARK: - Selector
-
-@objc extension ScanPageViewController {
-
-    func onClickScanPageBtn(_ sender: UIButton) {}
-    
-    func onRecvScanPageNoti(_ noti: Notification) {}
-}
 
 // MARK: - ScanPageViewInput 
 
