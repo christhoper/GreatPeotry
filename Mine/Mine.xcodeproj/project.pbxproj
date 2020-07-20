@@ -10,6 +10,46 @@
 		700EE1A0965A4C1F6720DFBC /* Pods_Mine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6B18A7FBF9B844D581F2D9 /* Pods_Mine.framework */; };
 		FF0160F324A22FE400BD27B0 /* MineRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0160F224A22FE300BD27B0 /* MineRoutable.swift */; };
 		FF0160FE24A2325D00BD27B0 /* Mine_Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0160FD24A2325D00BD27B0 /* Mine_Header.swift */; };
+		FF0E32DF24C54156001BE07D /* ArticlePageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E32D824C54156001BE07D /* ArticlePageProtocols.swift */; };
+		FF0E32E024C54156001BE07D /* ArticlePagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E32DA24C54156001BE07D /* ArticlePagePresenter.swift */; };
+		FF0E32E124C54156001BE07D /* ArticlePageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E32DC24C54156001BE07D /* ArticlePageInteractor.swift */; };
+		FF0E32E224C54156001BE07D /* ArticlePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E32DE24C54156001BE07D /* ArticlePageViewController.swift */; };
+		FF0E32FE24C54354001BE07D /* FavouriesPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E32F024C54354001BE07D /* FavouriesPagePresenter.swift */; };
+		FF0E32FF24C54354001BE07D /* FavouriesPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E32F124C54354001BE07D /* FavouriesPageProtocols.swift */; };
+		FF0E330024C54354001BE07D /* FavouriesPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E32F324C54354001BE07D /* FavouriesPageInteractor.swift */; };
+		FF0E330124C54354001BE07D /* FavouriesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E32F524C54354001BE07D /* FavouriesPageViewController.swift */; };
+		FF0E330224C54354001BE07D /* InvitationPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E32F824C54354001BE07D /* InvitationPagePresenter.swift */; };
+		FF0E330324C54354001BE07D /* InvitationPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E32FA24C54354001BE07D /* InvitationPageInteractor.swift */; };
+		FF0E330424C54354001BE07D /* InvitationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E32FC24C54354001BE07D /* InvitationPageViewController.swift */; };
+		FF0E330524C54354001BE07D /* InvitationPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E32FD24C54354001BE07D /* InvitationPageProtocols.swift */; };
+		FF0E332424C54569001BE07D /* BrowsingHistoryPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E331E24C54568001BE07D /* BrowsingHistoryPagePresenter.swift */; };
+		FF0E332524C54569001BE07D /* BrowsingHistoryPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E331F24C54568001BE07D /* BrowsingHistoryPageProtocols.swift */; };
+		FF0E332624C54569001BE07D /* BrowsingHistoryPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E332124C54569001BE07D /* BrowsingHistoryPageInteractor.swift */; };
+		FF0E332724C54569001BE07D /* BrowsingHistoryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E332324C54569001BE07D /* BrowsingHistoryPageViewController.swift */; };
+		FF0E333524C56D97001BE07D /* SettingsPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E332E24C56D97001BE07D /* SettingsPageProtocols.swift */; };
+		FF0E333624C56D97001BE07D /* SettingsPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E333024C56D97001BE07D /* SettingsPagePresenter.swift */; };
+		FF0E333724C56D97001BE07D /* SettingsPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E333224C56D97001BE07D /* SettingsPageInteractor.swift */; };
+		FF0E333824C56D97001BE07D /* SettingsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E333424C56D97001BE07D /* SettingsPageViewController.swift */; };
+		FF0E334124C574B6001BE07D /* MyPuesrPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E333B24C574B6001BE07D /* MyPuesrPagePresenter.swift */; };
+		FF0E334224C574B6001BE07D /* MyPuesrPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E333C24C574B6001BE07D /* MyPuesrPageProtocols.swift */; };
+		FF0E334324C574B6001BE07D /* MyPuesrPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E333E24C574B6001BE07D /* MyPuesrPageInteractor.swift */; };
+		FF0E334424C574B6001BE07D /* MyPuesrPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E334024C574B6001BE07D /* MyPuesrPageViewController.swift */; };
+		FF0E334D24C574E2001BE07D /* ActivityPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E334724C574E2001BE07D /* ActivityPagePresenter.swift */; };
+		FF0E334E24C574E2001BE07D /* ActivityPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E334924C574E2001BE07D /* ActivityPageInteractor.swift */; };
+		FF0E334F24C574E2001BE07D /* ActivityPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E334B24C574E2001BE07D /* ActivityPageViewController.swift */; };
+		FF0E335024C574E2001BE07D /* ActivityPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E334C24C574E2001BE07D /* ActivityPageProtocols.swift */; };
+		FF0E336124C57546001BE07D /* MyIslandPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E335B24C57546001BE07D /* MyIslandPagePresenter.swift */; };
+		FF0E336224C57546001BE07D /* MyIslandPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E335C24C57546001BE07D /* MyIslandPageProtocols.swift */; };
+		FF0E336324C57546001BE07D /* MyIslandPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E335E24C57546001BE07D /* MyIslandPageInteractor.swift */; };
+		FF0E336424C57546001BE07D /* MyIslandPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E336024C57546001BE07D /* MyIslandPageViewController.swift */; };
+		FF0E337924C5759E001BE07D /* DarkModelPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E337224C5759E001BE07D /* DarkModelPageProtocols.swift */; };
+		FF0E337A24C5759E001BE07D /* DarkModelPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E337424C5759E001BE07D /* DarkModelPagePresenter.swift */; };
+		FF0E337B24C5759E001BE07D /* DarkModelPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E337624C5759E001BE07D /* DarkModelPageInteractor.swift */; };
+		FF0E337C24C5759E001BE07D /* DarkModelPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E337824C5759E001BE07D /* DarkModelPageViewController.swift */; };
+		FF0E33A624C576DC001BE07D /* FeedbackPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E339F24C576DC001BE07D /* FeedbackPageProtocols.swift */; };
+		FF0E33A724C576DC001BE07D /* FeedbackPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E33A124C576DC001BE07D /* FeedbackPagePresenter.swift */; };
+		FF0E33A824C576DC001BE07D /* FeedbackPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E33A324C576DC001BE07D /* FeedbackPageInteractor.swift */; };
+		FF0E33A924C576DC001BE07D /* FeedbackPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E33A524C576DC001BE07D /* FeedbackPageViewController.swift */; };
 		FF2C08F224AB08600004C7BA /* GPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C08F124AB08600004C7BA /* GPFoundation.framework */; };
 		FF2C08F324AB08600004C7BA /* GPFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FF2C08F124AB08600004C7BA /* GPFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FF2C090324AB0C040004C7BA /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C090224AB0C040004C7BA /* UserInfoView.swift */; };
@@ -49,6 +89,46 @@
 		F648935B0B6755E76E8F0619 /* Pods-Mine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mine.debug.xcconfig"; path = "Target Support Files/Pods-Mine/Pods-Mine.debug.xcconfig"; sourceTree = "<group>"; };
 		FF0160F224A22FE300BD27B0 /* MineRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineRoutable.swift; sourceTree = "<group>"; };
 		FF0160FD24A2325D00BD27B0 /* Mine_Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mine_Header.swift; sourceTree = "<group>"; };
+		FF0E32D824C54156001BE07D /* ArticlePageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlePageProtocols.swift; sourceTree = "<group>"; };
+		FF0E32DA24C54156001BE07D /* ArticlePagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlePagePresenter.swift; sourceTree = "<group>"; };
+		FF0E32DC24C54156001BE07D /* ArticlePageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlePageInteractor.swift; sourceTree = "<group>"; };
+		FF0E32DE24C54156001BE07D /* ArticlePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlePageViewController.swift; sourceTree = "<group>"; };
+		FF0E32F024C54354001BE07D /* FavouriesPagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriesPagePresenter.swift; sourceTree = "<group>"; };
+		FF0E32F124C54354001BE07D /* FavouriesPageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriesPageProtocols.swift; sourceTree = "<group>"; };
+		FF0E32F324C54354001BE07D /* FavouriesPageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriesPageInteractor.swift; sourceTree = "<group>"; };
+		FF0E32F524C54354001BE07D /* FavouriesPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriesPageViewController.swift; sourceTree = "<group>"; };
+		FF0E32F824C54354001BE07D /* InvitationPagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationPagePresenter.swift; sourceTree = "<group>"; };
+		FF0E32FA24C54354001BE07D /* InvitationPageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationPageInteractor.swift; sourceTree = "<group>"; };
+		FF0E32FC24C54354001BE07D /* InvitationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationPageViewController.swift; sourceTree = "<group>"; };
+		FF0E32FD24C54354001BE07D /* InvitationPageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvitationPageProtocols.swift; sourceTree = "<group>"; };
+		FF0E331E24C54568001BE07D /* BrowsingHistoryPagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowsingHistoryPagePresenter.swift; sourceTree = "<group>"; };
+		FF0E331F24C54568001BE07D /* BrowsingHistoryPageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowsingHistoryPageProtocols.swift; sourceTree = "<group>"; };
+		FF0E332124C54569001BE07D /* BrowsingHistoryPageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowsingHistoryPageInteractor.swift; sourceTree = "<group>"; };
+		FF0E332324C54569001BE07D /* BrowsingHistoryPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowsingHistoryPageViewController.swift; sourceTree = "<group>"; };
+		FF0E332E24C56D97001BE07D /* SettingsPageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPageProtocols.swift; sourceTree = "<group>"; };
+		FF0E333024C56D97001BE07D /* SettingsPagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPagePresenter.swift; sourceTree = "<group>"; };
+		FF0E333224C56D97001BE07D /* SettingsPageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPageInteractor.swift; sourceTree = "<group>"; };
+		FF0E333424C56D97001BE07D /* SettingsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPageViewController.swift; sourceTree = "<group>"; };
+		FF0E333B24C574B6001BE07D /* MyPuesrPagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPuesrPagePresenter.swift; sourceTree = "<group>"; };
+		FF0E333C24C574B6001BE07D /* MyPuesrPageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPuesrPageProtocols.swift; sourceTree = "<group>"; };
+		FF0E333E24C574B6001BE07D /* MyPuesrPageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPuesrPageInteractor.swift; sourceTree = "<group>"; };
+		FF0E334024C574B6001BE07D /* MyPuesrPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPuesrPageViewController.swift; sourceTree = "<group>"; };
+		FF0E334724C574E2001BE07D /* ActivityPagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityPagePresenter.swift; sourceTree = "<group>"; };
+		FF0E334924C574E2001BE07D /* ActivityPageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityPageInteractor.swift; sourceTree = "<group>"; };
+		FF0E334B24C574E2001BE07D /* ActivityPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityPageViewController.swift; sourceTree = "<group>"; };
+		FF0E334C24C574E2001BE07D /* ActivityPageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityPageProtocols.swift; sourceTree = "<group>"; };
+		FF0E335B24C57546001BE07D /* MyIslandPagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyIslandPagePresenter.swift; sourceTree = "<group>"; };
+		FF0E335C24C57546001BE07D /* MyIslandPageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyIslandPageProtocols.swift; sourceTree = "<group>"; };
+		FF0E335E24C57546001BE07D /* MyIslandPageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyIslandPageInteractor.swift; sourceTree = "<group>"; };
+		FF0E336024C57546001BE07D /* MyIslandPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyIslandPageViewController.swift; sourceTree = "<group>"; };
+		FF0E337224C5759E001BE07D /* DarkModelPageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkModelPageProtocols.swift; sourceTree = "<group>"; };
+		FF0E337424C5759E001BE07D /* DarkModelPagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkModelPagePresenter.swift; sourceTree = "<group>"; };
+		FF0E337624C5759E001BE07D /* DarkModelPageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkModelPageInteractor.swift; sourceTree = "<group>"; };
+		FF0E337824C5759E001BE07D /* DarkModelPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkModelPageViewController.swift; sourceTree = "<group>"; };
+		FF0E339F24C576DC001BE07D /* FeedbackPageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackPageProtocols.swift; sourceTree = "<group>"; };
+		FF0E33A124C576DC001BE07D /* FeedbackPagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackPagePresenter.swift; sourceTree = "<group>"; };
+		FF0E33A324C576DC001BE07D /* FeedbackPageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackPageInteractor.swift; sourceTree = "<group>"; };
+		FF0E33A524C576DC001BE07D /* FeedbackPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackPageViewController.swift; sourceTree = "<group>"; };
 		FF2C08F124AB08600004C7BA /* GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2C090224AB0C040004C7BA /* UserInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		FF3F1D17245AC588004B674E /* Mine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +183,356 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FF0E32D724C54156001BE07D /* ArticlePage */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E32D824C54156001BE07D /* ArticlePageProtocols.swift */,
+				FF0E32DB24C54156001BE07D /* Model */,
+				FF0E32D924C54156001BE07D /* Presenter */,
+				FF0E32DD24C54156001BE07D /* View */,
+			);
+			path = ArticlePage;
+			sourceTree = "<group>";
+		};
+		FF0E32D924C54156001BE07D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E32DA24C54156001BE07D /* ArticlePagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FF0E32DB24C54156001BE07D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E32DC24C54156001BE07D /* ArticlePageInteractor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF0E32DD24C54156001BE07D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E32DE24C54156001BE07D /* ArticlePageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF0E32EE24C54354001BE07D /* FavouriesPage */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E32F124C54354001BE07D /* FavouriesPageProtocols.swift */,
+				FF0E32F224C54354001BE07D /* Model */,
+				FF0E32EF24C54354001BE07D /* Presenter */,
+				FF0E32F424C54354001BE07D /* View */,
+			);
+			path = FavouriesPage;
+			sourceTree = "<group>";
+		};
+		FF0E32EF24C54354001BE07D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E32F024C54354001BE07D /* FavouriesPagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FF0E32F224C54354001BE07D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E32F324C54354001BE07D /* FavouriesPageInteractor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF0E32F424C54354001BE07D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E32F524C54354001BE07D /* FavouriesPageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF0E32F624C54354001BE07D /* InvitationPage */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E32FD24C54354001BE07D /* InvitationPageProtocols.swift */,
+				FF0E32F924C54354001BE07D /* Model */,
+				FF0E32F724C54354001BE07D /* Presenter */,
+				FF0E32FB24C54354001BE07D /* View */,
+			);
+			path = InvitationPage;
+			sourceTree = "<group>";
+		};
+		FF0E32F724C54354001BE07D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E32F824C54354001BE07D /* InvitationPagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FF0E32F924C54354001BE07D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E32FA24C54354001BE07D /* InvitationPageInteractor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF0E32FB24C54354001BE07D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E32FC24C54354001BE07D /* InvitationPageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF0E331C24C54568001BE07D /* BrowsingHistoryPage */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E331F24C54568001BE07D /* BrowsingHistoryPageProtocols.swift */,
+				FF0E332024C54568001BE07D /* Model */,
+				FF0E331D24C54568001BE07D /* Presenter */,
+				FF0E332224C54569001BE07D /* View */,
+			);
+			path = BrowsingHistoryPage;
+			sourceTree = "<group>";
+		};
+		FF0E331D24C54568001BE07D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E331E24C54568001BE07D /* BrowsingHistoryPagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FF0E332024C54568001BE07D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E332124C54569001BE07D /* BrowsingHistoryPageInteractor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF0E332224C54569001BE07D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E332324C54569001BE07D /* BrowsingHistoryPageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF0E332D24C56D97001BE07D /* SettingsPage */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E332E24C56D97001BE07D /* SettingsPageProtocols.swift */,
+				FF0E333124C56D97001BE07D /* Model */,
+				FF0E332F24C56D97001BE07D /* Presenter */,
+				FF0E333324C56D97001BE07D /* View */,
+			);
+			path = SettingsPage;
+			sourceTree = "<group>";
+		};
+		FF0E332F24C56D97001BE07D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E333024C56D97001BE07D /* SettingsPagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FF0E333124C56D97001BE07D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E333224C56D97001BE07D /* SettingsPageInteractor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF0E333324C56D97001BE07D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E333424C56D97001BE07D /* SettingsPageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF0E333924C574B6001BE07D /* MyPuesrPage */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E333C24C574B6001BE07D /* MyPuesrPageProtocols.swift */,
+				FF0E333D24C574B6001BE07D /* Model */,
+				FF0E333A24C574B6001BE07D /* Presenter */,
+				FF0E333F24C574B6001BE07D /* View */,
+			);
+			path = MyPuesrPage;
+			sourceTree = "<group>";
+		};
+		FF0E333A24C574B6001BE07D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E333B24C574B6001BE07D /* MyPuesrPagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FF0E333D24C574B6001BE07D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E333E24C574B6001BE07D /* MyPuesrPageInteractor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF0E333F24C574B6001BE07D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E334024C574B6001BE07D /* MyPuesrPageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF0E334524C574E2001BE07D /* ActivityPage */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E334C24C574E2001BE07D /* ActivityPageProtocols.swift */,
+				FF0E334824C574E2001BE07D /* Model */,
+				FF0E334624C574E2001BE07D /* Presenter */,
+				FF0E334A24C574E2001BE07D /* View */,
+			);
+			path = ActivityPage;
+			sourceTree = "<group>";
+		};
+		FF0E334624C574E2001BE07D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E334724C574E2001BE07D /* ActivityPagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FF0E334824C574E2001BE07D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E334924C574E2001BE07D /* ActivityPageInteractor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF0E334A24C574E2001BE07D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E334B24C574E2001BE07D /* ActivityPageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF0E335924C57546001BE07D /* MyIslandPage */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E335C24C57546001BE07D /* MyIslandPageProtocols.swift */,
+				FF0E335D24C57546001BE07D /* Model */,
+				FF0E335A24C57546001BE07D /* Presenter */,
+				FF0E335F24C57546001BE07D /* View */,
+			);
+			path = MyIslandPage;
+			sourceTree = "<group>";
+		};
+		FF0E335A24C57546001BE07D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E335B24C57546001BE07D /* MyIslandPagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FF0E335D24C57546001BE07D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E335E24C57546001BE07D /* MyIslandPageInteractor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF0E335F24C57546001BE07D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E336024C57546001BE07D /* MyIslandPageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF0E337124C5759E001BE07D /* DarkModelPage */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E337224C5759E001BE07D /* DarkModelPageProtocols.swift */,
+				FF0E337524C5759E001BE07D /* Model */,
+				FF0E337324C5759E001BE07D /* Presenter */,
+				FF0E337724C5759E001BE07D /* View */,
+			);
+			path = DarkModelPage;
+			sourceTree = "<group>";
+		};
+		FF0E337324C5759E001BE07D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E337424C5759E001BE07D /* DarkModelPagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FF0E337524C5759E001BE07D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E337624C5759E001BE07D /* DarkModelPageInteractor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF0E337724C5759E001BE07D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E337824C5759E001BE07D /* DarkModelPageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF0E339E24C576DC001BE07D /* FeedbackPage */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E339F24C576DC001BE07D /* FeedbackPageProtocols.swift */,
+				FF0E33A224C576DC001BE07D /* Model */,
+				FF0E33A024C576DC001BE07D /* Presenter */,
+				FF0E33A424C576DC001BE07D /* View */,
+			);
+			path = FeedbackPage;
+			sourceTree = "<group>";
+		};
+		FF0E33A024C576DC001BE07D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E33A124C576DC001BE07D /* FeedbackPagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FF0E33A224C576DC001BE07D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E33A324C576DC001BE07D /* FeedbackPageInteractor.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF0E33A424C576DC001BE07D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E33A524C576DC001BE07D /* FeedbackPageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FF3F1D0D245AC588004B674E = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +555,16 @@
 		FF3F1D19245AC588004B674E /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				FF0E339E24C576DC001BE07D /* FeedbackPage */,
+				FF0E337124C5759E001BE07D /* DarkModelPage */,
+				FF0E335924C57546001BE07D /* MyIslandPage */,
+				FF0E334524C574E2001BE07D /* ActivityPage */,
+				FF0E333924C574B6001BE07D /* MyPuesrPage */,
+				FF0E332D24C56D97001BE07D /* SettingsPage */,
+				FF0E331C24C54568001BE07D /* BrowsingHistoryPage */,
+				FF0E32EE24C54354001BE07D /* FavouriesPage */,
+				FF0E32F624C54354001BE07D /* InvitationPage */,
+				FF0E32D724C54156001BE07D /* ArticlePage */,
 				FF96837124AC7A2600024CCA /* ScanPage */,
 				FF3F1D28245AC5DC004B674E /* MainPage */,
 				FF3F1D1A245AC588004B674E /* Mine.h */,
@@ -336,20 +776,60 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF0E33A724C576DC001BE07D /* FeedbackPagePresenter.swift in Sources */,
+				FF0E332524C54569001BE07D /* BrowsingHistoryPageProtocols.swift in Sources */,
+				FF0E336324C57546001BE07D /* MyIslandPageInteractor.swift in Sources */,
+				FF0E336424C57546001BE07D /* MyIslandPageViewController.swift in Sources */,
+				FF0E333724C56D97001BE07D /* SettingsPageInteractor.swift in Sources */,
+				FF0E332724C54569001BE07D /* BrowsingHistoryPageViewController.swift in Sources */,
+				FF0E337924C5759E001BE07D /* DarkModelPageProtocols.swift in Sources */,
 				FF3F1D33245AC5DC004B674E /* MainPageViewController.swift in Sources */,
+				FF0E337A24C5759E001BE07D /* DarkModelPagePresenter.swift in Sources */,
+				FF0E32FF24C54354001BE07D /* FavouriesPageProtocols.swift in Sources */,
 				FFB60E3224AB250A007FF836 /* TopBarView.swift in Sources */,
 				FF0160FE24A2325D00BD27B0 /* Mine_Header.swift in Sources */,
 				FF8C547124A32335009FEB57 /* MainPageTableViewCell.swift in Sources */,
+				FF0E330224C54354001BE07D /* InvitationPagePresenter.swift in Sources */,
 				FF2C090324AB0C040004C7BA /* UserInfoView.swift in Sources */,
 				FF96837A24AC7A2600024CCA /* ScanPageProtocols.swift in Sources */,
+				FF0E332624C54569001BE07D /* BrowsingHistoryPageInteractor.swift in Sources */,
+				FF0E334224C574B6001BE07D /* MyPuesrPageProtocols.swift in Sources */,
+				FF0E336224C57546001BE07D /* MyIslandPageProtocols.swift in Sources */,
+				FF0E334424C574B6001BE07D /* MyPuesrPageViewController.swift in Sources */,
+				FF0E32E224C54156001BE07D /* ArticlePageViewController.swift in Sources */,
+				FF0E330124C54354001BE07D /* FavouriesPageViewController.swift in Sources */,
+				FF0E334D24C574E2001BE07D /* ActivityPagePresenter.swift in Sources */,
 				FF0160F324A22FE400BD27B0 /* MineRoutable.swift in Sources */,
+				FF0E337C24C5759E001BE07D /* DarkModelPageViewController.swift in Sources */,
 				FF3F1D30245AC5DC004B674E /* MainPagePresenter.swift in Sources */,
+				FF0E335024C574E2001BE07D /* ActivityPageProtocols.swift in Sources */,
+				FF0E330024C54354001BE07D /* FavouriesPageInteractor.swift in Sources */,
+				FF0E334F24C574E2001BE07D /* ActivityPageViewController.swift in Sources */,
 				FFB60E4024AB2B5C007FF836 /* R.generated.swift in Sources */,
+				FF0E336124C57546001BE07D /* MyIslandPagePresenter.swift in Sources */,
 				FF96837924AC7A2600024CCA /* ScanPagePresenter.swift in Sources */,
 				FF96837C24AC7A2600024CCA /* ScanPageViewController.swift in Sources */,
 				FF96837B24AC7A2600024CCA /* ScanPageInteractor.swift in Sources */,
+				FF0E33A924C576DC001BE07D /* FeedbackPageViewController.swift in Sources */,
+				FF0E334324C574B6001BE07D /* MyPuesrPageInteractor.swift in Sources */,
 				FF3F1D32245AC5DC004B674E /* MainPageInteractor.swift in Sources */,
+				FF0E332424C54569001BE07D /* BrowsingHistoryPagePresenter.swift in Sources */,
+				FF0E334124C574B6001BE07D /* MyPuesrPagePresenter.swift in Sources */,
 				FF3F1D31245AC5DC004B674E /* MainPageProtocols.swift in Sources */,
+				FF0E333524C56D97001BE07D /* SettingsPageProtocols.swift in Sources */,
+				FF0E337B24C5759E001BE07D /* DarkModelPageInteractor.swift in Sources */,
+				FF0E32FE24C54354001BE07D /* FavouriesPagePresenter.swift in Sources */,
+				FF0E32E024C54156001BE07D /* ArticlePagePresenter.swift in Sources */,
+				FF0E32E124C54156001BE07D /* ArticlePageInteractor.swift in Sources */,
+				FF0E33A824C576DC001BE07D /* FeedbackPageInteractor.swift in Sources */,
+				FF0E330324C54354001BE07D /* InvitationPageInteractor.swift in Sources */,
+				FF0E333624C56D97001BE07D /* SettingsPagePresenter.swift in Sources */,
+				FF0E333824C56D97001BE07D /* SettingsPageViewController.swift in Sources */,
+				FF0E33A624C576DC001BE07D /* FeedbackPageProtocols.swift in Sources */,
+				FF0E334E24C574E2001BE07D /* ActivityPageInteractor.swift in Sources */,
+				FF0E330524C54354001BE07D /* InvitationPageProtocols.swift in Sources */,
+				FF0E32DF24C54156001BE07D /* ArticlePageProtocols.swift in Sources */,
+				FF0E330424C54354001BE07D /* InvitationPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

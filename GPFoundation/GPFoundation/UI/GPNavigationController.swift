@@ -9,7 +9,6 @@
 import UIKit
 
 public class GPNavigationController: UINavigationController {
-
     public override func viewDidLoad() {
         super.viewDidLoad()
         // 全屏侧滑返回
@@ -24,9 +23,6 @@ public class GPNavigationController: UINavigationController {
     
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        // 全屏侧滑返回
-        self.interactivePopGestureRecognizer?.delegate = self
-        self.interactivePopGestureRecognizer?.addTarget(self, action: #selector(onPopGesture(sender:)))
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -34,7 +30,9 @@ public class GPNavigationController: UINavigationController {
     }
     
     public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        if animated {
+        if children.count > 0 {
+            let backItem = UIBarButtonItem(image: R.image.navigation_back(), style: .plain, target: self, action: #selector(back))
+            viewController.navigationItem.leftBarButtonItem = backItem
             viewController.hidesBottomBarWhenPushed = true
         }
         super.pushViewController(viewController, animated: animated)
@@ -47,7 +45,10 @@ public class GPNavigationController: UINavigationController {
         
         return nil
     }
-
+    
+    @objc private func back() {
+        super.popViewController(animated: true)
+    }
 }
 
 extension GPNavigationController {

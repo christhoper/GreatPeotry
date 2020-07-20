@@ -8,14 +8,13 @@
 
 import UIKit
 
-class WrittingPageViewController: UIViewController {
+class WrittingPageViewController: GPBaseViewController {
 
     var output: WrittingPageViewOutput!
 
     // MARK: override
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupNavItems()
         setupSubViews()
         addObserverForNoti()

@@ -34,9 +34,19 @@ protocol MainPageViewOutput {
     func getWifiList()
     
     /// 写作
-    func openWriteSence()
+    func openWriteScence()
     /// 扫描
-    func openScanSence()
+    func openScanScence()
+    /// 我的文章
+    func openArticleScence()
+    /// 我的帖子
+    func openInvitationScence()
+    /// 我的收藏
+    func openFavouriesScence()
+    /// 浏览历史
+    func openBrowsingHistoryScence()
+    /// 设置
+    func openSettingScence(for indexPath: IndexPath)
 }
 
 /// methods for communication Presenter -> Interactor

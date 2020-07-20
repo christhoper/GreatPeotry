@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1A3495135FE41A004ABFD2F6 /* Pods_GPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29099DF42CF407721EC79FEE /* Pods_GPFoundation.framework */; };
+		FF0E33B124C58954001BE07D /* GPBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E33B024C58954001BE07D /* GPBaseViewController.swift */; };
+		FF0E33C024C59681001BE07D /* GPNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E33BF24C59681001BE07D /* GPNetworkingManager.swift */; };
+		FF0E33C224C596A6001BE07D /* GPRequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E33C124C596A6001BE07D /* GPRequestEntity.swift */; };
+		FF0E33C424C596BA001BE07D /* GPResponeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E33C324C596BA001BE07D /* GPResponeEntity.swift */; };
+		FF0E33C624C59701001BE07D /* GPResponeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E33C524C59701001BE07D /* GPResponeParser.swift */; };
+		FF0E33C824C5978B001BE07D /* GPNetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E33C724C5978B001BE07D /* GPNetworkingError.swift */; };
+		FF0E33D124C59C74001BE07D /* GPReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E33D024C59C74001BE07D /* GPReachabilityManager.swift */; };
 		FF2C08B624AAE8280004C7BA /* GPFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = FF2C08B424AAE8280004C7BA /* GPFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF2C08D124AAE9060004C7BA /* GPConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C08D024AAE9060004C7BA /* GPConstant.swift */; };
 		FF2C08D424AAE97B0004C7BA /* AnimateLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C08D324AAE97B0004C7BA /* AnimateLoadingView.swift */; };
@@ -17,6 +24,8 @@
 		FF96837E24AC849100024CCA /* GPUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96837D24AC849100024CCA /* GPUIViewController.swift */; };
 		FF96838024AC89DC00024CCA /* GPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96837F24AC89DC00024CCA /* GPNavigationController.swift */; };
 		FF96838224AC920800024CCA /* GPUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96838124AC920800024CCA /* GPUIButton.swift */; };
+		FF9CB20A24B9AB5A00FF468A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF9CB20924B9AB5A00FF468A /* Assets.xcassets */; };
+		FF9CB21224B9AD9F00FF468A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9CB21124B9AD9F00FF468A /* R.generated.swift */; };
 		FFB60E1E24AB0EF8007FF836 /* GPUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E1D24AB0EF8007FF836 /* GPUITableView.swift */; };
 		FFB60E2024AB0F74007FF836 /* GPUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E1F24AB0F74007FF836 /* GPUITableViewCell.swift */; };
 		FFB60E3024AB2020007FF836 /* GPUIDevive.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E2F24AB2020007FF836 /* GPUIDevive.swift */; };
@@ -27,6 +36,13 @@
 		12C553FF70CE095C517AC8F6 /* Pods-GPFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPFoundation.debug.xcconfig"; path = "Target Support Files/Pods-GPFoundation/Pods-GPFoundation.debug.xcconfig"; sourceTree = "<group>"; };
 		238B3271B4D223BB169DAFAA /* Pods-GPFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPFoundation.release.xcconfig"; path = "Target Support Files/Pods-GPFoundation/Pods-GPFoundation.release.xcconfig"; sourceTree = "<group>"; };
 		29099DF42CF407721EC79FEE /* Pods_GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF0E33B024C58954001BE07D /* GPBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPBaseViewController.swift; sourceTree = "<group>"; };
+		FF0E33BF24C59681001BE07D /* GPNetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNetworkingManager.swift; sourceTree = "<group>"; };
+		FF0E33C124C596A6001BE07D /* GPRequestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPRequestEntity.swift; sourceTree = "<group>"; };
+		FF0E33C324C596BA001BE07D /* GPResponeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPResponeEntity.swift; sourceTree = "<group>"; };
+		FF0E33C524C59701001BE07D /* GPResponeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPResponeParser.swift; sourceTree = "<group>"; };
+		FF0E33C724C5978B001BE07D /* GPNetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNetworkingError.swift; sourceTree = "<group>"; };
+		FF0E33D024C59C74001BE07D /* GPReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPReachabilityManager.swift; sourceTree = "<group>"; };
 		FF2C08B124AAE8280004C7BA /* GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2C08B424AAE8280004C7BA /* GPFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPFoundation.h; sourceTree = "<group>"; };
 		FF2C08B524AAE8280004C7BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +54,8 @@
 		FF96837D24AC849100024CCA /* GPUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUIViewController.swift; sourceTree = "<group>"; };
 		FF96837F24AC89DC00024CCA /* GPNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNavigationController.swift; sourceTree = "<group>"; };
 		FF96838124AC920800024CCA /* GPUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUIButton.swift; sourceTree = "<group>"; };
+		FF9CB20924B9AB5A00FF468A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF9CB21124B9AD9F00FF468A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = ../R/R.generated.swift; sourceTree = "<group>"; };
 		FFB60E1D24AB0EF8007FF836 /* GPUITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUITableView.swift; sourceTree = "<group>"; };
 		FFB60E1F24AB0F74007FF836 /* GPUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUITableViewCell.swift; sourceTree = "<group>"; };
 		FFB60E2F24AB2020007FF836 /* GPUIDevive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUIDevive.swift; sourceTree = "<group>"; };
@@ -74,6 +92,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FF0E33BE24C59623001BE07D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FF0E33BF24C59681001BE07D /* GPNetworkingManager.swift */,
+				FF0E33C124C596A6001BE07D /* GPRequestEntity.swift */,
+				FF0E33C324C596BA001BE07D /* GPResponeEntity.swift */,
+				FF0E33C524C59701001BE07D /* GPResponeParser.swift */,
+				FF0E33C724C5978B001BE07D /* GPNetworkingError.swift */,
+				FF0E33D024C59C74001BE07D /* GPReachabilityManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		FF2C08A724AAE8280004C7BA = {
 			isa = PBXGroup;
 			children = (
@@ -95,10 +126,13 @@
 		FF2C08B324AAE8280004C7BA /* GPFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				FF0E33BE24C59623001BE07D /* Networking */,
 				FF2C08D224AAE9300004C7BA /* UI */,
 				FF2C08CF24AAE8E10004C7BA /* Constant */,
 				FF2C08CC24AAE8910004C7BA /* Extention */,
 				FF2C08B424AAE8280004C7BA /* GPFoundation.h */,
+				FF9CB21124B9AD9F00FF468A /* R.generated.swift */,
+				FF9CB20924B9AB5A00FF468A /* Assets.xcassets */,
 				FF2C08B524AAE8280004C7BA /* Info.plist */,
 			);
 			path = GPFoundation;
@@ -133,6 +167,7 @@
 			children = (
 				FF2C08D324AAE97B0004C7BA /* AnimateLoadingView.swift */,
 				FF96837F24AC89DC00024CCA /* GPNavigationController.swift */,
+				FF0E33B024C58954001BE07D /* GPBaseViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -156,6 +191,7 @@
 			buildConfigurationList = FF2C08B924AAE8280004C7BA /* Build configuration list for PBXNativeTarget "GPFoundation" */;
 			buildPhases = (
 				048D74E4281E1F1CBDF8CB2E /* [CP] Check Pods Manifest.lock */,
+				FF9CB20B24B9AC3000FF468A /* ShellScript */,
 				FF2C08AC24AAE8280004C7BA /* Headers */,
 				FF2C08AD24AAE8280004C7BA /* Sources */,
 				FF2C08AE24AAE8280004C7BA /* Frameworks */,
@@ -208,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF9CB20A24B9AB5A00FF468A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +273,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FF9CB20B24B9AC3000FF468A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -245,14 +301,22 @@
 			files = (
 				FFB60E2024AB0F74007FF836 /* GPUITableViewCell.swift in Sources */,
 				FF2C08D124AAE9060004C7BA /* GPConstant.swift in Sources */,
+				FF0E33B124C58954001BE07D /* GPBaseViewController.swift in Sources */,
 				FF96837E24AC849100024CCA /* GPUIViewController.swift in Sources */,
 				FF2C08D424AAE97B0004C7BA /* AnimateLoadingView.swift in Sources */,
 				FF3C900924AD7B4500DC0677 /* GPData.swift in Sources */,
+				FF0E33C824C5978B001BE07D /* GPNetworkingError.swift in Sources */,
 				FF96838024AC89DC00024CCA /* GPNavigationController.swift in Sources */,
+				FF9CB21224B9AD9F00FF468A /* R.generated.swift in Sources */,
+				FF0E33D124C59C74001BE07D /* GPReachabilityManager.swift in Sources */,
 				FF96838224AC920800024CCA /* GPUIButton.swift in Sources */,
+				FF0E33C024C59681001BE07D /* GPNetworkingManager.swift in Sources */,
 				FFB60E1E24AB0EF8007FF836 /* GPUITableView.swift in Sources */,
+				FF0E33C424C596BA001BE07D /* GPResponeEntity.swift in Sources */,
 				FF2C08D824AAE9860004C7BA /* GPColor.swift in Sources */,
 				FF2C08D724AAE9860004C7BA /* GPFont.swift in Sources */,
+				FF0E33C624C59701001BE07D /* GPResponeParser.swift in Sources */,
+				FF0E33C224C596A6001BE07D /* GPRequestEntity.swift in Sources */,
 				FFB60E3024AB2020007FF836 /* GPUIDevive.swift in Sources */,
 				FFB60E5024AB3883007FF836 /* GPUILabel.swift in Sources */,
 			);

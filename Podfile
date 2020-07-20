@@ -23,6 +23,9 @@ def pods_common
   pod 'SwiftEntryKit'
   pod 'Nuke'
   pod 'CryptoSwift'
+  pod 'Alamofire'
+  pod 'RxAlamofire'
+  pod 'ReachabilitySwift'
   
 end
 

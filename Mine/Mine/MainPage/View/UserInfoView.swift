@@ -10,6 +10,11 @@ import UIKit
 
 class UserInfoView: UIView {
     
+    
+    var onTapOfArticleHandler: (() -> Void)?
+    var onTapOfInvitationHandler: (() -> Void)?
+    var onTapOfFavouriesHandler: (() -> Void)?
+    
     private let avatarImageHeight: CGFloat = 80.0
     
     lazy var bgView: UIView = {
@@ -46,6 +51,8 @@ class UserInfoView: UIView {
         let view = ItemView()
         view.titleLabel.text = "我的文章"
         view.contentLabel.text = "99"
+        let tap = UITapGestureRecognizer(target: self, action: #selector(onTapGestureRecognizerOfArticleView))
+        view.addGestureRecognizer(tap)
         return view
     }()
     
@@ -54,6 +61,8 @@ class UserInfoView: UIView {
         let view = ItemView()
         view.titleLabel.text = "我的帖子"
         view.contentLabel.text = "99"
+        let tap = UITapGestureRecognizer(target: self, action: #selector(onTapGestureRecognizerOfInvitationView))
+        view.addGestureRecognizer(tap)
         return view
     }()
     
@@ -62,6 +71,8 @@ class UserInfoView: UIView {
         let view = ItemView()
         view.titleLabel.text = "赞和收藏"
         view.contentLabel.text = "99"
+        let tap = UITapGestureRecognizer(target: self, action: #selector(onTapGestureRecognizerOfFavouriesView))
+        view.addGestureRecognizer(tap)
         return view
     }()
     
@@ -132,6 +143,28 @@ class UserInfoView: UIView {
             make.left.equalTo(invitationView.snp.right)
         }
     }
+}
+
+@objc extension UserInfoView {
+    
+    func onTapGestureRecognizerOfArticleView() {
+        if let block = onTapOfArticleHandler {
+            block()
+        }
+    }
+    
+    func onTapGestureRecognizerOfInvitationView() {
+        if let block = onTapOfInvitationHandler {
+            block()
+        }
+    }
+    
+    func onTapGestureRecognizerOfFavouriesView() {
+        if let block = onTapOfFavouriesHandler {
+            block()
+        }
+    }
+    
 }
 
 

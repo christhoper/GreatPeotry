@@ -69,6 +69,7 @@ class MainPageViewController: UIViewController {
         topViewEvents()
         output.getWifiList()
         onClickButtonEvents()
+        userViewEvents()
     }
 }
 
@@ -76,8 +77,7 @@ class MainPageViewController: UIViewController {
 
 extension MainPageViewController {
 
-    func setupNavItems() {
-    }
+    func setupNavItems() {}
     
     func setupSubViews() {
         view.backgroundColor = UIColor(red: 226, green: 71, blue: 64)
@@ -125,11 +125,25 @@ extension MainPageViewController {
 extension MainPageViewController {
     func topViewEvents() {
         topView.onClickQrButtonHandler = { [weak self] in
-            self?.output.openScanSence()
+            self?.output.openScanScence()
         }
         
         topView.onClickWriteButtonHandler = { [weak self] in
-            self?.output.openWriteSence()
+            self?.output.openWriteScence()
+        }
+    }
+    
+    func userViewEvents() {
+        userInfoView.onTapOfArticleHandler = { [weak self] in
+            self?.output.openArticleScence()
+        }
+        
+        userInfoView.onTapOfInvitationHandler = { [weak self] in
+            self?.output.openInvitationScence()
+        }
+        
+        userInfoView.onTapOfFavouriesHandler = { [weak self] in
+            self?.output.openFavouriesScence()
         }
     }
 }
@@ -150,6 +164,10 @@ extension MainPageViewController: UITableViewDelegate, UITableViewDataSource {
         let title = output.dataSources[indexPath.row]
         cell.setupCellDataSource(for: title)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.output.openSettingScence(for: indexPath)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -175,12 +193,12 @@ extension MainPageViewController: UITableViewDelegate, UITableViewDataSource {
 @objc extension MainPageViewController {
     private func onClickButtonEvents() {
         qrBtn.rx.tap.subscribe { (_) in
-            self.output.openScanSence()
+            self.output.openScanScence()
         }.disposed(by: bag)
         
         writeBtn.rx.tap.subscribe { (events) in
             print(events)
-            self.output.openWriteSence()
+            self.output.openWriteScence()
         }.disposed(by: bag)
     }
 }

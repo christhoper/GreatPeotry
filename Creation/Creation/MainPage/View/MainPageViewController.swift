@@ -11,6 +11,16 @@ import UIKit
 class MainPageViewController: UIViewController {
 
     var output: MainPageViewOutput!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationHidden(for: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationHidden(for: false)
+    }
 
     // MARK: override
     override func viewDidLoad() {

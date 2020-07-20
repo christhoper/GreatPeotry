@@ -33,6 +33,7 @@ extension GPTabBarViewController {
         UITabBarItem.appearance().setTitleTextAttributes(normalAttributes, for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes(selctedAttributes, for: .selected)
         UITabBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().tintColor = .blackTextColor
 
         if #available(iOS 13.0, *) {
             let appearance = self.tabBar.standardAppearance.copy()
@@ -68,21 +69,21 @@ extension GPTabBarViewController {
         }
     }
 
-    private func createHomeNavigationController() -> UINavigationController {
+    private func createHomeNavigationController() -> GPNavigationController {
         let homePage = Router.home.createViewController()
         let homeNav = GPNavigationController(rootViewController: homePage)
         homeNav.tabBarItem = UITabBarItem(title: "首页", image: R.image.home_selected(), selectedImage: R.image.home_unSelected())
         return homeNav
     }
 
-    private func createCreationNavigationController() -> UINavigationController {
+    private func createCreationNavigationController() -> GPNavigationController {
         let creationPage = Router.creation.createViewController()
         let nav = GPNavigationController(rootViewController: creationPage)
         nav.tabBarItem = UITabBarItem(title: "创作", image: R.image.complaint_selected(), selectedImage: R.image.complaint_unSelected())
         return nav
     }
 
-    private func createMineNavigationController() -> UINavigationController {
+    private func createMineNavigationController() -> GPNavigationController {
         let minePage = Router.mine.createViewController()
         let nav = GPNavigationController(rootViewController: minePage)
         nav.tabBarItem = UITabBarItem(title: "我的", image: R.image.mine_selected(), selectedImage: R.image.mine_unSelected())
