@@ -14,6 +14,11 @@ PODS:
     - R.swift.Library (~> 5.2.0)
   - R.swift.Library (5.2.0)
   - ReachabilitySwift (5.0.0)
+  - Realm (5.3.3):
+    - Realm/Headers (= 5.3.3)
+  - Realm/Headers (5.3.3)
+  - RealmSwift (5.3.3):
+    - Realm (= 5.3.3)
   - RxAlamofire (5.1.0):
     - RxAlamofire/Core (= 5.1.0)
   - RxAlamofire/Core (5.1.0):
@@ -40,6 +45,7 @@ DEPENDENCIES:
   - Nuke
   - R.swift
   - ReachabilitySwift
+  - RealmSwift
   - RxAlamofire
   - RxCocoa
   - RxSwift
@@ -69,6 +75,8 @@ SPEC REPOS:
     - R.swift
     - R.swift.Library
     - ReachabilitySwift
+    - Realm
+    - RealmSwift
     - RxAlamofire
 
 SPEC CHECKSUMS:
@@ -83,6 +91,8 @@ SPEC CHECKSUMS:
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
   R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  Realm: 2d57ea355bf8ca2a0964d6bfb38d28d7ff2addf6
+  RealmSwift: 0a709536ecea30eea1d3c514f6ade2ed078dee3c
   RxAlamofire: a2d7621de4c23a0c6e7b476b504acc32838ee341
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
@@ -92,6 +102,6 @@ SPEC CHECKSUMS:
   SwiftEntryKit: 340713c2e4a6662c5149629990bf1088bf5f0389
   VerticalCardSwiper: a152823dbe457f7cc8920c86579c928bfe40d502
 
-PODFILE CHECKSUM: 968efab782177a39046059b9c35fdf81121caf08
+PODFILE CHECKSUM: 8d5164678b3ccf263d04ed9be44c493fe5c3cd9f
 
 COCOAPODS: 1.9.3

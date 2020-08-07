@@ -8,6 +8,8 @@
 
 import UIKit
 
+public protocol Routable {}
+
 public class Router {
     static let shared: Router = Router()
     private init() {}
@@ -26,17 +28,6 @@ public class Router {
 }
 
 
-public protocol Routable {}
 
-public protocol HomeRoutable: Routable {
-    func createViewController() -> UIViewController
-}
 
-public protocol CreationRoutable: Routable {
-    func createViewController() -> UIViewController
-    func createWrittingViewController() -> UIViewController
-}
 
-public protocol MineRoutable: Routable {
-    func createViewController() -> UIViewController
-}

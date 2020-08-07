@@ -12,8 +12,8 @@ import Alamofire
 import RxAlamofire
 
 
-public class BLHttpManager: NSObject {
-    public static let shared = BLHttpManager()
+public class GPHttpManager: NSObject {
+    public static let shared = GPHttpManager()
     private override init() {}
     
     let bag = DisposeBag()
@@ -78,7 +78,7 @@ public class BLHttpManager: NSObject {
 
 
 // MARK: - Request
-extension BLHttpManager {
+extension GPHttpManager {
     
     //MARK: -
     
@@ -196,7 +196,7 @@ extension BLHttpManager {
 }
 
 //MARK: - Assistant
-extension BLHttpManager {
+extension GPHttpManager {
     
     /// 配置网络请求异常提示信息
     ///

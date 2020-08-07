@@ -23,13 +23,30 @@ protocol MainPageModuleOutput: class {}
 // MARK: - SceneProtocol
 
 /// methods for communication Presenter -> View
-protocol MainPageViewInput: class {}
+protocol MainPageViewInput: class {
+    
+
+    func didGetNews()
+    func getNewsFailure(error: String)
+}
 
 /// methods for communication View -> Presenter
-protocol MainPageViewOutput {}
+protocol MainPageViewOutput {
+    var neswEntity: [MainPageEntity] { get set }
+    // 测试使用（获取新闻）
+    func loadFirstPageNews()
+    func loadNextPageNews(for lastNewsId: Double)
+}
 
 /// methods for communication Presenter -> Interactor
-protocol MainPageInteractorInput {}
+protocol MainPageInteractorInput {
+    func doLoadFirstPageNews()
+    func doLoadNextPageNews(for lastNewsId: Double)
+}
 
 /// methods for communication Interactor -> Presenter
-protocol MainPageInteractorOutput: class {}
+protocol MainPageInteractorOutput: class {
+    func handleLoadNewsResult(result: GPResponseEntity)
+    func handleLoadMoreNeswResult(result: GPResponseEntity)
+    func handleError(error: String)
+}

@@ -64,7 +64,15 @@ extension MainPageViewController {}
 
 // MARK: - MainPageViewInput 
 
-extension MainPageViewController: MainPageViewInput {}
+extension MainPageViewController: MainPageViewInput {
+    func didGetNews() {
+        
+    }
+    
+    func getNewsFailure(error: String) {
+        
+    }
+}
 
 // MARK: - MainPageModuleBuilder
 

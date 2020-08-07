@@ -30,6 +30,7 @@
 		FFB60E2024AB0F74007FF836 /* GPUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E1F24AB0F74007FF836 /* GPUITableViewCell.swift */; };
 		FFB60E3024AB2020007FF836 /* GPUIDevive.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E2F24AB2020007FF836 /* GPUIDevive.swift */; };
 		FFB60E5024AB3883007FF836 /* GPUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E4F24AB3883007FF836 /* GPUILabel.swift */; };
+		FFCF3DD124DD576C00CB428D /* GPString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCF3DD024DD576C00CB428D /* GPString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		FFB60E1F24AB0F74007FF836 /* GPUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUITableViewCell.swift; sourceTree = "<group>"; };
 		FFB60E2F24AB2020007FF836 /* GPUIDevive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUIDevive.swift; sourceTree = "<group>"; };
 		FFB60E4F24AB3883007FF836 /* GPUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUILabel.swift; sourceTree = "<group>"; };
+		FFCF3DD024DD576C00CB428D /* GPString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				FF96837D24AC849100024CCA /* GPUIViewController.swift */,
 				FF96838124AC920800024CCA /* GPUIButton.swift */,
 				FF3C900824AD7B4400DC0677 /* GPData.swift */,
+				FFCF3DD024DD576C00CB428D /* GPString.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				FF0E33C024C59681001BE07D /* GPNetworkingManager.swift in Sources */,
 				FFB60E1E24AB0EF8007FF836 /* GPUITableView.swift in Sources */,
 				FF0E33C424C596BA001BE07D /* GPResponeEntity.swift in Sources */,
+				FFCF3DD124DD576C00CB428D /* GPString.swift in Sources */,
 				FF2C08D824AAE9860004C7BA /* GPColor.swift in Sources */,
 				FF2C08D724AAE9860004C7BA /* GPFont.swift in Sources */,
 				FF0E33C624C59701001BE07D /* GPResponeParser.swift in Sources */,

@@ -37,7 +37,7 @@ extension MainPagePresenter: MainPagePresenterView {
     }
     
     func openWriteScence() {
-        let controller = Router.creation.createWrittingViewController()
+        let controller = Router.creation.openWrittingViewController(["key": "value"])
         nav?.pushViewController(controller, animated: true)
     }
     

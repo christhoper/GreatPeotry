@@ -9,14 +9,14 @@
 import UIKit
 import Router
 
-
 extension Router: CreationRoutable {
     public func createViewController() -> UIViewController {
         let (viewController, _) = MainPageModuleBuilder.setupModule()
         return viewController
     }
     
-    public func createWrittingViewController() -> UIViewController {
+    
+    public func openWrittingViewController(_ params: [String : Any]) -> UIViewController {
         let (viewController, _) = WrittingPageModuleBuilder.setupModule()
         return viewController
     }

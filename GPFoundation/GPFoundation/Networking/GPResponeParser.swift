@@ -53,7 +53,7 @@ public class BLResponseParser<T: HandyJSON> {
     }
     
     /// 对象解析器(单个)
-    public func bl_objectParse(_ response: GPResponseEntity) -> (T?, Error?) {
+    public func objectParse(_ response: GPResponseEntity) -> (T?, Error?) {
         guard let bodyMessage = response.bodyMessage else {
             return (nil, GPResponseParserError(targetModelName: targeModelName, kind: .bodyMssageInvalid))
         }
@@ -67,7 +67,7 @@ public class BLResponseParser<T: HandyJSON> {
     }
     
     /// 解析对应 key 中的对象
-    public func bl_objectKeyParse(_ response: GPResponseEntity, key: String) -> (T?, Error?) {
+    public func objectKeyParse(_ response: GPResponseEntity, key: String) -> (T?, Error?) {
         guard let bodyMessage = response.bodyMessage else {
             return (nil, GPResponseParserError(targetModelName: targeModelName, kind: .bodyMssageInvalid))
         }
@@ -90,7 +90,7 @@ public class BLResponseParser<T: HandyJSON> {
     }
     
     /// 分页对象序列解析器
-    public func bl_pageDatasParse(_ response: GPResponseEntity, key: String = "pageDatas") -> ([T]?, Error?) {
+    public func pageDatasParse(_ response: GPResponseEntity, key: String = "pageDatas") -> ([T]?, Error?) {
         guard let bodyMessage = response.bodyMessage else {
             return (nil, GPResponseParserError(targetModelName: targeModelName, kind: .bodyMssageInvalid))
         }
@@ -113,8 +113,7 @@ public class BLResponseParser<T: HandyJSON> {
     }
     
     /// 数组对象解析器
-    public func bl_arrayParse(_ response: GPResponseEntity) -> ([T]?, GPResponseParserError?) {
-        
+    public func arrayParse(_ response: GPResponseEntity) -> ([T]?, GPResponseParserError?) {
         guard let bodyMessage = response.bodyMessage else {
             return (nil, GPResponseParserError(targetModelName: targeModelName, kind: .bodyMssageInvalid))
         }

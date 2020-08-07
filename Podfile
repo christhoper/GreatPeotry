@@ -17,7 +17,7 @@ def pods_common
   pod 'Kingfisher'
   pod 'KRProgressHUD'
   pod 'R.swift'
-#  pod 'RealmSwift'
+  pod 'RealmSwift'
   pod 'VerticalCardSwiper'
   pod 'SkeletonView'
   pod 'SwiftEntryKit'

@@ -17,6 +17,9 @@ class MainPagePresenter {
     weak var transitionHandler: UIViewController!
     var interactor: MainPageInteractorInput!
     var outer: MainPageModuleOutput?
+    
+    var neswEntity: [MainPageEntity] = [MainPageEntity]()
+    
 }
 
 extension MainPagePresenter {
@@ -28,11 +31,31 @@ extension MainPagePresenter {
 
 // MARK: - MainPagePresenterView
 
-extension MainPagePresenter: MainPagePresenterView {}
+extension MainPagePresenter: MainPagePresenterView {
+    func loadFirstPageNews() {
+        
+    }
+    
+    func loadNextPageNews(for lastNewsId: Double) {
+        
+    }
+}
 
 // MARK: - MainPagePresenterInteractor
 
-extension MainPagePresenter: MainPagePresenterInteractor {}
+extension MainPagePresenter: MainPagePresenterInteractor {
+    func handleLoadNewsResult(result: GPResponseEntity) {
+        
+    }
+    
+    func handleLoadMoreNeswResult(result: GPResponseEntity) {
+        
+    }
+    
+    func handleError(error: String) {
+        
+    }
+}
 
 // MARK: - MainPageModuleInput
 
