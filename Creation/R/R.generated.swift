@@ -88,15 +88,33 @@ struct R: Rswift.Validatable {
     try intern.validate()
   }
 
-  /// This `R.image` struct is generated, and contains static references to 1 images.
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
     /// Image `main_add`.
     static let main_add = Rswift.ImageResource(bundle: R.hostingBundle, name: "main_add")
+    /// Image `main_count`.
+    static let main_count = Rswift.ImageResource(bundle: R.hostingBundle, name: "main_count")
+    /// Image `main_placeholder`.
+    static let main_placeholder = Rswift.ImageResource(bundle: R.hostingBundle, name: "main_placeholder")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "main_add", bundle: ..., traitCollection: ...)`
     static func main_add(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.main_add, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "main_count", bundle: ..., traitCollection: ...)`
+    static func main_count(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.main_count, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "main_placeholder", bundle: ..., traitCollection: ...)`
+    static func main_placeholder(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.main_placeholder, compatibleWith: traitCollection)
     }
     #endif
 

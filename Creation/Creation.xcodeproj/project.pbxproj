@@ -19,6 +19,7 @@
 		FF3F1DB1245AC800004B674E /* MainPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1DAB245AC800004B674E /* MainPageProtocols.swift */; };
 		FF3F1DB2245AC800004B674E /* MainPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1DAD245AC800004B674E /* MainPageInteractor.swift */; };
 		FF3F1DB3245AC800004B674E /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1DAF245AC800004B674E /* MainPageViewController.swift */; };
+		FF79BEBD24DE442D0034ADC8 /* MainPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79BEBC24DE442D0034ADC8 /* MainPageTableViewCell.swift */; };
 		FFB60E5924AB4651007FF836 /* WrittingPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E5324AB4651007FF836 /* WrittingPagePresenter.swift */; };
 		FFB60E5A24AB4651007FF836 /* WrittingPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E5524AB4651007FF836 /* WrittingPageInteractor.swift */; };
 		FFB60E5B24AB4651007FF836 /* WrittingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E5724AB4651007FF836 /* WrittingPageViewController.swift */; };
@@ -55,6 +56,7 @@
 		FF3F1DAB245AC800004B674E /* MainPageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageProtocols.swift; sourceTree = "<group>"; };
 		FF3F1DAD245AC800004B674E /* MainPageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageInteractor.swift; sourceTree = "<group>"; };
 		FF3F1DAF245AC800004B674E /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		FF79BEBC24DE442D0034ADC8 /* MainPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTableViewCell.swift; sourceTree = "<group>"; };
 		FFB60E5324AB4651007FF836 /* WrittingPagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrittingPagePresenter.swift; sourceTree = "<group>"; };
 		FFB60E5524AB4651007FF836 /* WrittingPageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrittingPageInteractor.swift; sourceTree = "<group>"; };
 		FFB60E5724AB4651007FF836 /* WrittingPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WrittingPageViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				FF3F1DAF245AC800004B674E /* MainPageViewController.swift */,
+				FF79BEBC24DE442D0034ADC8 /* MainPageTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				FF3F1DB1245AC800004B674E /* MainPageProtocols.swift in Sources */,
 				FF0E33B824C58EF0001BE07D /* R.generated.swift in Sources */,
 				FF0E33B324C58B25001BE07D /* Creation_Header.swift in Sources */,
+				FF79BEBD24DE442D0034ADC8 /* MainPageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,9 +8,6 @@
 
 import UIKit
 import GPFoundation
-import CommonCrypto
-import CryptoSwift
-
 
 class MainPageViewController: UIViewController {
 
@@ -38,81 +35,11 @@ class MainPageViewController: UIViewController {
         setupNavItems()
         setupSubViews()
         addObserverForNoti()
-        self.output.fetchPeotry()
-        self.loadingView.showAnimatedGradientSkeleton()
+        output.fetchPeotry()
+        loadingView.showAnimatedGradientSkeleton()
         
-        var circle = Circle()
-        circle.radius = 20
-        print(circle)
-        
-        let key = "4682360910433770"
-        let content = "21535/0"
-        let iv = "8824368895109142"
-        
-        let deCryContent = "w6IbxUAapGDFaE0r9KXUBA=="
-        
-
-        let result = content.aesCBCEncrypt(key, iv: iv)
-        let s = result!.base64EncodedString()
-        
-        print("加密",String(s))
-        
-        let decry = content.aesEncrypt(key: key, iv: iv)
-        
-        
-        print(decry)
-//        let decreData = Data(base64Encoded: deCryContent)
-//        let result = aes?.decrypt(data: decreData)
-//
-//        print("解密数据", result as Any)
     }
     
-}
-
-
-struct Circle {
-    var radius: Double {
-        willSet {
-            print(newValue)
-        }
-        
-        didSet {
-            print(oldValue, radius)
-        }
-    }
-    
-    init() {
-        self.radius = 10
-    }
-    
-}
-
-public extension String {
-    func aesEncrypt(key: String, iv: String) -> String {
-        var result = ""
-        do {
-            let enc = try AES(key: Array(key.utf8), blockMode: CBC(iv: Array(iv.utf8)), padding: .zeroPadding).encrypt(Array(self.utf8))
-            let encData = Data(bytes: enc, count: Int(enc.count))
-            let base64String = encData.base64EncodedString()
-            result = String(base64String)
-        } catch {
-            print("Error: \(error)")
-        }
-        return result
-    }
-    
-    func aesDecrypt(key: String, iv: String) -> String {
-        var result = ""
-        do {
-            guard let data = Data(base64Encoded: self) else { return result}
-            let dec = try AES(key: Array(key.utf8), blockMode: CBC(iv: Array(iv.utf8)), padding: .zeroPadding).decrypt(Array(data))
-            let decData = Data(bytes: dec, count: Int(dec.count))
-            result = String(data: decData, encoding: .utf8) ?? ""
-        } catch {
-            print("Error: \(error)")
-        }
-        return result
-    }
 }
 
 

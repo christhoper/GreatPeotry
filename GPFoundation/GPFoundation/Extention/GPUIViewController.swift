@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import KRProgressHUD
 
 public extension UIViewController {
     func navigationHidden(for hidden: Bool) {
@@ -39,5 +40,16 @@ public extension UIViewController {
         }))
 
         self.present(alert, animated: true, completion: nil)
+    }
+}
+
+
+public extension UIViewController {
+    func showHub(for content: String) {
+        KRProgressHUD.showMessage(content)
+    }
+    
+    func hiddenHub() {
+        KRProgressHUD.dismiss()
     }
 }

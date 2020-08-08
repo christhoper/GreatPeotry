@@ -24,18 +24,17 @@ protocol MainPageModuleOutput: class {}
 
 /// methods for communication Presenter -> View
 protocol MainPageViewInput: class {
-    
-
-    func didGetNews()
-    func getNewsFailure(error: String)
+    func didLoadFirstPageNews()
+    func didLoadMoreNews(_ isNoMore: Bool)
+    func loadNewsFailure(error: String)
 }
 
 /// methods for communication View -> Presenter
 protocol MainPageViewOutput {
-    var neswEntity: [MainPageEntity] { get set }
+    var neswEntities: [MainPageEntity] { get set }
     // 测试使用（获取新闻）
     func loadFirstPageNews()
-    func loadNextPageNews(for lastNewsId: Double)
+    func loadNextPageNews()
 }
 
 /// methods for communication Presenter -> Interactor

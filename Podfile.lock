@@ -8,6 +8,7 @@ PODS:
   - KRActivityIndicatorView (3.0.4)
   - KRProgressHUD (3.4.4):
     - KRActivityIndicatorView (= 3.0.4)
+  - MJRefresh (3.4.3)
   - Nuke (8.4.0)
   - QuickLayout (3.0.0)
   - R.swift (5.2.2):
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - HandyJSON
   - Kingfisher
   - KRProgressHUD
+  - MJRefresh
   - Nuke
   - R.swift
   - ReachabilitySwift
@@ -72,6 +74,7 @@ SPEC REPOS:
     - VerticalCardSwiper
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - Alamofire
+    - MJRefresh
     - R.swift
     - R.swift.Library
     - ReachabilitySwift
@@ -86,6 +89,7 @@ SPEC CHECKSUMS:
   Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
   KRActivityIndicatorView: 549db10b9578d58bac73db063d8b544e8970f7f2
   KRProgressHUD: c3b9a48a0ee4824ea13212ac3f1efa50dca021e3
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   Nuke: fa6f784c4f7e1c0f9313668510186c68b7af2509
   QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
   R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
@@ -102,6 +106,6 @@ SPEC CHECKSUMS:
   SwiftEntryKit: 340713c2e4a6662c5149629990bf1088bf5f0389
   VerticalCardSwiper: a152823dbe457f7cc8920c86579c928bfe40d502
 
-PODFILE CHECKSUM: 8d5164678b3ccf263d04ed9be44c493fe5c3cd9f
+PODFILE CHECKSUM: 1c22bd597b345eaeb10aa9b85d89fee8ba08d994
 
 COCOAPODS: 1.9.3

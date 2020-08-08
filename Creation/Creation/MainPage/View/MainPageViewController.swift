@@ -12,14 +12,27 @@ class MainPageViewController: UIViewController {
 
     var output: MainPageViewOutput!
     
+    lazy var tableView: UITableView =  {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.estimatedRowHeight = 120
+        tableView.estimatedSectionHeaderHeight = 0.0
+        tableView.estimatedSectionFooterHeight = 0.0
+        tableView.separatorStyle = .none
+        tableView.register(MainPageTableViewCell.self, forCellReuseIdentifier: MainPageTableViewCell.identifier)
+        tableView.isSkeletonable = true
+        return tableView
+    }()
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationHidden(for: true)
+//        self.navigationHidden(for: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationHidden(for: false)
+//        self.navigationHidden(for: false)
     }
 
     // MARK: override
@@ -29,6 +42,9 @@ class MainPageViewController: UIViewController {
         setupNavItems()
         setupSubViews()
         addObserverForNoti()
+        output.loadFirstPageNews()
+        tableViewRefresh()
+        view.showAnimatedSkeleton()
     }
 }
 
@@ -40,6 +56,21 @@ extension MainPageViewController {
     
     func setupSubViews() {
         view.backgroundColor = .yellow
+        view.addSubview(tableView)
+       
+        tableView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+    }
+    
+    func tableViewRefresh() {
+        tableView.setMJRefreshFooter {
+            self.output.loadNextPageNews()
+        }
+        
+        tableView.setMJRefreshHeader {
+            self.output.loadFirstPageNews()
+        }
     }
     
     func addObserverForNoti() {}
@@ -51,7 +82,36 @@ extension MainPageViewController {}
 
 // MARK: - Delegate
 
-extension MainPageViewController {}
+extension MainPageViewController: SkeletonTableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "MainPageTableViewCell"
+    }
+   
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return output.neswEntities.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let model = output.neswEntities[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: MainPageTableViewCell.identifier) as! MainPageTableViewCell
+        cell.setupModel(model)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let newsItem = output.neswEntities[indexPath.row]
+        return newsItem.cellHieght
+    }
+    
+}
 
 // MARK: - Selector
 
@@ -65,12 +125,19 @@ extension MainPageViewController {}
 // MARK: - MainPageViewInput 
 
 extension MainPageViewController: MainPageViewInput {
-    func didGetNews() {
-        
+    func didLoadFirstPageNews() {
+        tableView.endHeaderRefresh()
+        view.hideSkeleton()
+        tableView.reloadData()
     }
     
-    func getNewsFailure(error: String) {
-        
+    func didLoadMoreNews(_ isNoMore: Bool) {
+        tableView.reloadData()
+        tableView.endFooterRefresh(isWithNoMoreData: isNoMore)
+    }
+    
+    func loadNewsFailure(error: String) {
+        showHub(for: error)
     }
 }
 

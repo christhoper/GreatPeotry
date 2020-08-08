@@ -26,7 +26,7 @@ def pods_common
   pod 'Alamofire'
   pod 'RxAlamofire'
   pod 'ReachabilitySwift'
-  
+  pod 'MJRefresh'
 end
 
 def pods_home
@@ -40,6 +40,9 @@ def pods_creation
   
 end
 
+def pods_foudation
+  
+end
 
 
 target 'GreatPeotry' do
@@ -90,6 +93,7 @@ target 'GPFoundation' do
 
   project './GPFoundation/GPFoundation.xcodeproj'
   pods_common
+  pods_foudation
 
 end
 
