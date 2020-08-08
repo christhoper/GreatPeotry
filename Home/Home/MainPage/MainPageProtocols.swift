@@ -32,6 +32,7 @@ protocol MainPageViewOutput {
     
     /// 诗词数据
     var entitys: [MainPageEntity?] { get set }
+    var bannerUrls: [String] { get }
     
     /// 获取诗词数据
     func fetchPeotry()

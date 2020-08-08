@@ -13,6 +13,16 @@ class MainPageViewController: UIViewController {
 
     var output: MainPageViewOutput!
     
+    lazy var bannerView: GPBannerColloetionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: GPConstant.width, height: 200)
+        let view = GPBannerColloetionView(frame: .zero, collectionViewLayout: layout)
+        view.urls = self.output.bannerUrls
+        view.isPagingEnabled = true
+        return view
+    }()
+    
     lazy var cardSwiperView: VerticalCardSwiper = {
         let view = VerticalCardSwiper()
         view.delegate = self
@@ -37,7 +47,7 @@ class MainPageViewController: UIViewController {
         addObserverForNoti()
         output.fetchPeotry()
         loadingView.showAnimatedGradientSkeleton()
-        
+        bannerView.refreshCellData()
     }
     
 }
@@ -51,20 +61,30 @@ extension MainPageViewController {
     
     func setupSubViews() {
         view.backgroundColor = .white
-        
+        view.addSubview(bannerView)
         view.addSubview(cardSwiperView)
+        view.addSubview(loadingView)
+        
+        loadingView.bringSubviewToFront(view)
+        setupSubviewsContraints()
+    }
+    
+    func setupSubviewsContraints() {
+        bannerView.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview()
+            make.top.equalToSuperview().offset(GPConstant.kNavigationBarHeight)
+            make.height.equalTo(200)
+        }
         cardSwiperView.snp.makeConstraints { (make) in
             make.left.right.bottom.equalToSuperview()
-            make.top.equalToSuperview().offset(88)
+            make.top.equalTo(bannerView.snp.bottom)
         }
         
-        view.addSubview(loadingView)
         loadingView.snp.makeConstraints { (make) in
-            make.edges.equalTo(cardSwiperView)
+            make.edges.equalToSuperview()
         }
-        
-        self.loadingView.bringSubviewToFront(self.view)
     }
+    
     
     func addObserverForNoti() {}
 }
@@ -111,7 +131,7 @@ extension MainPageViewController: MainPageViewInput {
     
     func didFetchPeotryEntitys() {
         loadingView.hideSkeleton(transition: .crossDissolve(0.25))
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.loadingView.isHidden = true
             self.cardSwiperView.reloadData()
         }

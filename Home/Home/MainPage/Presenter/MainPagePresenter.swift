@@ -31,6 +31,12 @@ extension MainPagePresenter {
 // MARK: - MainPagePresenterView
 
 extension MainPagePresenter: MainPagePresenterView {
+    var bannerUrls: [String] {
+        ["https://file.wbp5.com/upload/files/file/fazzaco/2019/11/21/092650708.png",
+         "https://file.wbp5.com/upload/files/file/fazzaco/2019/12/01/094613989.jpg",
+         "https://file.wbp5.com/upload/files/file/fazzaco/2019/12/01/094001317.png"]
+    }
+    
 
     func fetchPeotry() {
         self.interactor.doFetchPeotry(for: "测试ID")

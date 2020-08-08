@@ -79,31 +79,31 @@ public extension String {
         return dateString
     }
 }
-//
-//public extension String {
-//    func aesEncrypt(key: String, iv: String) -> String {
-//        var result = ""
-//        do {
-//            let enc = try AES(key: Array(key.utf8), blockMode: CBC(iv: Array(iv.utf8)), padding: .zeroPadding).encrypt(Array(self.utf8))
-//            let encData = Data(bytes: enc, count: Int(enc.count))
-//            let base64String = encData.base64EncodedString()
-//            result = String(base64String)
-//        } catch {
-//            print("Error: \(error)")
-//        }
-//        return result
-//    }
-//    
-//    func aesDecrypt(key: String, iv: String) -> String {
-//        var result = ""
-//        do {
-//            guard let data = Data(base64Encoded: self) else { return result}
-//            let dec = try AES(key: Array(key.utf8), blockMode: CBC(iv: Array(iv.utf8)), padding: .zeroPadding).decrypt(Array(data))
-//            let decData = Data(bytes: dec, count: Int(dec.count))
-//            result = String(data: decData, encoding: .utf8) ?? ""
-//        } catch {
-//            print("Error: \(error)")
-//        }
-//        return result
-//    }
-//}
+
+public extension String {
+    func aesEncrypt(key: String, iv: String) -> String {
+        var result = ""
+        do {
+            let enc = try AES(key: Array(key.utf8), blockMode: CBC(iv: Array(iv.utf8)), padding: .zeroPadding).encrypt(Array(self.utf8))
+            let encData = Data(bytes: enc, count: Int(enc.count))
+            let base64String = encData.base64EncodedString()
+            result = String(base64String)
+        } catch {
+            print("Error: \(error)")
+        }
+        return result
+    }
+
+    func aesDecrypt(key: String, iv: String) -> String {
+        var result = ""
+        do {
+            guard let data = Data(base64Encoded: self) else { return result}
+            let dec = try AES(key: Array(key.utf8), blockMode: CBC(iv: Array(iv.utf8)), padding: .zeroPadding).decrypt(Array(data))
+            let decData = Data(bytes: dec, count: Int(dec.count))
+            result = String(data: decData, encoding: .utf8) ?? ""
+        } catch {
+            print("Error: \(error)")
+        }
+        return result
+    }
+}
