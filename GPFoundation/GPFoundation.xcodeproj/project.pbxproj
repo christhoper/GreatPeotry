@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A3495135FE41A004ABFD2F6 /* Pods_GPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29099DF42CF407721EC79FEE /* Pods_GPFoundation.framework */; };
+		FF0B7E7D258A087600A96AE4 /* GPArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0B7E7C258A087600A96AE4 /* GPArray.swift */; };
 		FF0E33B124C58954001BE07D /* GPBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E33B024C58954001BE07D /* GPBaseViewController.swift */; };
 		FF0E33C024C59681001BE07D /* GPNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E33BF24C59681001BE07D /* GPNetworkingManager.swift */; };
 		FF0E33C224C596A6001BE07D /* GPRequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E33C124C596A6001BE07D /* GPRequestEntity.swift */; };
@@ -21,7 +22,7 @@
 		FF2C08D724AAE9860004C7BA /* GPFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C08D524AAE9860004C7BA /* GPFont.swift */; };
 		FF2C08D824AAE9860004C7BA /* GPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C08D624AAE9860004C7BA /* GPColor.swift */; };
 		FF3C900924AD7B4500DC0677 /* GPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C900824AD7B4400DC0677 /* GPData.swift */; };
-		FF79BEBB24DE43C50034ADC8 /* CGInt64.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79BEBA24DE43C50034ADC8 /* CGInt64.swift */; };
+		FF79BEBB24DE43C50034ADC8 /* GPInt64.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79BEBA24DE43C50034ADC8 /* GPInt64.swift */; };
 		FF79BEEF24DE932B0034ADC8 /* GPBannerColloetionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79BEEE24DE932B0034ADC8 /* GPBannerColloetionView.swift */; };
 		FF96837E24AC849100024CCA /* GPUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96837D24AC849100024CCA /* GPUIViewController.swift */; };
 		FF96838024AC89DC00024CCA /* GPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96837F24AC89DC00024CCA /* GPNavigationController.swift */; };
@@ -39,6 +40,7 @@
 		12C553FF70CE095C517AC8F6 /* Pods-GPFoundation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPFoundation.debug.xcconfig"; path = "Target Support Files/Pods-GPFoundation/Pods-GPFoundation.debug.xcconfig"; sourceTree = "<group>"; };
 		238B3271B4D223BB169DAFAA /* Pods-GPFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPFoundation.release.xcconfig"; path = "Target Support Files/Pods-GPFoundation/Pods-GPFoundation.release.xcconfig"; sourceTree = "<group>"; };
 		29099DF42CF407721EC79FEE /* Pods_GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF0B7E7C258A087600A96AE4 /* GPArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPArray.swift; sourceTree = "<group>"; };
 		FF0E33B024C58954001BE07D /* GPBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPBaseViewController.swift; sourceTree = "<group>"; };
 		FF0E33BF24C59681001BE07D /* GPNetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNetworkingManager.swift; sourceTree = "<group>"; };
 		FF0E33C124C596A6001BE07D /* GPRequestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPRequestEntity.swift; sourceTree = "<group>"; };
@@ -54,7 +56,7 @@
 		FF2C08D524AAE9860004C7BA /* GPFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPFont.swift; sourceTree = "<group>"; };
 		FF2C08D624AAE9860004C7BA /* GPColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPColor.swift; sourceTree = "<group>"; };
 		FF3C900824AD7B4400DC0677 /* GPData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPData.swift; sourceTree = "<group>"; };
-		FF79BEBA24DE43C50034ADC8 /* CGInt64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGInt64.swift; sourceTree = "<group>"; };
+		FF79BEBA24DE43C50034ADC8 /* GPInt64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPInt64.swift; sourceTree = "<group>"; };
 		FF79BEEE24DE932B0034ADC8 /* GPBannerColloetionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPBannerColloetionView.swift; sourceTree = "<group>"; };
 		FF96837D24AC849100024CCA /* GPUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUIViewController.swift; sourceTree = "<group>"; };
 		FF96837F24AC89DC00024CCA /* GPNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNavigationController.swift; sourceTree = "<group>"; };
@@ -157,7 +159,8 @@
 				FF96838124AC920800024CCA /* GPUIButton.swift */,
 				FF3C900824AD7B4400DC0677 /* GPData.swift */,
 				FFCF3DD024DD576C00CB428D /* GPString.swift */,
-				FF79BEBA24DE43C50034ADC8 /* CGInt64.swift */,
+				FF79BEBA24DE43C50034ADC8 /* GPInt64.swift */,
+				FF0B7E7C258A087600A96AE4 /* GPArray.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -325,11 +328,12 @@
 				FFCF3DD124DD576C00CB428D /* GPString.swift in Sources */,
 				FF2C08D824AAE9860004C7BA /* GPColor.swift in Sources */,
 				FF2C08D724AAE9860004C7BA /* GPFont.swift in Sources */,
-				FF79BEBB24DE43C50034ADC8 /* CGInt64.swift in Sources */,
+				FF79BEBB24DE43C50034ADC8 /* GPInt64.swift in Sources */,
 				FF0E33C624C59701001BE07D /* GPResponeParser.swift in Sources */,
 				FF0E33C224C596A6001BE07D /* GPRequestEntity.swift in Sources */,
 				FF79BEEF24DE932B0034ADC8 /* GPBannerColloetionView.swift in Sources */,
 				FFB60E3024AB2020007FF836 /* GPUIDevive.swift in Sources */,
+				FF0B7E7D258A087600A96AE4 /* GPArray.swift in Sources */,
 				FFB60E5024AB3883007FF836 /* GPUILabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
