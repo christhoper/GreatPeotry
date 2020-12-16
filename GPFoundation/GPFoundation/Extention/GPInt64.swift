@@ -1,5 +1,5 @@
 //
-//  CGInt64.swift
+//  GPInt64.swift
 //  GPFoundation
 //
 //  Created by bailun on 2020/8/8.
