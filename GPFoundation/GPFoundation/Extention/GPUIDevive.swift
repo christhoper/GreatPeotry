@@ -11,6 +11,7 @@ import UIKit
 import SystemConfiguration
 
 public extension UIDevice {
+    
     /// 是否全面屏系列
     static func isFullScreen() -> Bool {
         if #available(iOS 11, *) {

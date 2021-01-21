@@ -11,6 +11,7 @@ import CryptoSwift
 import CommonCrypto
 
 public extension String {
+    
     /// 计算文本高度
     static func caculateHeight(content: String, maxWidth: CGFloat, font: UIFont) -> CGFloat {
         guard content.count > 0 && maxWidth > 0 else {
@@ -26,6 +27,7 @@ public extension String {
 
 
 public extension String {
+    
     static func dateToString(_ date: Date, dateFormat: String = "yyyy-MM-dd HH:mm:ss") -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = dateFormat
@@ -81,6 +83,7 @@ public extension String {
 }
 
 public extension String {
+    
     func aesEncrypt(key: String, iv: String) -> String {
         var result = ""
         do {

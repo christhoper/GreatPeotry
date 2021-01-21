@@ -10,6 +10,7 @@ import UIKit
 import Router
 
 extension Router: CreationRoutable {
+    
     public func createViewController() -> UIViewController {
         let (viewController, _) = MainPageModuleBuilder.setupModule()
         return viewController

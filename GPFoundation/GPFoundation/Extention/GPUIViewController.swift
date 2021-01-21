@@ -11,6 +11,7 @@ import AVFoundation
 import KRProgressHUD
 
 public extension UIViewController {
+    
     func navigationHidden(for hidden: Bool) {
         self.navigationController?.navigationBar.isHidden = hidden
     }
@@ -18,14 +19,11 @@ public extension UIViewController {
 
 
 public extension UIViewController {
+    
     /// 首次弹出访问相机权限
     func alertPromptToAllowCameraAccessViaSetting() {
         // 其次 弹出Aler弹窗 询问是否需要在设置中 开启照相机访问权限
-        let alert = UIAlertController(
-            title: "提示",
-            message: "未开启相机权限",
-            preferredStyle: UIAlertController.Style.alert
-        )
+        let alert = UIAlertController(title: "提示", message: "未开启相机权限", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "取消", style: .default, handler: { (_) in
             self.navigationController?.popViewController(animated: true)
         }))
@@ -45,6 +43,7 @@ public extension UIViewController {
 
 
 public extension UIViewController {
+    
     func showHub(for content: String) {
         KRProgressHUD.showMessage(content)
     }
