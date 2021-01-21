@@ -27,6 +27,7 @@ def pods_common
   pod 'RxAlamofire'
   pod 'ReachabilitySwift'
   pod 'MJRefresh'
+  pod 'FSPagerView'
 end
 
 def pods_home

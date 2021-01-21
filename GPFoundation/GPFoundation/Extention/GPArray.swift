@@ -20,4 +20,9 @@ extension Array where Element: Equatable {
         }
     }
     
+    /// 防止数组越界导致的崩溃
+    subscript(safe index: Int) -> Element? {
+        return indices ~= index ? self[index] : nil
+    }
+    
 }

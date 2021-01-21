@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.9.1)
   - CryptoSwift (1.3.0)
+  - FSPagerView (0.8.3)
   - HandyJSON (5.0.1)
   - Kingfisher (5.12.0):
     - Kingfisher/Core (= 5.12.0)
@@ -40,6 +41,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - CryptoSwift
+  - FSPagerView
   - HandyJSON
   - Kingfisher
   - KRProgressHUD
@@ -74,6 +76,7 @@ SPEC REPOS:
     - VerticalCardSwiper
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - Alamofire
+    - FSPagerView
     - MJRefresh
     - R.swift
     - R.swift.Library
@@ -85,6 +88,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   CryptoSwift: 1283821600233bdbeb96d7b389c3288c3bf77211
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   HandyJSON: d45b8415c501e3affc59ca9762c1197ff0feb646
   Kingfisher: dc6e0f53bb5b12c3e75bedb0e01bbd7a640eea69
   KRActivityIndicatorView: 549db10b9578d58bac73db063d8b544e8970f7f2
@@ -106,6 +110,6 @@ SPEC CHECKSUMS:
   SwiftEntryKit: 340713c2e4a6662c5149629990bf1088bf5f0389
   VerticalCardSwiper: a152823dbe457f7cc8920c86579c928bfe40d502
 
-PODFILE CHECKSUM: 1c22bd597b345eaeb10aa9b85d89fee8ba08d994
+PODFILE CHECKSUM: e5e7e7bfb28ba1ce29e9170cce21395e69abb5a8
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

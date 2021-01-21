@@ -24,7 +24,6 @@
 		FF2C08D824AAE9860004C7BA /* GPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C08D624AAE9860004C7BA /* GPColor.swift */; };
 		FF3C900924AD7B4500DC0677 /* GPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C900824AD7B4400DC0677 /* GPData.swift */; };
 		FF79BEBB24DE43C50034ADC8 /* GPInt64.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79BEBA24DE43C50034ADC8 /* GPInt64.swift */; };
-		FF79BEEF24DE932B0034ADC8 /* GPBannerColloetionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79BEEE24DE932B0034ADC8 /* GPBannerColloetionView.swift */; };
 		FF96837E24AC849100024CCA /* GPUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96837D24AC849100024CCA /* GPUIViewController.swift */; };
 		FF96838024AC89DC00024CCA /* GPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96837F24AC89DC00024CCA /* GPNavigationController.swift */; };
 		FF96838224AC920800024CCA /* GPUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96838124AC920800024CCA /* GPUIButton.swift */; };
@@ -34,6 +33,11 @@
 		FFB60E2024AB0F74007FF836 /* GPUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E1F24AB0F74007FF836 /* GPUITableViewCell.swift */; };
 		FFB60E3024AB2020007FF836 /* GPUIDevive.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E2F24AB2020007FF836 /* GPUIDevive.swift */; };
 		FFB60E5024AB3883007FF836 /* GPUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E4F24AB3883007FF836 /* GPUILabel.swift */; };
+		FFC9A5A525B955C50014CFBF /* HostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9A5A425B955C50014CFBF /* HostManager.swift */; };
+		FFC9A5A825B957A90014CFBF /* MainHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9A5A725B957A90014CFBF /* MainHost.swift */; };
+		FFC9A5AB25B957B70014CFBF /* MainAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9A5AA25B957B70014CFBF /* MainAPI.swift */; };
+		FFC9A5AF25B963FD0014CFBF /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9A5AE25B963FD0014CFBF /* MD5.swift */; };
+		FFC9A5B225B964610014CFBF /* NetworkConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC9A5B125B964610014CFBF /* NetworkConfigure.swift */; };
 		FFCF3DD124DD576C00CB428D /* GPString.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCF3DD024DD576C00CB428D /* GPString.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +63,6 @@
 		FF2C08D624AAE9860004C7BA /* GPColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPColor.swift; sourceTree = "<group>"; };
 		FF3C900824AD7B4400DC0677 /* GPData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPData.swift; sourceTree = "<group>"; };
 		FF79BEBA24DE43C50034ADC8 /* GPInt64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPInt64.swift; sourceTree = "<group>"; };
-		FF79BEEE24DE932B0034ADC8 /* GPBannerColloetionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPBannerColloetionView.swift; sourceTree = "<group>"; };
 		FF96837D24AC849100024CCA /* GPUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUIViewController.swift; sourceTree = "<group>"; };
 		FF96837F24AC89DC00024CCA /* GPNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNavigationController.swift; sourceTree = "<group>"; };
 		FF96838124AC920800024CCA /* GPUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUIButton.swift; sourceTree = "<group>"; };
@@ -69,6 +72,11 @@
 		FFB60E1F24AB0F74007FF836 /* GPUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUITableViewCell.swift; sourceTree = "<group>"; };
 		FFB60E2F24AB2020007FF836 /* GPUIDevive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUIDevive.swift; sourceTree = "<group>"; };
 		FFB60E4F24AB3883007FF836 /* GPUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUILabel.swift; sourceTree = "<group>"; };
+		FFC9A5A425B955C50014CFBF /* HostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostManager.swift; sourceTree = "<group>"; };
+		FFC9A5A725B957A90014CFBF /* MainHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHost.swift; sourceTree = "<group>"; };
+		FFC9A5AA25B957B70014CFBF /* MainAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAPI.swift; sourceTree = "<group>"; };
+		FFC9A5AE25B963FD0014CFBF /* MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
+		FFC9A5B125B964610014CFBF /* NetworkConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigure.swift; sourceTree = "<group>"; };
 		FFCF3DD024DD576C00CB428D /* GPString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +144,8 @@
 		FF2C08B324AAE8280004C7BA /* GPFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				FFC9A5AD25B963D30014CFBF /* Untils */,
+				FFC9A59E25B954ED0014CFBF /* Host+API */,
 				FF0E33BE24C59623001BE07D /* Networking */,
 				FF2C08D224AAE9300004C7BA /* UI */,
 				FF2C08CF24AAE8E10004C7BA /* Constant */,
@@ -182,9 +192,27 @@
 				FF2C08D324AAE97B0004C7BA /* AnimateLoadingView.swift */,
 				FF96837F24AC89DC00024CCA /* GPNavigationController.swift */,
 				FF0E33B024C58954001BE07D /* GPBaseViewController.swift */,
-				FF79BEEE24DE932B0034ADC8 /* GPBannerColloetionView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		FFC9A59E25B954ED0014CFBF /* Host+API */ = {
+			isa = PBXGroup;
+			children = (
+				FFC9A5A425B955C50014CFBF /* HostManager.swift */,
+				FFC9A5A725B957A90014CFBF /* MainHost.swift */,
+				FFC9A5AA25B957B70014CFBF /* MainAPI.swift */,
+			);
+			path = "Host+API";
+			sourceTree = "<group>";
+		};
+		FFC9A5AD25B963D30014CFBF /* Untils */ = {
+			isa = PBXGroup;
+			children = (
+				FFC9A5AE25B963FD0014CFBF /* MD5.swift */,
+				FFC9A5B125B964610014CFBF /* NetworkConfigure.swift */,
+			);
+			path = Untils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +344,7 @@
 			files = (
 				FFB60E2024AB0F74007FF836 /* GPUITableViewCell.swift in Sources */,
 				FF2C08D124AAE9060004C7BA /* GPConstant.swift in Sources */,
+				FFC9A5AF25B963FD0014CFBF /* MD5.swift in Sources */,
 				FF0E33B124C58954001BE07D /* GPBaseViewController.swift in Sources */,
 				FF96837E24AC849100024CCA /* GPUIViewController.swift in Sources */,
 				FF2C08D424AAE97B0004C7BA /* AnimateLoadingView.swift in Sources */,
@@ -328,14 +357,17 @@
 				FF96838224AC920800024CCA /* GPUIButton.swift in Sources */,
 				FF0E33C024C59681001BE07D /* GPNetworkingManager.swift in Sources */,
 				FFB60E1E24AB0EF8007FF836 /* GPUITableView.swift in Sources */,
+				FFC9A5A825B957A90014CFBF /* MainHost.swift in Sources */,
+				FFC9A5AB25B957B70014CFBF /* MainAPI.swift in Sources */,
 				FF0E33C424C596BA001BE07D /* GPResponeEntity.swift in Sources */,
+				FFC9A5A525B955C50014CFBF /* HostManager.swift in Sources */,
+				FFC9A5B225B964610014CFBF /* NetworkConfigure.swift in Sources */,
 				FFCF3DD124DD576C00CB428D /* GPString.swift in Sources */,
 				FF2C08D824AAE9860004C7BA /* GPColor.swift in Sources */,
 				FF2C08D724AAE9860004C7BA /* GPFont.swift in Sources */,
 				FF79BEBB24DE43C50034ADC8 /* GPInt64.swift in Sources */,
 				FF0E33C624C59701001BE07D /* GPResponeParser.swift in Sources */,
 				FF0E33C224C596A6001BE07D /* GPRequestEntity.swift in Sources */,
-				FF79BEEF24DE932B0034ADC8 /* GPBannerColloetionView.swift in Sources */,
 				FFB60E3024AB2020007FF836 /* GPUIDevive.swift in Sources */,
 				FF0B7E7D258A087600A96AE4 /* GPArray.swift in Sources */,
 				FFB60E5024AB3883007FF836 /* GPUILabel.swift in Sources */,

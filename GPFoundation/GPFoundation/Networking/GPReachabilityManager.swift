@@ -11,6 +11,7 @@ import Reachability
 
 
 public class GPReachabilityManager {
+    
     public static let shared = GPReachabilityManager()
     private init() {
         self.configReachability()
@@ -100,5 +101,7 @@ extension GPReachabilityManager {
             NotificationCenter.default.post(name: GPReachabilityManager.networkDisConnectedNotification, object: nil)
         }
     }
-    
 }
+
+
+

@@ -11,3 +11,4 @@
 @_exported import HandyJSON
 @_exported import SkeletonView
 @_exported import GPFoundation
+@_exported import Kingfisher
