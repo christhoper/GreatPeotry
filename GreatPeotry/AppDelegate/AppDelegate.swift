@@ -18,10 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 13.0, *) {
             
         } else {
+            setupHost()
+            setupNetworking()
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.backgroundColor = UIColor.white
-            self.enterMainPage()
-            self.window?.makeKeyAndVisible()
+            enterMainPage()
+            window?.makeKeyAndVisible()
         }
         
         return true
@@ -47,10 +49,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     func enterMainPage() {
         let tabbarController = GPTabBarViewController()
-        if let _ = window?.rootViewController as? GPTabBarViewController {
-            return
-        } else {
-            window?.rootViewController = tabbarController
-        }
+        window?.rootViewController = tabbarController
     }
 }

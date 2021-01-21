@@ -7,20 +7,24 @@
 //
 
 import UIKit
-import GPFoundation
+import FSPagerView
 
 class MainPageViewController: UIViewController {
 
     var output: MainPageViewOutput!
     
-    lazy var bannerView: GPBannerColloetionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: GPConstant.width, height: 200)
-        let view = GPBannerColloetionView(frame: .zero, collectionViewLayout: layout)
-        view.urls = self.output.bannerUrls
-        view.isPagingEnabled = true
+    lazy var bannerView: FSPagerView = {
+        let view = FSPagerView(frame: .zero)
+        view.dataSource = self
+        view.delegate = self
+        view.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "FSPagerViewCellId")
+        view.automaticSlidingInterval = 3
         return view
+    }()
+    
+    lazy var pageControl: FSPageControl = {
+        let page = FSPageControl(frame: .zero)
+        return page
     }()
     
     lazy var cardSwiperView: VerticalCardSwiper = {
@@ -46,8 +50,8 @@ class MainPageViewController: UIViewController {
         setupSubViews()
         addObserverForNoti()
         output.fetchPeotry()
+        output.fetchBanner()
         loadingView.showAnimatedGradientSkeleton()
-        bannerView.refreshCellData()
     }
     
 }
@@ -64,6 +68,7 @@ extension MainPageViewController {
         view.addSubview(bannerView)
         view.addSubview(cardSwiperView)
         view.addSubview(loadingView)
+        view.addSubview(pageControl)
         
         loadingView.bringSubviewToFront(view)
         setupSubviewsContraints()
@@ -83,27 +88,30 @@ extension MainPageViewController {
         loadingView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
+        pageControl.snp.makeConstraints { (make) in
+            make.bottom.left.right.equalTo(bannerView)
+            make.height.equalTo(30)
+        }
     }
     
     
     func addObserverForNoti() {}
 }
 
-// MARK: - Network
-
 extension MainPageViewController {}
 
 // MARK: - Delegate
 
 extension MainPageViewController: VerticalCardSwiperDelegate, VerticalCardSwiperDatasource {
+    
     func numberOfCards(verticalCardSwiperView: VerticalCardSwiperView) -> Int {
-        return self.output.entitys.count
+        return output.entitys.count
     }
     
     func cardForItemAt(verticalCardSwiperView: VerticalCardSwiperView, cardForItemAt index: Int) -> CardCell {
         let cell = verticalCardSwiperView.dequeueReusableCell(withReuseIdentifier: CardSwiperCell.identifier, for: index) as! CardSwiperCell
         cell.setRandomBackgroundColor()
-        if let model = self.output.entitys[index] {
+        if let model = output.entitys[index] {
             cell.setupCell(for: model)
         }
         return cell
@@ -111,9 +119,24 @@ extension MainPageViewController: VerticalCardSwiperDelegate, VerticalCardSwiper
     
     func willSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection) {
         if index < self.output.entitys.count {
-            self.output.entitys.remove(at: index)
+            output.entitys.remove(at: index)
         }
     }
+}
+
+extension MainPageViewController: FSPagerViewDelegate, FSPagerViewDataSource {
+    
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
+        return output.bannerUrls.count
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "FSPagerViewCellId", at: index)
+        let url = output.bannerUrls[index]
+        cell.imageView?.kf.setImage(with: URL(string: url))
+        return cell
+    }
+    
 }
 
 // MARK: - Selector
@@ -129,12 +152,16 @@ extension MainPageViewController: VerticalCardSwiperDelegate, VerticalCardSwiper
 
 extension MainPageViewController: MainPageViewInput {
     
-    func didFetchPeotryEntitys() {
+    func didFetchBanner() {
+        loadingView.isHidden = true
         loadingView.hideSkeleton(transition: .crossDissolve(0.25))
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.loadingView.isHidden = true
-            self.cardSwiperView.reloadData()
-        }
+        pageControl.numberOfPages = output.bannerUrls.count
+        bannerView.reloadData()
+    }
+    
+    
+    func didFetchPeotryEntitys() {
+        self.cardSwiperView.reloadData()
     }
 }
 

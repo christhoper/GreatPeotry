@@ -17,9 +17,14 @@ public class GPNavigationController: UINavigationController {
         self.interactivePopGestureRecognizer?.addTarget(self, action: #selector(onPopGesture(sender:)))
     }
     
+    // MARK: - Initilization
     public override init(rootViewController: UIViewController) {
-        super.init(rootViewController: rootViewController)
+        super.init(navigationBarClass: UIViewController.self, toolbarClass: nil)
         viewControllers = [rootViewController]
+    }
+    
+    public override init(navigationBarClass: AnyClass?, toolbarClass: AnyClass?) {
+        super.init(navigationBarClass: navigationBarClass, toolbarClass: toolbarClass)
     }
     
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {

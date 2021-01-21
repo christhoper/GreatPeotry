@@ -9,6 +9,7 @@
 // MARK: - Entity
 
 struct MainPageEntity: HandyJSON {
+    
     var author: String = ""
     var paragraphs: [String] = []
     var title: String = ""
@@ -26,7 +27,16 @@ struct MainPageEntity: HandyJSON {
         }
         return result
     }
+}
+
+struct BannerEntity: HandyJSON {
     
+    var aboutId = ""
+    var image = ""
+    var jumpType: Int = 0
+    var jumpUrl: String = ""
+    var type: Int = 0
+    var language = 0
 }
 
 // MARK: - Interactor
@@ -37,6 +47,7 @@ class MainPageInteractor {
 }
 
 extension MainPageInteractor: MainPageInteractorInput {
+    
     func doFetchPeotry(for id: String) {
         let bundle = Bundle.main.path(forResource: "poetTest", ofType: "json")
         guard let path = bundle else { return }
@@ -44,5 +55,15 @@ extension MainPageInteractor: MainPageInteractorInput {
         let jsonString = String(data: data as Data, encoding: .utf8)
         let entitys = [MainPageEntity].deserialize(from: jsonString)
         self.output?.handleFetchPeotryResult(entitys)
+    }
+    
+    func doFetchBanner() {
+        let request = GPRequestEntity()
+        request.api = Host.shared.main.homeMain(.banner)
+        Http.shared.get(request: request, success: { (response) in
+            self.output?.handleBannerResult(response)
+        },failure: {(msg) in
+            self.output?.handleFetchBannerFailure(msg)
+        })
     }
 }

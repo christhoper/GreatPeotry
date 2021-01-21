@@ -18,6 +18,7 @@ class MainPagePresenter {
     var interactor: MainPageInteractorInput!
     var outer: MainPageModuleOutput?
     var entitys: [MainPageEntity?] = []
+    var bannerUrls: [String] = []
     
 }
 
@@ -31,25 +32,54 @@ extension MainPagePresenter {
 // MARK: - MainPagePresenterView
 
 extension MainPagePresenter: MainPagePresenterView {
-    var bannerUrls: [String] {
-        ["https://file.wbp5.com/upload/files/file/fazzaco/2019/11/21/092650708.png",
-         "https://file.wbp5.com/upload/files/file/fazzaco/2019/12/01/094613989.jpg",
-         "https://file.wbp5.com/upload/files/file/fazzaco/2019/12/01/094001317.png"]
+    
+    func fetchPeotry() {
+        interactor.doFetchPeotry(for: "测试ID")
     }
     
-
-    func fetchPeotry() {
-        self.interactor.doFetchPeotry(for: "测试ID")
+    func fetchBanner() {
+        interactor.doFetchBanner()
     }
 }
 
 // MARK: - MainPagePresenterInteractor
 
 extension MainPagePresenter: MainPagePresenterInteractor {
+    
+    enum SubCode: String {
+        case success = "3100000"
+    }
+    
     func handleFetchPeotryResult(_ entitys: [MainPageEntity?]?) {
         guard let entity = entitys else { return }
         self.entitys = entity
         self.view.didFetchPeotryEntitys()
+    }
+    
+    func handleBannerResult(_ respone: GPResponseEntity?) {
+        guard let result = respone else { return }
+        let (code, statusCode) = (result.code, result.statusCode)
+        guard code == HttpRequestResult.success else {
+            self.handleFetchBannerFailure(result.message)
+            return
+        }
+        
+        guard SubCode(rawValue: statusCode) == .success else {
+            return
+        }
+        
+        if let entitys = [BannerEntity].deserialize(from: result.bodyMessage) {
+            self.bannerUrls = entitys.compactMap {
+                return $0?.image
+            }
+            
+            self.view.didFetchBanner()
+        }
+        
+    }
+    
+    func handleFetchBannerFailure(_ error: String) {
+        
     }
 }
 

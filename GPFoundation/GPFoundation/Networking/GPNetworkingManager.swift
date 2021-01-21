@@ -11,6 +11,7 @@ import RxSwift
 import Alamofire
 import RxAlamofire
 
+public typealias Http = GPHttpManager
 
 public final class GPHttpManager {
     
@@ -262,7 +263,6 @@ extension GPHttpManager {
         var errorMsg = networkHint.noServer
         if GPReachabilityManager.shared.isReachable {
             if let rxSwiftError = error as? RxError {
-                print("@@@@@-----> BLHttpManager---RxError 数据获取失败哦，请重试...", error)
                 switch rxSwiftError {
                 case .timeout:
                     errorMsg = networkHint.timeout
@@ -270,7 +270,7 @@ extension GPHttpManager {
                     break
                 }
             } else if let _ = error as? AFError {
-                print("@@@@@-----> BLHttpManager---AFError 数据获取失败哦，请重试...", error)
+                print("@@@@@---AFError 数据获取失败哦，请重试...", error)
             }
         } else {
             errorMsg = networkHint.notNet
@@ -278,6 +278,5 @@ extension GPHttpManager {
         
         return errorMsg
     }
-    
 }
 

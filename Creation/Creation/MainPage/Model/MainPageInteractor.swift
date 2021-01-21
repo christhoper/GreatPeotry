@@ -88,12 +88,9 @@ struct VideoEntity: HandyJSON {
 class MainPageInteractor {
 
     weak var output: MainPageInteractorOutput?
-    var url: String {
-        "http://47.107.252.15/appapi/api/getNewsList"
-    }
-    
+
     var pageSize: Int {
-        10
+        20
     }
 }
 
@@ -105,7 +102,7 @@ extension MainPageInteractor: MainPageInteractorInput {
         parameters["pageSize"] = pageSize
         parameters["lastSortId"] = 0
         let request = GPRequestEntity()
-        request.api = url
+        request.api = Host.shared.main.homeMain(.news)
         request.params = parameters
         
         GPHttpManager.shared.get(request: request, success: { (respone) in
@@ -121,7 +118,7 @@ extension MainPageInteractor: MainPageInteractorInput {
         parameters["lastSortId"] = lastNewsId
         
         let request = GPRequestEntity()
-        request.api = url
+        request.api = Host.shared.main.homeMain(.news)
         request.params = parameters
         GPHttpManager.shared.get(request: request, success: { (respone) in
             self.output?.handleLoadMoreNeswResult(result: respone)

@@ -139,6 +139,7 @@ extension MainPageViewController: MainPageViewInput {
     }
     
     func loadNewsFailure(error: String) {
+        view.hideSkeleton()
         showHub(for: error)
     }
 }

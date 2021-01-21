@@ -24,7 +24,9 @@ protocol MainPageModuleOutput: class {}
 
 /// methods for communication Presenter -> View
 protocol MainPageViewInput: class {
+    
     func didFetchPeotryEntitys()
+    func didFetchBanner()
 }
 
 /// methods for communication View -> Presenter
@@ -36,14 +38,20 @@ protocol MainPageViewOutput {
     
     /// 获取诗词数据
     func fetchPeotry()
+    func fetchBanner()
 }
 
 /// methods for communication Presenter -> Interactor
 protocol MainPageInteractorInput {
+    
     func doFetchPeotry(for id: String)
+    func doFetchBanner()
 }
 
 /// methods for communication Interactor -> Presenter
 protocol MainPageInteractorOutput: class {
+    
     func handleFetchPeotryResult(_ entitys: [MainPageEntity?]?)
+    func handleBannerResult(_ respone: GPResponseEntity?)
+    func handleFetchBannerFailure(_ error: String)
 }

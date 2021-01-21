@@ -47,6 +47,7 @@ class CardSwiperCell: CardCell {
 }
 
 extension CardSwiperCell {
+    
     private func setupSubviews() {
         self.backgroundColor = UIColor.mainColor
         contentView.addSubview(authorLabel)

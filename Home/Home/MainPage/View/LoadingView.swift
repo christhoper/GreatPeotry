@@ -33,6 +33,7 @@ enum LoadingType {
 }
 
 class LoadingView: UIView {
+    
     var type: LoadingType = .default {
         didSet {
             self.setupSubviews()
@@ -60,6 +61,7 @@ class LoadingView: UIView {
 
 
 class ElementLoadingView: UIView {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
