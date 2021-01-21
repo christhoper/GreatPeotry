@@ -12,9 +12,10 @@ import Alamofire
 import RxAlamofire
 
 
-public class GPHttpManager: NSObject {
+public final class GPHttpManager {
+    
     public static let shared = GPHttpManager()
-    private override init() {}
+    private init() {}
     
     let bag = DisposeBag()
     

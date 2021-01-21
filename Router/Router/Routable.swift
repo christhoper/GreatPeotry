@@ -10,7 +10,8 @@ import UIKit
 
 public protocol Routable {}
 
-public class Router {
+public final class Router {
+    
     static let shared: Router = Router()
     private init() {}
     

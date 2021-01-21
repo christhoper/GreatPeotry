@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 public extension UITableViewCell {
+    
     func defaultConfigure() {
         self.selectionStyle = .none
     }

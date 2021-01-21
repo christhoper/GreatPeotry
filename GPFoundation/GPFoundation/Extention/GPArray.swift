@@ -10,6 +10,7 @@ import Foundation
 
 
 extension Array where Element: Equatable {
+    
     /// 移除数组里面重复的元素
     func removeDuplicate() -> Array {
         return self.enumerated().filter { (index, value) -> Bool in

@@ -9,5 +9,6 @@
 import UIKit
 
 public protocol MineRoutable: Routable {
+    
     func createViewController() -> UIViewController
 }

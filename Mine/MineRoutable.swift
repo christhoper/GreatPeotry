@@ -11,6 +11,7 @@ import UIKit
 
 
 extension Router: MineRoutable {
+    
     public func createViewController() -> UIViewController {
         let (viewController, _) = MainPageModuleBuilder.setupModule()
         return viewController

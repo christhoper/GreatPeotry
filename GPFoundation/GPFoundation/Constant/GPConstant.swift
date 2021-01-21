@@ -9,6 +9,7 @@
 import UIKit
 
 public struct GPConstant {
+    
     /// 顶部安全区域偏移量
     public static var kSafeAreaTopInset: CGFloat {
         UIDevice.isFullScreen() ? 44 : 20

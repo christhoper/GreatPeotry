@@ -9,5 +9,6 @@
 import UIKit
 
 public protocol HomeRoutable: Routable {
+    
     func createViewController() -> UIViewController
 }

@@ -10,6 +10,7 @@ import UIKit
 import CommonCrypto
 
 public extension UILabel {
+    
     func defaultConfigure() {
         self.font = UIFont.AdaptiveRegularFont(size: 16)
         self.textColor = UIColor.gray102

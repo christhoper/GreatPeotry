@@ -11,6 +11,7 @@ import Kingfisher
 import SnapKit
 
 public class GPBannerColloetionView: UICollectionView {
+    
     public var urls: [String] = [String]()
     
     public override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
@@ -35,6 +36,7 @@ extension GPBannerColloetionView: UICollectionViewDelegate {
 }
 
 extension GPBannerColloetionView: UICollectionViewDataSource {
+    
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return urls.count
     }

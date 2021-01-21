@@ -10,6 +10,7 @@ import UIKit
 import MJRefresh
 
 public extension UITableView {
+    
     func defaultConfigure() {
         self.separatorStyle = .none
         self.estimatedRowHeight = 0
@@ -24,6 +25,7 @@ public extension UITableView {
 
 
 public extension UIScrollView {
+    
     func setMJRefreshHeader(function: @escaping () -> ()) {
         let mj_header = MJRefreshNormalHeader { [weak self] in
             if self?.mj_footer != nil {

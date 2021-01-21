@@ -9,6 +9,7 @@
 import UIKit
 
 public extension UIButton {
+    
     enum GPButtonEdgeInsetsEnum {
         /// image在上，label在下
         case imageUpLabelDown
@@ -87,6 +88,7 @@ private var leftKey: UInt8 = 0
 private var rightKey: UInt8 = 0
 
 public extension UIButton {
+    
     var top: NSNumber {
         get {
             return associatedObject(base: self, key: &topKey)

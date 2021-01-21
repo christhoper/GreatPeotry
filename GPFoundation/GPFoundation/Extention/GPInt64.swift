@@ -10,6 +10,7 @@ import Foundation
 
 
 public extension Int64 {
+    
     func toCountFormatterStringWithLocalLanguage() -> String {
         return toCountChineseString(isSimplified: true)
     }

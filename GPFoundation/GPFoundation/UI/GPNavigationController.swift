@@ -9,6 +9,7 @@
 import UIKit
 
 public class GPNavigationController: UINavigationController {
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         // 全屏侧滑返回
@@ -30,7 +31,7 @@ public class GPNavigationController: UINavigationController {
     }
     
     public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        if children.count > 0 {
+        if !children.isEmpty {
             let backItem = UIBarButtonItem(image: R.image.navigation_back(), style: .plain, target: self, action: #selector(back))
             viewController.navigationItem.leftBarButtonItem = backItem
             viewController.hidesBottomBarWhenPushed = true

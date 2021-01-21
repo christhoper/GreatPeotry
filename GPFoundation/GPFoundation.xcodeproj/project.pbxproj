@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A3495135FE41A004ABFD2F6 /* Pods_GPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29099DF42CF407721EC79FEE /* Pods_GPFoundation.framework */; };
 		FF0B7E7D258A087600A96AE4 /* GPArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0B7E7C258A087600A96AE4 /* GPArray.swift */; };
+		FF0B7E85258A11C800A96AE4 /* GPCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0B7E84258A11C800A96AE4 /* GPCell.swift */; };
 		FF0E33B124C58954001BE07D /* GPBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E33B024C58954001BE07D /* GPBaseViewController.swift */; };
 		FF0E33C024C59681001BE07D /* GPNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E33BF24C59681001BE07D /* GPNetworkingManager.swift */; };
 		FF0E33C224C596A6001BE07D /* GPRequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E33C124C596A6001BE07D /* GPRequestEntity.swift */; };
@@ -41,6 +42,7 @@
 		238B3271B4D223BB169DAFAA /* Pods-GPFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GPFoundation.release.xcconfig"; path = "Target Support Files/Pods-GPFoundation/Pods-GPFoundation.release.xcconfig"; sourceTree = "<group>"; };
 		29099DF42CF407721EC79FEE /* Pods_GPFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GPFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0B7E7C258A087600A96AE4 /* GPArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPArray.swift; sourceTree = "<group>"; };
+		FF0B7E84258A11C800A96AE4 /* GPCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPCell.swift; sourceTree = "<group>"; };
 		FF0E33B024C58954001BE07D /* GPBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPBaseViewController.swift; sourceTree = "<group>"; };
 		FF0E33BF24C59681001BE07D /* GPNetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNetworkingManager.swift; sourceTree = "<group>"; };
 		FF0E33C124C596A6001BE07D /* GPRequestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPRequestEntity.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				FFCF3DD024DD576C00CB428D /* GPString.swift */,
 				FF79BEBA24DE43C50034ADC8 /* GPInt64.swift */,
 				FF0B7E7C258A087600A96AE4 /* GPArray.swift */,
+				FF0B7E84258A11C800A96AE4 /* GPCell.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				FF3C900924AD7B4500DC0677 /* GPData.swift in Sources */,
 				FF0E33C824C5978B001BE07D /* GPNetworkingError.swift in Sources */,
 				FF96838024AC89DC00024CCA /* GPNavigationController.swift in Sources */,
+				FF0B7E85258A11C800A96AE4 /* GPCell.swift in Sources */,
 				FF9CB21224B9AD9F00FF468A /* R.generated.swift in Sources */,
 				FF0E33D124C59C74001BE07D /* GPReachabilityManager.swift in Sources */,
 				FF96838224AC920800024CCA /* GPUIButton.swift in Sources */,

@@ -83,6 +83,7 @@ extension MainPageViewController {}
 // MARK: - Delegate
 
 extension MainPageViewController: SkeletonTableViewDataSource, UITableViewDelegate {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -106,10 +107,10 @@ extension MainPageViewController: SkeletonTableViewDataSource, UITableViewDelega
         tableView.deselectRow(at: indexPath, animated: false)
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let newsItem = output.neswEntities[indexPath.row]
-        return newsItem.cellHieght
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let newsItem = output.neswEntities[indexPath.row]
+//        return newsItem.cellHieght
+//    }
     
 }
 
@@ -125,6 +126,7 @@ extension MainPageViewController: SkeletonTableViewDataSource, UITableViewDelega
 // MARK: - MainPageViewInput 
 
 extension MainPageViewController: MainPageViewInput {
+    
     func didLoadFirstPageNews() {
         tableView.endHeaderRefresh()
         view.hideSkeleton()

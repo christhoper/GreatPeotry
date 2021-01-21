@@ -10,6 +10,7 @@ import UIKit
 import HandyJSON
 
 public struct GPResponseParserError: LocalizedError {
+    
     enum ErrorKind {
         case unknown               // 未知错误
         case bodyMssageInvalid     // bodyMssage为空等
