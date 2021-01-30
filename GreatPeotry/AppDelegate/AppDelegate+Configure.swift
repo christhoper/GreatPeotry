@@ -6,7 +6,7 @@
 //  Copyright © 2021 hend. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import GPFoundation
 
 extension AppDelegate {
@@ -18,16 +18,10 @@ extension AppDelegate {
     func setupNetworking() {
         GPHttpManager.shared.setHttpHeaders()
     }
+    
+    func setupNavigationConfigre() {
+        UINavigationBar.appearance().gp_registerBarDefaultConfigClass(GPNavigationConfigure.self)
+    }
 }
 
 
-extension SceneDelegate {
-    
-    func setupHost() {
-        Host.shared.activeAPI(by: .test)
-    }
-    
-    func setupNetworking() {
-        GPHttpManager.shared.setHttpHeaders()
-    }
-}

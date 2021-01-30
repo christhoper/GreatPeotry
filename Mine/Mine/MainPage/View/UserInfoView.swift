@@ -27,9 +27,8 @@ class UserInfoView: UIView {
     lazy var avatarImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = avatarImageHeight / 2
-        imageView.backgroundColor = .green
         imageView.clipsToBounds = true
-        imageView.kf.setImage(with: URL(string: "https://img.wbp5.com/upload/images/fazzaco/2020/05/20/101045944.webp"))
+        imageView.kf.setImage(with: URL(string: "https://img.wx168e.com/upload/t-e/images/fazzaco/2020/12/08/110945557.webp"))
         return imageView
     }()
     

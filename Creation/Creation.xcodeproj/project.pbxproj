@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,8 @@
 		FF3F1DB1245AC800004B674E /* MainPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1DAB245AC800004B674E /* MainPageProtocols.swift */; };
 		FF3F1DB2245AC800004B674E /* MainPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1DAD245AC800004B674E /* MainPageInteractor.swift */; };
 		FF3F1DB3245AC800004B674E /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3F1DAF245AC800004B674E /* MainPageViewController.swift */; };
+		FF6AAFB425C5623B000232B3 /* TwitterTextEditor in Frameworks */ = {isa = PBXBuildFile; productRef = FF6AAFB325C5623B000232B3 /* TwitterTextEditor */; };
+		FF6AAFB525C5623B000232B3 /* TwitterTextEditor in Embed Frameworks */ = {isa = PBXBuildFile; productRef = FF6AAFB325C5623B000232B3 /* TwitterTextEditor */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FF79BEBD24DE442D0034ADC8 /* MainPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79BEBC24DE442D0034ADC8 /* MainPageTableViewCell.swift */; };
 		FFB60E5924AB4651007FF836 /* WrittingPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E5324AB4651007FF836 /* WrittingPagePresenter.swift */; };
 		FFB60E5A24AB4651007FF836 /* WrittingPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB60E5524AB4651007FF836 /* WrittingPageInteractor.swift */; };
@@ -33,6 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FF6AAFB525C5623B000232B3 /* TwitterTextEditor in Embed Frameworks */,
 				FF2C08FB24AB08870004C7BA /* GPFoundation.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -70,6 +73,7 @@
 			files = (
 				FF2C08FA24AB08870004C7BA /* GPFoundation.framework in Frameworks */,
 				F7E1995E074C8FD3FD1843B5 /* Pods_Creation.framework in Frameworks */,
+				FF6AAFB425C5623B000232B3 /* TwitterTextEditor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +234,9 @@
 			dependencies = (
 			);
 			name = Creation;
+			packageProductDependencies = (
+				FF6AAFB325C5623B000232B3 /* TwitterTextEditor */,
+			);
 			productName = Creation;
 			productReference = FF3F1D3E245AC636004B674E /* Creation.framework */;
 			productType = "com.apple.product-type.framework";
@@ -257,6 +264,9 @@
 				Base,
 			);
 			mainGroup = FF3F1D34245AC636004B674E;
+			packageReferences = (
+				FF6AAFB225C5623B000232B3 /* XCRemoteSwiftPackageReference "TwitterTextEditor" */,
+			);
 			productRefGroup = FF3F1D3F245AC636004B674E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -534,6 +544,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FF6AAFB225C5623B000232B3 /* XCRemoteSwiftPackageReference "TwitterTextEditor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twitter/TwitterTextEditor";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FF6AAFB325C5623B000232B3 /* TwitterTextEditor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF6AAFB225C5623B000232B3 /* XCRemoteSwiftPackageReference "TwitterTextEditor" */;
+			productName = TwitterTextEditor;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FF3F1D35245AC636004B674E /* Project object */;
 }

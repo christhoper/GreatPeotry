@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GPFoundation
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -21,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         setupHost()
         setupNetworking()
+        setupNavigationConfigre()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
         window = UIWindow(windowScene: windowScene)
@@ -62,17 +64,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
 }
 
 extension SceneDelegate {
     
     func enterMainPage() {
         let tabbarController = GPTabBarViewController()
-        if let _ = window?.rootViewController as? GPTabBarViewController {
-            return
-        } else {
-            window?.rootViewController = tabbarController
-        }
+        window?.rootViewController = tabbarController
+    }
+    
+    func setupHost() {
+        Host.shared.activeAPI(by: .test)
+    }
+    
+    func setupNetworking() {
+        GPHttpManager.shared.setHttpHeaders()
+    }
+    
+    func setupNavigationConfigre() {
+        UINavigationBar.appearance().gp_registerBarDefaultConfigClass(GPNavigationConfigure.self)
     }
 }

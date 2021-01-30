@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TwitterTextEditor
 
 class ArticlePageViewController: GPBaseViewController {
 

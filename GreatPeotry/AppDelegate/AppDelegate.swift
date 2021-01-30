@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             setupHost()
             setupNetworking()
+            setupNavigationConfigre()
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.backgroundColor = UIColor.white
             enterMainPage()
@@ -47,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate {
+    
     func enterMainPage() {
         let tabbarController = GPTabBarViewController()
         window?.rootViewController = tabbarController
