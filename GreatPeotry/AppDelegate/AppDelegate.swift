@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  GreatPeotry
 //
-//  Created by bailun on 2020/4/17.
+//  Created by jhd on 2020/4/17.
 //  Copyright © 2020 hend. All rights reserved.
 //
 

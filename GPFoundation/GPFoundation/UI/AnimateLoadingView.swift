@@ -2,7 +2,7 @@
 //  AnimateLoadingView.swift
 //  GPFoundation
 //
-//  Created by bailun on 2020/5/15.
+//  Created by jhd on 2020/5/15.
 //  Copyright © 2020 hend. All rights reserved.
 //
 

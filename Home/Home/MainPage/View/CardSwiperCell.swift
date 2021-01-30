@@ -2,7 +2,7 @@
 //  CardSwiperCell.swift
 //  Home
 //
-//  Created by bailun on 2020/5/6.
+//  Created by jhd on 2020/5/6.
 //  Copyright © 2020 hend. All rights reserved.
 //
 

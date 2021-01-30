@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  GreatPeotry
 //
-//  Created by bailun on 2020/6/8.
+//  Created by jhd on 2020/6/8.
 //  Copyright © 2020 hend. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  MainPageTableViewCell.swift
 //  Mine
 //
-//  Created by bailun on 2020/6/24.
+//  Created by jhd on 2020/6/24.
 //  Copyright © 2020 hend. All rights reserved.
 //
 

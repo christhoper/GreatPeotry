@@ -2,7 +2,7 @@
 //  TopBarView.swift
 //  Mine
 //
-//  Created by bailun on 2020/6/30.
+//  Created by jhd on 2020/6/30.
 //  Copyright © 2020 hend. All rights reserved.
 //
 

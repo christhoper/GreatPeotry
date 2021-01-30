@@ -2,8 +2,8 @@
 //  GPUITableViewCell.swift
 //  GPFoundation
 //
-//  Created by bailun on 2020/6/30.
-//  Copyright © 2020 Baillun. All rights reserved.
+//  Created by jhd on 2020/6/30.
+//  Copyright © 2020 jhd. All rights reserved.
 //
 
 import Foundation

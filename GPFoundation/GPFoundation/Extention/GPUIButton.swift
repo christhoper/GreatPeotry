@@ -2,8 +2,8 @@
 //  GPUIButton.swift
 //  GPFoundation
 //
-//  Created by bailun on 2020/7/1.
-//  Copyright © 2020 Baillun. All rights reserved.
+//  Created by jhd on 2020/7/1.
+//  Copyright © 2020 jhd. All rights reserved.
 //
 
 import UIKit
