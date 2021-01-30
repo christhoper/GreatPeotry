@@ -23,9 +23,13 @@
 		FF2C08D724AAE9860004C7BA /* GPFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C08D524AAE9860004C7BA /* GPFont.swift */; };
 		FF2C08D824AAE9860004C7BA /* GPColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C08D624AAE9860004C7BA /* GPColor.swift */; };
 		FF3C900924AD7B4500DC0677 /* GPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3C900824AD7B4400DC0677 /* GPData.swift */; };
+		FF6AAF7725C54D3C000232B3 /* GPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6AAF7625C54D3C000232B3 /* GPNavigationController.swift */; };
+		FF6AAF7A25C54DC6000232B3 /* GPNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6AAF7925C54DC6000232B3 /* GPNavigationBar.swift */; };
+		FF6AAF7D25C54E5D000232B3 /* GPPlaceholderNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6AAF7C25C54E5D000232B3 /* GPPlaceholderNavigationBar.swift */; };
+		FF6AAF8025C54EA2000232B3 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6AAF7F25C54EA2000232B3 /* UIViewController+Navigation.swift */; };
+		FF6AAF8A25C55241000232B3 /* GPNavigationConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6AAF8925C55241000232B3 /* GPNavigationConfigure.swift */; };
 		FF79BEBB24DE43C50034ADC8 /* GPInt64.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF79BEBA24DE43C50034ADC8 /* GPInt64.swift */; };
 		FF96837E24AC849100024CCA /* GPUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96837D24AC849100024CCA /* GPUIViewController.swift */; };
-		FF96838024AC89DC00024CCA /* GPNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96837F24AC89DC00024CCA /* GPNavigationController.swift */; };
 		FF96838224AC920800024CCA /* GPUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF96838124AC920800024CCA /* GPUIButton.swift */; };
 		FF9CB20A24B9AB5A00FF468A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF9CB20924B9AB5A00FF468A /* Assets.xcassets */; };
 		FF9CB21224B9AD9F00FF468A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9CB21124B9AD9F00FF468A /* R.generated.swift */; };
@@ -62,9 +66,13 @@
 		FF2C08D524AAE9860004C7BA /* GPFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPFont.swift; sourceTree = "<group>"; };
 		FF2C08D624AAE9860004C7BA /* GPColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPColor.swift; sourceTree = "<group>"; };
 		FF3C900824AD7B4400DC0677 /* GPData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPData.swift; sourceTree = "<group>"; };
+		FF6AAF7625C54D3C000232B3 /* GPNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPNavigationController.swift; sourceTree = "<group>"; };
+		FF6AAF7925C54DC6000232B3 /* GPNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNavigationBar.swift; sourceTree = "<group>"; };
+		FF6AAF7C25C54E5D000232B3 /* GPPlaceholderNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPPlaceholderNavigationBar.swift; sourceTree = "<group>"; };
+		FF6AAF7F25C54EA2000232B3 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
+		FF6AAF8925C55241000232B3 /* GPNavigationConfigure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNavigationConfigure.swift; sourceTree = "<group>"; };
 		FF79BEBA24DE43C50034ADC8 /* GPInt64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPInt64.swift; sourceTree = "<group>"; };
 		FF96837D24AC849100024CCA /* GPUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUIViewController.swift; sourceTree = "<group>"; };
-		FF96837F24AC89DC00024CCA /* GPNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPNavigationController.swift; sourceTree = "<group>"; };
 		FF96838124AC920800024CCA /* GPUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPUIButton.swift; sourceTree = "<group>"; };
 		FF9CB20924B9AB5A00FF468A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF9CB21124B9AD9F00FF468A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = ../R/R.generated.swift; sourceTree = "<group>"; };
@@ -144,6 +152,7 @@
 		FF2C08B324AAE8280004C7BA /* GPFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				FF6AAF7525C54D00000232B3 /* Navigation */,
 				FFC9A5AD25B963D30014CFBF /* Untils */,
 				FFC9A59E25B954ED0014CFBF /* Host+API */,
 				FF0E33BE24C59623001BE07D /* Networking */,
@@ -190,10 +199,21 @@
 			isa = PBXGroup;
 			children = (
 				FF2C08D324AAE97B0004C7BA /* AnimateLoadingView.swift */,
-				FF96837F24AC89DC00024CCA /* GPNavigationController.swift */,
 				FF0E33B024C58954001BE07D /* GPBaseViewController.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		FF6AAF7525C54D00000232B3 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				FF6AAF7625C54D3C000232B3 /* GPNavigationController.swift */,
+				FF6AAF7925C54DC6000232B3 /* GPNavigationBar.swift */,
+				FF6AAF7C25C54E5D000232B3 /* GPPlaceholderNavigationBar.swift */,
+				FF6AAF7F25C54EA2000232B3 /* UIViewController+Navigation.swift */,
+				FF6AAF8925C55241000232B3 /* GPNavigationConfigure.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		FFC9A59E25B954ED0014CFBF /* Host+API */ = {
@@ -350,8 +370,8 @@
 				FF2C08D424AAE97B0004C7BA /* AnimateLoadingView.swift in Sources */,
 				FF3C900924AD7B4500DC0677 /* GPData.swift in Sources */,
 				FF0E33C824C5978B001BE07D /* GPNetworkingError.swift in Sources */,
-				FF96838024AC89DC00024CCA /* GPNavigationController.swift in Sources */,
 				FF0B7E85258A11C800A96AE4 /* GPCell.swift in Sources */,
+				FF6AAF7725C54D3C000232B3 /* GPNavigationController.swift in Sources */,
 				FF9CB21224B9AD9F00FF468A /* R.generated.swift in Sources */,
 				FF0E33D124C59C74001BE07D /* GPReachabilityManager.swift in Sources */,
 				FF96838224AC920800024CCA /* GPUIButton.swift in Sources */,
@@ -364,10 +384,14 @@
 				FFC9A5B225B964610014CFBF /* NetworkConfigure.swift in Sources */,
 				FFCF3DD124DD576C00CB428D /* GPString.swift in Sources */,
 				FF2C08D824AAE9860004C7BA /* GPColor.swift in Sources */,
+				FF6AAF7A25C54DC6000232B3 /* GPNavigationBar.swift in Sources */,
 				FF2C08D724AAE9860004C7BA /* GPFont.swift in Sources */,
+				FF6AAF7D25C54E5D000232B3 /* GPPlaceholderNavigationBar.swift in Sources */,
 				FF79BEBB24DE43C50034ADC8 /* GPInt64.swift in Sources */,
+				FF6AAF8A25C55241000232B3 /* GPNavigationConfigure.swift in Sources */,
 				FF0E33C624C59701001BE07D /* GPResponeParser.swift in Sources */,
 				FF0E33C224C596A6001BE07D /* GPRequestEntity.swift in Sources */,
+				FF6AAF8025C54EA2000232B3 /* UIViewController+Navigation.swift in Sources */,
 				FFB60E3024AB2020007FF836 /* GPUIDevive.swift in Sources */,
 				FF0B7E7D258A087600A96AE4 /* GPArray.swift in Sources */,
 				FFB60E5024AB3883007FF836 /* GPUILabel.swift in Sources */,

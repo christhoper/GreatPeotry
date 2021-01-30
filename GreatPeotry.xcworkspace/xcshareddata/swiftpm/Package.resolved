@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "TwitterTextEditor",
+        "repositoryURL": "https://github.com/twitter/TwitterTextEditor",
+        "state": {
+          "branch": null,
+          "revision": "8aa914134c5b6aa46e862de63f239ec0e3b52a91",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
