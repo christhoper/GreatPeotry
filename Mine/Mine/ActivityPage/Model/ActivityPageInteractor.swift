@@ -3,7 +3,7 @@
 //  BL_VIPer.xcodeproj
 //
 //  Created by jhd on 20/07/2020.
-//  Copyright © 2020 BaiLun. All rights reserved.
+//  Copyright © 2020 jhd. All rights reserved.
 //
 
 // MARK: - Entity

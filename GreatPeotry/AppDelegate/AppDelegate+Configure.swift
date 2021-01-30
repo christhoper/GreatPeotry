@@ -2,7 +2,7 @@
 //  AppDelegate+Configure.swift
 //  GreatPeotry
 //
-//  Created by bailun on 2021/1/21.
+//  Created by jhd on 2021/1/21.
 //  Copyright © 2021 hend. All rights reserved.
 //
 

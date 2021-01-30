@@ -2,8 +2,8 @@
 //  HostManager.swift
 //  GPFoundation
 //
-//  Created by bailun on 2021/1/21.
-//  Copyright © 2021 Baillun. All rights reserved.
+//  Created by jhd on 2021/1/21.
+//  Copyright © 2021 jhd. All rights reserved.
 //
 
 import Foundation

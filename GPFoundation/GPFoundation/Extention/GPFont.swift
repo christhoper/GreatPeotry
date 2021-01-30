@@ -2,7 +2,7 @@
 //  GPFont.swift
 //  GPFoundation
 //
-//  Created by bailun on 2020/4/28.
+//  Created by jhd on 2020/4/28.
 //  Copyright © 2020 hend. All rights reserved.
 //
 
